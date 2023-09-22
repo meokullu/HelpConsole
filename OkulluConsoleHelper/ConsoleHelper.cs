@@ -1,6 +1,6 @@
 ﻿namespace OkulluConsoleHelper
 {
-    public static class Helper
+    public static partial class Helper
     {
         public static string Percentage8F(int item1, int item2)
         {
@@ -55,6 +55,28 @@
         public static string Percentage2F(sbyte item1, byte item2)
         {
             return (item1 * 100 / (double)item2).ToString("0.00") + "%";
+        }
+    }
+
+    public static partial class Helper
+    {
+        /// <summary>
+        /// Sleep uses Thread.Sleep, writes Sleeping {duration} ms to console's title.
+        /// </summary>
+        /// <param name="duration"></param>
+        public static void Sleep(int duration)
+        {
+            //
+            string tempTitle = Console.Title;
+
+            //
+            Console.Title = $"Sleeping {duration} ms";
+
+            //
+            Thread.Sleep(duration);
+
+            //
+            Console.Title = tempTitle;
         }
     }
 }
