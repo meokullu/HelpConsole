@@ -1,6 +1,10 @@
-﻿namespace OkulluConsoleHelper
+﻿using System;
+using System.Runtime.CompilerServices;
+using System.Threading;
+
+namespace HelpConsole
 {
-    public static partial class Helper
+    public static partial class HelpConsole
     {
         public static string Percentage8F(int item1, int item2)
         {
@@ -17,7 +21,7 @@
             return (item1 * 100 / (double)item2).ToString("0") + "%";
         }
 
-        public static string PercentageNoFram(short item1, short item2)
+        public static string PercentageNoFrac(short item1, short item2)
         {
             return (item1 * 100 / (double)item2).ToString("0") + "%";
         }
@@ -58,7 +62,7 @@
         }
     }
 
-    public static partial class Helper
+    public static partial class HelpConsole
     {
         /// <summary>
         /// Sleep uses Thread.Sleep, writes Sleeping {duration} ms to console's title.
@@ -77,6 +81,33 @@
 
             //
             Console.Title = tempTitle;
+        }
+    }
+
+    public static partial class HelpConsole
+    {
+        public static void StartingMethod([CallerMemberName] string memberName = "")
+        {
+            //
+            Console.WriteLine("");
+
+            //
+            Console.WriteLine($"{memberName} started...");
+
+            //
+            Console.Beep(725, 250);
+        }
+
+        public static void EndingMethod([CallerMemberName] string memberName = "")
+        {
+            //
+            Console.WriteLine("");
+
+            //
+            Console.WriteLine($"{memberName} ended...");
+
+            //
+            Console.Beep(725, 250);
         }
     }
 }
