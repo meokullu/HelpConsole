@@ -5,7 +5,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <FileVersion>1.0.0</FileVersion>
     <AssemblyVersion>1.0.0</AssemblyVersion>
-    <Version>1.0.0-alpha</Version>
+    <Version>1.0.0-alpha.1</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console have methods to use Console useful.</Title>
@@ -13,7 +13,8 @@
     <Authors>Enes Okullu</Authors>
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>Console; Helper</PackageTags>
-    <PackageReleaseNotes>Initial version.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added ClearConsoleTitle()
+Added Percentage8F() for double, short, byte, sbyte</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>meokullu.github.io/HelpConsole/</PackageProjectUrl>
