@@ -17,6 +17,55 @@ namespace HelpConsole
         /// <returns></returns>
         public static string Percentage8F(int item1, int item2)
         {
+            //
+            return (item1 * 100 / (double)item2).ToString("0.00000000") + "%";
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item1"></param>
+        /// <param name="item2"></param>
+        /// <returns></returns>
+        public static string Percentage8F(double item1, double item2)
+        {
+            //
+            return (item1 * 100 / item2).ToString("0.00000000") + "%";
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item1"></param>
+        /// <param name="item2"></param>
+        /// <returns></returns>
+        public static string Percentage8F(short item1, short item2)
+        {
+            //
+            return (item1 * 100 / (double)item2).ToString("0.00000000") + "%";
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item1"></param>
+        /// <param name="item2"></param>
+        /// <returns></returns>
+        public static string Percentage8F(byte item1, byte item2)
+        {
+            //
+            return (item1 * 100 / (double)item2).ToString("0.00000000") + "%";
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item1"></param>
+        /// <param name="item2"></param>
+        /// <returns></returns>
+        public static string Percentage8F(sbyte item1, sbyte item2)
+        {
+            //
             return (item1 * 100 / (double)item2).ToString("0.00000000") + "%";
         }
 
@@ -190,6 +239,20 @@ namespace HelpConsole
         /// <summary>
         /// 
         /// </summary>
+        public static void ClearConsoleTitle()
+        {
+            //
+            _titleFirstText = null;
+            _titleSecondText = null;
+            _titleThirdText = null;
+
+            //
+            Console.Title = "";
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="appName"></param>
         public static void StartUp(string appName)
         {
@@ -223,7 +286,6 @@ namespace HelpConsole
             //
             Console.Beep(575, 250);
         }
-
         /// <summary>
         /// Sleep uses Thread.Sleep, writes Sleeping {duration} ms to console's title.
         /// </summary>
