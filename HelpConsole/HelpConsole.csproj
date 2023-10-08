@@ -8,16 +8,18 @@
     <Version>1.0.0-alpha.2</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <Title>Help Console have methods to use Console useful.</Title>
+    <Title>Help Console</Title>
     <Company>Enes Okullu</Company>
     <Authors>Enes Okullu</Authors>
     <Copyright>Enes Okullu</Copyright>
-    <PackageTags>Console; Helper</PackageTags>
-    <PackageReleaseNotes>v1.0.0-alpha.2</PackageReleaseNotes>
+    <PackageTags>console; console-application; console-app</PackageTags>
+    <PackageReleaseNotes>v1.0.0-alpha.2
+Added summaries into methods.
+Added comments.</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>meokullu.github.io/HelpConsole/</PackageProjectUrl>
-    <Description>Help Console have methods to use console application easier.</Description>
+    <Description>HelpConsole is a project to offer useful methods which makes easier to use console applications.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>

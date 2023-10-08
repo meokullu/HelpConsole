@@ -214,7 +214,7 @@ namespace HelpConsole
         /// <param name="firstText">First text</param>
         /// <param name="secondText">Second text</param>
         /// <param name="thirdText">Third text</param>
-        [SupportedOSPlatform("windows")]
+        //[SupportedOSPlatform("windows")]
         public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "")
         {
             // Checking if firstText is null.
@@ -260,7 +260,7 @@ namespace HelpConsole
         /// <summary>
         /// Clears console title.
         /// </summary>
-        [SupportedOSPlatform("windows")]
+        //[SupportedOSPlatform("windows")]
         public static void ClearConsoleTitle()
         {
             // Set default value null.
@@ -280,7 +280,7 @@ namespace HelpConsole
         /// Starting up.
         /// </summary>
         /// <param name="appName">Application name</param>
-        [SupportedOSPlatform("windows")]
+        //[SupportedOSPlatform("windows")]
         public static void StartUp(string appName)
         {
             // Set default app name value with parameter value.
@@ -305,7 +305,7 @@ namespace HelpConsole
         /// <summary>
         /// Ending up.
         /// </summary>
-        [SupportedOSPlatform("windows")]
+        //[SupportedOSPlatform("windows")]
         public static void FinishingUp()
         {
             // Setting console title.
@@ -325,7 +325,7 @@ namespace HelpConsole
         /// Sleep uses Thread.Sleep, writes Sleeping {duration} ms to console's title.
         /// </summary>
         /// <param name="duration">Time in milliseconds.</param>
-        [SupportedOSPlatform("windows")]
+        //[SupportedOSPlatform("windows")]
         public static void Sleep(int duration)
         {
             // Save console title into temporary variable.
@@ -345,7 +345,7 @@ namespace HelpConsole
         /// Sleep uses Thread.Sleep, writes Sleeping {duration} ms to console's title.
         /// </summary>
         /// <param name="duration"></param>
-        [SupportedOSPlatform("windows")]
+        //[SupportedOSPlatform("windows")]
         public static void SleepWithBeeping(int duration)
         {
             // Save console title into temporary variable.
@@ -380,7 +380,7 @@ namespace HelpConsole
         /// Method starting with writing its name and beeping.
         /// </summary>
         /// <param name="memberName"></param>
-        [SupportedOSPlatform("windows")]
+        //[SupportedOSPlatform("windows")]
         public static void StartingMethod([CallerMemberName] string memberName = "")
         {
             // Skipping line.
@@ -397,7 +397,7 @@ namespace HelpConsole
         /// Method ending with writing its name and beeping.
         /// </summary>
         /// <param name="memberName"></param>
-        [SupportedOSPlatform("windows")]
+        //[SupportedOSPlatform("windows")]
         public static void EndingMethod([CallerMemberName] string memberName = "")
         {
             // Skipping line.
