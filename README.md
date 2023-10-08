@@ -50,7 +50,6 @@ EndingMethod([CallerMemberName] string memberName = "")
 * 1.0.0-alpha.2
 	* Added summaries into methods.
 	* Added comments.
-	* Added SupportedOSPlatform attribute into windows only methods.
 
 * 1.0.0-alpha.1
 	* Added ClearConsoleTitle().
