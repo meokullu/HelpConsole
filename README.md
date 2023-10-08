@@ -1,6 +1,10 @@
 # HelpConsole
 
+HelpConsole is a project to offer useful methods which makes easier to use console applications.
+
 ## Description
+
+HelpConsole has methods to increase liability of output, state and methods.
 
 ## Listed Methods
 ```
@@ -65,6 +69,9 @@ EndingMethod([CallerMemberName] string memberName = "")
   * Initial version.
 
 ## Task list
+
+- [ ] Update README.md
+- [ ] Add more methods.
 
 ## Licence
 [MIT license](https://github.com/meokullu/HelpConsole/blob/master/LICENSE)
