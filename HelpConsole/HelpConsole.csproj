@@ -5,7 +5,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <FileVersion>1.0.0</FileVersion>
     <AssemblyVersion>1.0.0</AssemblyVersion>
-    <Version>1.0.0-alpha.2</Version>
+    <Version>1.0.0-alpha.3</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -13,15 +13,16 @@
     <Authors>Enes Okullu</Authors>
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app</PackageTags>
-    <PackageReleaseNotes>v1.0.0-alpha.2
-Added summaries into methods.
-Added comments.</PackageReleaseNotes>
+    <PackageReleaseNotes>v1.0.0-alpha.3
+Added icons.</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>meokullu.github.io/HelpConsole/</PackageProjectUrl>
     <Description>HelpConsole is a project to offer useful methods which makes easier to use console applications.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <ApplicationIcon>Resources\icon256.ico</ApplicationIcon>
+    <PackageIcon>icon128.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
@@ -45,11 +46,22 @@ Added comments.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Resources\icon256.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
     <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\icon128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
