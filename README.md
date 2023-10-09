@@ -47,6 +47,9 @@ EndingMethod([CallerMemberName] string memberName = "")
 
 ## Version History
 
+* 1.0.0-alpha.3
+	* Added icons. 
+
 * 1.0.0-alpha.2
 	* Added summaries into methods.
 	* Added comments.
@@ -56,16 +59,7 @@ EndingMethod([CallerMemberName] string memberName = "")
 	* Added Percentage8F() for double, short, byte, sbyte.
 
 * 1.0.0-alpha
-	* Initial version. 
-
-## Version History
-
-* 1.0.0-alpha.1
-  * Added ClearConsoleTitle()
-  * Added Percentage8F() for double, short, byte, sbyte data types.
-
-* 1.0.0-alpha
-  * Initial version.
+	* Initial version.
 
 ## Task list
 
