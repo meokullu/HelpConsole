@@ -1,12 +1,12 @@
-# HelpConsole
+## HelpConsole
 
 HelpConsole is a project to offer useful methods which makes easier to use console applications.
 
-## Description
+### Description
 
 HelpConsole has methods to increase liability of output, state and methods.
 
-## Listed Methods
+### Example Usage
 ```
 Percentage8F(int item1, int item2)
 ```
@@ -41,36 +41,19 @@ StartingMethod([CallerMemberName] string memberName = "")
 EndingMethod([CallerMemberName] string memberName = "")
 ```
 
-## Example Usage
+### Version History
+See Changelog 'link'
 
-## Output
-
-## Version History
-
-* 1.0.0-alpha.3
-	* Added icons. 
-
-* 1.0.0-alpha.2
-	* Added summaries into methods.
-	* Added comments.
-
-* 1.0.0-alpha.1
-	* Added ClearConsoleTitle().
-	* Added Percentage8F() for double, short, byte, sbyte.
-
-* 1.0.0-alpha
-	* Initial version.
-
-## Task list
+### Task list
 
 - [ ] Update README.md
 - [ ] Add more methods.
 
-## Licence
+### Licence
 [MIT license](https://github.com/meokullu/HelpConsole/blob/master/LICENSE)
 
-## Authors
+### Authors
 Twitter: Enes Okullu [@enesokullu](https://twitter.com/EnesOkullu)
 
-## Help
+### Help
 Twitter: Enes Okullu [@enesokullu](https://twitter.com/EnesOkullu)

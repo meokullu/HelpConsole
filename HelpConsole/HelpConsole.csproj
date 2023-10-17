@@ -14,7 +14,9 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app</PackageTags>
     <PackageReleaseNotes>v1.0.0-alpha.3
-Added icons.</PackageReleaseNotes>
+
+    See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
+    </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>meokullu.github.io/HelpConsole/</PackageProjectUrl>
