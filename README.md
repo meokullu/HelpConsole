@@ -42,12 +42,10 @@ EndingMethod([CallerMemberName] string memberName = "")
 ```
 
 ### Version History
-See Changelog 'link'
+See [Changelog](https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
 
 ### Task list
-
-- [ ] Update README.md
-- [ ] Add more methods.
+* Create an issue or check task list: [Issues](https://github.com/meokullu/HelpConsole/issues)
 
 ### Licence
 [MIT license](https://github.com/meokullu/HelpConsole/blob/master/LICENSE)
