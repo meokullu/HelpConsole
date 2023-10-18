@@ -12,7 +12,7 @@
     <Company>Enes Okullu</Company>
     <Authors>Enes Okullu</Authors>
     <Copyright>Enes Okullu</Copyright>
-    <PackageTags>console; console-application; console-app</PackageTags>
+    <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>v1.0.0-alpha.3
     See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
