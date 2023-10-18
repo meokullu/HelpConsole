@@ -10,9 +10,14 @@
 ### Removed
 -->
 
-## [1.0.0.alpha.x] (Upcoming)
-*
-*
+## [1.0.0.alpha.4]
+
+### Added
+* Tag added to PackageTags.
+* CHANGELOG link added under Version History on README.
+
+### Changed
+* README has cleaner view.
 
 ## [1.0.0-alpha.3]
 
