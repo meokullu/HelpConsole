@@ -14,7 +14,6 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app</PackageTags>
     <PackageReleaseNotes>v1.0.0-alpha.3
-
     See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>
@@ -57,6 +56,10 @@
       <PackagePath>\</PackagePath>
     </None>
     <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\CHANGELOG.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
