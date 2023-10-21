@@ -7,9 +7,36 @@ HelpConsole is a project to offer useful methods which makes easier to use conso
 HelpConsole has methods to increase liability of output, state and methods.
 
 ### Example Usage
+
+#### Start & Finish
 ```
-Percentage8F(int item1, int item2)
+StartUp(ConsoleOption consoleOption = null);
 ```
+```
+FinishUp()
+```
+#### Text
+```
+SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "")
+```
+```
+ClearConsoleTitle()
+```
+#### Sleeping & Beeping
+```
+Sleep(int duration)
+```
+```
+SleepWithBeeping(int duration)
+```
+#### Methods
+```
+StartingMethod([CallerMemberName] string memberName = "")
+```
+```
+EndingMethod([CallerMemberName] string memberName = "")
+```
+#### Fractions
 ```
 PercentageNoFrac(int item1, int item2)
 ```
@@ -17,29 +44,10 @@ PercentageNoFrac(int item1, int item2)
 Percentage2F(int item1, int item2)
 ```
 ```
-SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "")
+Percentage8F(int item1, int item2)
 ```
-```
-ClearConsoleTitle()
-```
-```
-StartUp(string appName)
-```
-```
-FinishingUp()
-```
-```
-Sleep(int duration)
-```
-```
-SleepWithBeeping(int duration)
-```
-```
-StartingMethod([CallerMemberName] string memberName = "")
-```
-```
-EndingMethod([CallerMemberName] string memberName = "")
-```
+
+To check listed methods, example of output visit wiki page. [HelpConsole Wiki](https://github.com/meokullu/HelpConsole/wiki)
 
 ### Version History
 See [Changelog](https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
