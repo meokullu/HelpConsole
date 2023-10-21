@@ -10,19 +10,21 @@
 ### Removed
 -->
 
-## [1.0.0.alpha.5] (Upcoming)
+## [1.0.0-alpha.5] (Upcoming)
 
 ## Added
-* `ConsoleOption` is available now. It has `AppName`, `ScreenColorOption`, `CursorAvailable`, `ScreenOption`, `WarningSound` and `WaitOnEnd` properties.
+* `ConsoleOption` is available now. It has `AppName`, `ScreenColorOption`, `CursorAvailable`, `WarningSound` and `WaitOnEnd` properties.
 * `ScreenColorOption` has `BackgroundColor` and `ForegroundColor` and its constructor.
-* `ScreenOption` has `Width` and `Height` also its constructor.
 * Missing method summaries are filled.
+
+## Changed
+* Beeping as warning has condition which is set to be false as default.
 
 ## Removed
 * `FinishingUp()` method is depreciated and renamed as `FinishUp()`.
 * `StartUp(string appName)` method is depreciated. Use `StartUp()`
 
-## [1.0.0.alpha.4]
+## [1.0.0-alpha.4]
 
 ### Added
 * Tag added to PackageTags.
