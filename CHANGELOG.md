@@ -10,7 +10,14 @@
 ### Removed
 -->
 
-## [1.0.0-alpha.5] (Upcoming)
+## [1.0.0-beta] (Upcoming)
+
+## Changed
+* `Beep.cs` is created.
+* `Math.cs` is created.
+* `Title.cs` is created.
+
+## [1.0.0-alpha.5]
 
 ## Added
 * `ConsoleOption` is available now. It has `AppName`, `ScreenColorOption`, `CursorAvailable`, `WarningSound` and `WaitOnEnd` properties.
