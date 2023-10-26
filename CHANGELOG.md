@@ -10,10 +10,13 @@
 ### Removed
 -->
 
-## [1.0.0-beta] (Upcoming)
+## [1.0.0-beta]
 
 ## Added
-* New pre-defined `ScreenColorOption`. `ScrenColorOptionCyna` and `ScreenColorOptionDarkYellow` are added.
+* New pre-defined `ScreenColorOption`. `ScrenColorOptionCyan` and `ScreenColorOptionDarkYellow` are added.
+* `Beep(Melody)` is added.
+* `Melody` added. Melody has array of integers which is played by `Beep(Melody)`. Integers address sound frequency, duration of sound and waiting respectively.
+* `Warning`, `Welcome`, `Success` pre-defined `Melody` are added.
 
 ## Changed
 * `Beep.cs` is created.
