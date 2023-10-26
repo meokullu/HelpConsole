@@ -24,6 +24,9 @@ ClearConsoleTitle()
 ```
 #### Sleeping & Beeping
 ```
+Beep(Melody melody)
+```
+```
 Sleep(int duration)
 ```
 ```
