@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.Versioning;
 using System.Threading;
+using static HelpConsole.src.HelpConsole;
 
 namespace HelpConsole
 {
@@ -10,10 +11,8 @@ namespace HelpConsole
     /// </summary>
     public static partial class HelpConsole
     {
-        #region Console Option
-
         // Console Option
-        private static ConsoleOption _consoleOptions = new ConsoleOption();
+        internal static ConsoleOption _consoleOptions = new ConsoleOption();
 
         /// <summary>
         /// Set and holds console options.
@@ -50,71 +49,6 @@ namespace HelpConsole
             /// </summary>
             public bool WaitOnEnd = true;
         }
-
-        #endregion Console Option
-
-        #region Screen Color Options
-
-        // Screen Color Option.
-        private static ScreenColorOption _defaultScreenColorOption = new ScreenColorOption(foregroundColor: ConsoleColor.Black, backgroundColor: ConsoleColor.White);
-
-        /// <summary>
-        /// Set and holds screen color options.
-        /// </summary>
-        public static ScreenColorOption ScreenColorOptions { get => _defaultScreenColorOption; set => _defaultScreenColorOption = value; }  
-
-        /// <summary>
-        /// Preset black for background, yellow for foreground.
-        /// </summary>
-        public readonly static ScreenColorOption ScreenColorOptionYellow = new ScreenColorOption(foregroundColor: ConsoleColor.Yellow, backgroundColor: ConsoleColor.Black);
-
-        /// <summary>
-        /// Preset black for background, green for foreground color.
-        /// </summary>
-        public readonly static ScreenColorOption ScreenColorOptionGreen = new ScreenColorOption(foregroundColor: ConsoleColor.Green, backgroundColor: ConsoleColor.Black);
-
-        /// <summary>
-        /// Preset black for background, green for foreground color.
-        /// </summary>
-        public readonly static ScreenColorOption ScreenColorOptionCyan = new ScreenColorOption(foregroundColor: ConsoleColor.Cyan, backgroundColor: ConsoleColor.Black);
-
-        /// <summary>
-        /// Preset black for background, dark yellow for foreground color.
-        /// </summary>
-        public readonly static ScreenColorOption ScreenColorOptionDarkYellow = new ScreenColorOption(foregroundColor: ConsoleColor.DarkYellow, backgroundColor: ConsoleColor.Black);
-
-
-        /// <summary>
-        /// Settings for console colors.
-        /// </summary>
-        public class ScreenColorOption
-        {
-            /// <summary>
-            /// Sets foreground color for text.
-            /// </summary>
-            public ConsoleColor ForegroundColor = ConsoleColor.Black;
-
-            /// <summary>
-            /// Sets background color for background.
-            /// </summary>
-            public ConsoleColor BackgroundColor = ConsoleColor.White;
-
-            /// <summary>
-            /// Sets ScreenColorOption.
-            /// </summary>
-            /// <param name="foregroundColor">Text color.</param>
-            /// <param name="backgroundColor">Background color.</param>
-            public ScreenColorOption(ConsoleColor foregroundColor, ConsoleColor backgroundColor)
-            {
-                // Text color.
-                ForegroundColor = foregroundColor;
-
-                // Foreground color.
-                BackgroundColor = backgroundColor;
-            }
-        }
-
-        #endregion Screen Color Options
     }
 
     /// <summary>
@@ -222,68 +156,4 @@ namespace HelpConsole
             FinishUp();
         }
     }
-
-    #region Methods for methods
-
-    /// <summary>
-    /// Methods helpers.
-    /// </summary>
-    public static partial class HelpConsole
-    {
-        // Start up beeping frequency.
-        private const int _startBeepFreqency = 725;
-
-        // Start up beeping duration.
-        private const int _startBeepDuration = 500;
-
-        // Finish up beeping frequency.
-        private const int _endBeepDuration = 525;
-
-        // Finish up beeping duration.
-        private const int _endBeepFrequency = 500;
-
-        /// <summary>
-        /// Method starting with writing its name and beeping.
-        /// </summary>
-        /// <param name="memberName">Catches method's name.</param>
-        //[SupportedOSPlatform("windows")]
-        public static void StartingMethod([CallerMemberName] string memberName = "")
-        {
-            // Skipping line.
-            Console.WriteLine("");
-
-            // Writing the method's name.
-            Console.WriteLine($"{memberName} started...");
-
-            // Checks if warning sound is active.
-            if (_consoleOptions.WarningSound)
-            {
-                // Beep sounds.
-                Console.Beep(_startBeepFreqency, _startBeepDuration);
-            }
-        }
-
-        /// <summary>
-        /// Method ending with writing its name and beeping.
-        /// </summary>
-        /// <param name="memberName">Catches method's name.</param>
-        //[SupportedOSPlatform("windows")]
-        public static void EndingMethod([CallerMemberName] string memberName = "")
-        {
-            // Skipping line.
-            Console.WriteLine("");
-
-            // Writing a method's name.
-            Console.WriteLine($"{memberName} ended...");
-
-            // Checks if warning sound is active.
-            if (_consoleOptions.WarningSound)
-            {
-                // Beep sounds.
-                Console.Beep(_endBeepFrequency, _endBeepDuration);
-            }
-        }
-    }
-
-    #endregion Methods for methods
 }
