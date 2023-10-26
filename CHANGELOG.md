@@ -12,10 +12,14 @@
 
 ## [1.0.0-beta] (Upcoming)
 
+## Added
+* New pre-defined `ScreenColorOption`. `ScrenColorOptionCyna` and `ScreenColorOptionDarkYellow` are added.
+
 ## Changed
 * `Beep.cs` is created.
 * `Math.cs` is created.
 * `Title.cs` is created.
+* `ScreenColorOption.cs` is created.
 
 ## [1.0.0-alpha.5]
 
