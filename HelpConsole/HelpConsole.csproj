@@ -5,7 +5,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <FileVersion>1.0.0</FileVersion>
     <AssemblyVersion>1.0.0</AssemblyVersion>
-    <Version>1.0.0-beta</Version>
+    <Version>1.0.0-beta.1</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -14,16 +14,10 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
-      v1.0.0-beta      
-      * New pre-defined `ScreenColorOption`. `ScrenColorOptionCyan` and `ScreenColorOptionDarkYellow` are added.
-      * `Beep(Melody)` is added.
-      * `Melody` added. Melody has array of integers which is played by `Beep(Melody)`. Integers address sound frequency, duration of sound and waiting respectively.
-      * `Warning`, `Welcome`, `Success` pre-defined `Melody` are added.
-
-      * `Beep.cs` is created.
-      * `Math.cs` is created.
-      * `Title.cs` is created.
-      * `ScreenColorOption.cs` is created.
+      v1.0.0-beta.1      
+      * Changing missing static declaration into Beep, Math, ScreenColor.
+      * Changing wrong namespace on Method, ScreenColorOption and Title
+      
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>

@@ -6,7 +6,7 @@ namespace HelpConsole
     /// <summary>
     /// Beep.
     /// </summary>
-    public partial class HelpConsole
+    public static partial class HelpConsole
     {
         /// <summary>
         /// Beep for warning.
