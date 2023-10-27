@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace HelpConsole.src
+namespace HelpConsole
 {
-    public partial class HelpConsole
+    public static partial class HelpConsole
     {
         // Screen Color Option.
         internal static ScreenColorOption _defaultScreenColorOption = new ScreenColorOption(foregroundColor: ConsoleColor.Black, backgroundColor: ConsoleColor.White);

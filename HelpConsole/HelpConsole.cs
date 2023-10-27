@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
-using System.Runtime.Versioning;
-using System.Threading;
-using static HelpConsole.src.HelpConsole;
 
 namespace HelpConsole
 {
