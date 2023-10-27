@@ -10,6 +10,12 @@
 ### Removed
 -->
 
+## [1.0.0-beta.1]
+
+## Changed
+* Changing missing static declaration into Beep, Math, ScreenColorOption.
+* Changing wrong namespace on Method, ScreenColorOption and Title.
+
 ## [1.0.0-beta]
 
 ## Added
