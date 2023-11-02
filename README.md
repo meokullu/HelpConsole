@@ -1,6 +1,9 @@
 ## HelpConsole
+[![HelpConsole](https://img.shields.io/nuget/v/HelpConsole.svg)](https://www.nuget.org/packages/HelpConsole/) [![HelpConsole](https://img.shields.io/nuget/dt/HelpConsole.svg)](https://www.nuget.org/packages/HelpConsole/) [![License](https://img.shields.io/github/license/meokullu/HelpConsole.svg)](https://github.com/meokullu/HelpConsole/blob/master/LICENSE)
 
 HelpConsole is a project to offer useful methods which makes easier to use console applications.
+
+[Download on NuGet gallery](https://www.nuget.org/packages/HelpConsole/)
 
 ### Description
 
@@ -59,10 +62,13 @@ See [Changelog](https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md
 * Create an issue or check task list: [Issues](https://github.com/meokullu/HelpConsole/issues)
 
 ### Licence
-[MIT license](https://github.com/meokullu/HelpConsole/blob/master/LICENSE)
+This repository is licensed under the "MIT" license. See [MIT license](https://github.com/meokullu/HelpConsole/blob/master/LICENSE).
 
-### Authors
-Twitter: Enes Okullu [@enesokullu](https://twitter.com/EnesOkullu)
+### Authors & Contributing
+
+If you'd like to contribute, then contribute. <!-- [contributing guide](CONTRIBUTING.md). -->
+
+[![Contributors](https://contrib.rocks/image?repo=meokullu/HelpConsole)](https://github.com/meokullu/HelpConsole/graphs/contributors)
 
 ### Help
 Twitter: Enes Okullu [@enesokullu](https://twitter.com/EnesOkullu)
