@@ -11,11 +11,20 @@
 #### Removed
 -->
 
+### [1.0.0-beta.2]
+
+#### Added
+* `SetConsoleTitle(string firstText)` and `SetConsoleTitle(string firstText, string secondText)` new methods are added. These methods calls `SetConsoleTitle(strinf firstText, string secondText, string thirdText)`. 
+
+#### Changed
+* New design README.
+* New design CHANGELOG.
+
 ### [1.0.0-beta.1]
 
 ### Changed
-* Changing missing static declaration into Beep, Math, ScreenColorOption.
-* Changing wrong namespace on Method, ScreenColorOption and Title.
+* Changing missing static declaration into `Beep`, `Math`, `ScreenColorOption`.
+* Changing wrong namespace on `Method`, `ScreenColorOption` and `Title`.
 
 ### [1.0.0-beta]
 

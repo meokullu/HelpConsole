@@ -5,7 +5,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <FileVersion>1.0.0</FileVersion>
     <AssemblyVersion>1.0.0</AssemblyVersion>
-    <Version>1.0.0-beta.1</Version>
+    <Version>1.0.0-beta.2</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -14,9 +14,10 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
-      v1.0.0-beta.1      
-      * Changing missing static declaration into Beep, Math, ScreenColor.
-      * Changing wrong namespace on Method, ScreenColorOption and Title
+      v1.0.0-beta.2     
+      * New design README.
+      * New design CHANGELOG.
+      * Added new two methods for SetConsoleTitle() with one and two parameters.
       
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
