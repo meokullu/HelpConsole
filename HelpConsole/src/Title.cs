@@ -17,6 +17,27 @@ namespace HelpConsole
         private static string _titleThirdText = "";
 
         /// <summary>
+        /// Sets console's title with one text. {f} Calls <see cref="SetConsoleTitle(string, string, string)"/>
+        /// </summary>
+        /// <param name="firstText">First text</param>
+        public static void SetConsoleTitle(string firstText)
+        {
+            //
+            SetConsoleTitle(firstText: firstText, secondText: "", thirdText: "");
+        }
+
+        /// <summary>
+        ///  Sets console's title with two text. {f} - {s} Calls <see cref="SetConsoleTitle(string, string, string)"/>
+        /// </summary>
+        /// <param name="firstText">First text</param>
+        /// <param name="secondText">Second text</param>
+        public static void SetConsoleTitle(string firstText, string secondText)
+        {
+            //
+            SetConsoleTitle(firstText: firstText, secondText: secondText, thirdText: "");
+        }
+
+        /// <summary>
         /// Sets console's title with three text. {f} - {s} - {t}
         /// </summary>
         /// <param name="firstText">First text</param>
