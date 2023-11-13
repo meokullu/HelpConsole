@@ -3,23 +3,40 @@ using System.Runtime.CompilerServices;
 
 namespace HelpConsole
 {
-
     /// <summary>
     /// Methods helpers.
     /// </summary>
     public static partial class HelpConsole
     {
-        // Start up beeping frequency.
-        private const int _startBeepFreqency = 725;
+        /// <summary>
+        /// Melody whose played when <see cref="StartingMethod(string)"/> is called.
+        /// </summary>
+        private static Melody _startMethodMelody = new Melody { Notes = new int[] { 725, 500, 0 } };
 
-        // Start up beeping duration.
-        private const int _startBeepDuration = 500;
+        /// <summary>
+        /// Sets melody that is played when <see cref="StartingMethod(string)"/> is called.
+        /// </summary>
+        /// <param name="melody"></param>
+        public static void SetStartMethodMelody(Melody melody)
+        {
+            // Sets default value with melody.
+            _startMethodMelody = melody;
+        }
 
-        // Finish up beeping frequency.
-        private const int _endBeepDuration = 525;
+        /// <summary>
+        /// Melody whose played when <see cref="EndingMethod(string)"/> is called.
+        /// </summary>
+        private static Melody _endMethodMelody = new Melody { Notes = new int[] { 525, 500, 0 } };
 
-        // Finish up beeping duration.
-        private const int _endBeepFrequency = 500;
+        /// <summary>
+        /// Sets melody that is played when <see cref="EndingMethod(string)"/> is called.
+        /// </summary>
+        /// <param name="melody"></param>
+        public static void SetEndingMethodMelody(Melody melody)
+        {
+            // Sets default value with melody.
+            _endMethodMelody = melody;
+        }
 
         /// <summary>
         /// Method starting with writing its name and beeping.
@@ -37,8 +54,8 @@ namespace HelpConsole
             // Checks if warning sound is active.
             if (_consoleOptions.WarningSound)
             {
-                // Beep sounds.
-                Console.Beep(_startBeepFreqency, _startBeepDuration);
+                // Beep sounds
+                Beep(_startMethodMelody);
             }
         }
 
@@ -59,7 +76,7 @@ namespace HelpConsole
             if (_consoleOptions.WarningSound)
             {
                 // Beep sounds.
-                Console.Beep(_endBeepFrequency, _endBeepDuration);
+                Beep(_endMethodMelody);
             }
         }
     }

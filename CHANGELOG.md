@@ -11,6 +11,14 @@
 #### Removed
 -->
 
+### [1.0.0-beta.3]
+
+#### Added
+* `SetStartMethodMelody(Melody melody)` and `SetEndingMethodMelody(Melody melody)` are added for `Method.cs`. These methods can be used to set default melody that will be played when `StartMethod()` and `EndingMethod()` are called respectively.
+
+#### Changed
+* `StartMethod()` and `EndingMethod()` are no longer use `Console.Beep()`. These methods are now using `Beep(Melody melody)` under `Beep.cs`.
+
 ### [1.0.0-beta.2]
 
 #### Added
