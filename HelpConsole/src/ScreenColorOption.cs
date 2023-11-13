@@ -32,7 +32,6 @@ namespace HelpConsole
         /// </summary>
         public readonly static ScreenColorOption ScreenColorOptionDarkYellow = new ScreenColorOption(foregroundColor: ConsoleColor.DarkYellow, backgroundColor: ConsoleColor.Black);
 
-
         /// <summary>
         /// Settings for console colors.
         /// </summary>
