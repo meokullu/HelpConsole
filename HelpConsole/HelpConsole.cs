@@ -52,17 +52,11 @@ namespace HelpConsole
     /// </summary>
     public static partial class HelpConsole
     {
-        // Start up beeping frequency.
-        private const int _startUpBeepFrequency = 850;
+        // Start up beeping frequency and duration.
+        private static readonly Melody _startUpMelody = new Melody { Notes = new int[] { 850, 400, 0 } };
 
-        // Start up beeping duration.
-        private const int _startUpBeepDuration = 400;
-
-        // Finish up beeping frequency.
-        private const int _finishUpBeepFrequency = 1250;
-
-        // Finish up beeping duration.
-        private const int _finishUpBeepDuration = 400;
+        // Finish up beeping frequency and duration.
+        private static readonly Melody _finishUpMelody = new Melody { Notes = new int[] { 1250, 400, 0 } };
 
         /// <summary>
         /// Starting up.
@@ -79,7 +73,7 @@ namespace HelpConsole
             }
 
             // Set console title with default value.
-            Console.Title = consoleOptions.AppName;
+            SetConsoleTitle(firstText: consoleOptions.AppName);
 
             // Set console background color with default color value.
             Console.BackgroundColor = consoleOptions.ScreenColorOption.BackgroundColor;
@@ -94,7 +88,7 @@ namespace HelpConsole
             if (consoleOptions.WarningSound)
             {
                 // Beep sound.
-                Console.Beep(_startUpBeepFrequency, _startUpBeepDuration);
+                Beep(_startUpMelody);
             }
         }
 
@@ -105,7 +99,7 @@ namespace HelpConsole
         public static void FinishUp()
         {
             // Setting console title.
-            Console.Title = "Done...";
+            SetConsoleTitle("Done...");
 
             // Giving a new line.
             Console.WriteLine("");
@@ -117,7 +111,7 @@ namespace HelpConsole
             if (_consoleOptions.WarningSound)
             {
                 // Beeping.
-                Console.Beep(_finishUpBeepFrequency, _finishUpBeepDuration);
+                Beep(_finishUpMelody);
             }
 
             // Checking if WaitOnEnd is true.

@@ -11,7 +11,7 @@ namespace HelpConsole
         /// <summary>
         /// Beep for warning.
         /// </summary>
-        public static Melody Warning = new Melody { Notes = new int[]{ 250, 250, 0 } };
+        public static Melody Warning = new Melody { Notes = new int[] { 250, 250, 0 } };
 
         /// <summary>
         /// Beep for welcome.
@@ -22,6 +22,13 @@ namespace HelpConsole
         /// Beep for success.
         /// </summary>
         public static Melody Success = new Melody { Notes = new int[] { 750, 200, 100, 650, 250, 100, 850, 150, 65, 450, 450, 0 } };
+
+        /// <summary>
+        /// Beep for beeping method. <see cref="SleepWithBeeping(int)"/>
+        /// </summary>
+        /// <param name="duration"></param>
+        /// <returns></returns>
+        public static Melody Beeping(int duration) => new Melody { Notes = new int[] { 725, duration, duration } };
 
         /// <summary>
         /// Melody holds integer array with an order of sound frequency, duuration of sound and waiting.
@@ -58,7 +65,7 @@ namespace HelpConsole
             for (int i = 0; i < melody.Notes.Length; i = i + 3)
             {
                 // Checking if frequency of note is in range, it
-                if (melody.Notes[i] < 37 || melody.Notes[i] > 32767 || melody.Notes[i + 1] < 0 || melody.Notes[i + 2] < 0 )
+                if (melody.Notes[i] < 37 || melody.Notes[i] > 32767 || melody.Notes[i + 1] < 0 || melody.Notes[i + 2] < 0)
                 {
                     //
                     Console.WriteLine("Error on notes");
@@ -67,7 +74,7 @@ namespace HelpConsole
                     continue;
                 }
 
-                //
+                // Beeping from Console.
                 Console.Beep(melody.Notes[i], melody.Notes[i + 1]);
 
                 //
@@ -76,17 +83,11 @@ namespace HelpConsole
                     //
                     Thread.Sleep(melody.Notes[i + 2]);
                 }
-
-                //
-                Console.WriteLine(i);
             }
         }
 
-        // Warning beep frequency.
-        private const int _warningBeepFrequency = 725;
-
         /// <summary>
-        /// Sleep uses Thread.Sleep, writes Sleeping {duration} ms to console's title.
+        /// Sleep uses <see cref="Thread.Sleep(int)"/>, writes Sleeping {duration} ms to console's title via <see cref="SetConsoleTitle(string)"/>.
         /// </summary>
         /// <param name="duration">Time in milliseconds.</param>
         //[SupportedOSPlatform("windows")]
@@ -96,17 +97,17 @@ namespace HelpConsole
             string tempTitle = Console.Title;
 
             // Set console title specified with duration to indicate sleeping.
-            Console.Title = $"Sleeping {duration} ms";
+            SetConsoleTitle($"Sleeping {duration} ms");
 
             // Sleeping.
             Thread.Sleep(duration);
 
             // Set console title's back.
-            Console.Title = tempTitle;
+            SetConsoleTitle(tempTitle);
         }
 
         /// <summary>
-        /// Sleep uses Thread.Sleep, writes Sleeping {duration} ms to console's title.
+        /// Sleep uses <see cref="Thread.Sleep(int)"/>, writes Sleeping {duration} ms to console's title.
         /// </summary>
         /// <param name="duration"></param>
         //[SupportedOSPlatform("windows")]
@@ -116,22 +117,13 @@ namespace HelpConsole
             string tempTitle = Console.Title;
 
             // Set console title specified with duration to indicate sleeping.
-            Console.Title = $"Sleeping {duration} ms";
+            SetConsoleTitle($"Sleeping {duration} ms");
 
-            // Beeping. One fourth of duration.
-            Console.Beep(_warningBeepFrequency, duration / 4);
+            // Beeping.  
+            Beep(Beeping(duration));
 
-            // Sleeping. One fourth of duration.
-            Thread.Sleep(duration / 4);
-
-            // Beeping. One fourth of duration.
-            Console.Beep(_warningBeepFrequency, duration / 4);
-
-            // Sleeping. One fourth of duration.
-            Thread.Sleep(duration / 4);
-
-            // // Set console title's back.
-            Console.Title = tempTitle;
+            // Set console title's back.
+            SetConsoleTitle(firstText: tempTitle);
         }
     }
 }
