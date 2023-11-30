@@ -5,7 +5,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <FileVersion>1.0.0</FileVersion>
     <AssemblyVersion>1.0.0</AssemblyVersion>
-    <Version>1.0.0-beta.3</Version>
+    <Version>1.0.0-beta.4</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -14,9 +14,9 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
-      v1.0.0-beta.3
-      * `SetStartMethodMelody(Melody melody)` and `SetEndingMethodMelody(Melody melody)` are added.
-
+      v1.0.0-beta.4
+      * `SetConsoleTitleSeperator(string string)` method is added to set seperator between Console's title items.
+      * Fixed unintentional added " - " bug on title while not all parameters are used for `SetConsoleTitle()`
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>

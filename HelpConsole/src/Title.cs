@@ -16,6 +16,19 @@ namespace HelpConsole
         // Title's third part text.
         private static string _titleThirdText = "";
 
+        // Title's seperator between first, second and third text.
+        private static string _titleSeperator = " - ";
+
+        /// <summary>
+        /// Sets console's title seperator for better liability between parameters.
+        /// </summary>
+        /// <param name="seperator">A string adding between parameters</param>
+        public static void SetConsoleTitleSeperator(string seperator)
+        {
+            // Sets default variable with provided value.
+            _titleSeperator = seperator;
+        }
+
         /// <summary>
         /// Sets console's title with one text. {f} Calls <see cref="SetConsoleTitle(string, string, string)"/>
         /// </summary>
@@ -82,8 +95,8 @@ namespace HelpConsole
                 _titleThirdText = thirdText;
             }
 
-            // Setting console's title with first, second and third text.
-            Console.Title = $"{firstText} - {secondText} - {thirdText}";
+            // Setting console's title with first, second and third text. Adds provided title seperator if parameter parameter is provided.
+            Console.Title = $"{firstText}{(string.IsNullOrEmpty(secondText) ? "" : _titleSeperator)}{secondText}{(string.IsNullOrEmpty(thirdText) ? "" : _titleSeperator)}{thirdText}";
         }
 
         /// <summary>
