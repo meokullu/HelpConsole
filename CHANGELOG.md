@@ -11,6 +11,14 @@
 #### Removed
 -->
 
+### [1.0.0-beta.4]
+
+#### Added
+* `SetConsoleTitleSeperator(string separator)` is added. Console title's item could be seperated with provided value.
+
+#### Changed
+* `SetConsoleTitleSeperator(string firstText, string secondText, string thirdText)` is now checking if parameter is provided and if so adds string seperator value.
+
 ### [1.0.0-beta.3]
 
 #### Added

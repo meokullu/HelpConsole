@@ -8,6 +8,8 @@ namespace HelpConsole
     /// </summary>
     public static partial class HelpConsole
     {
+        #region Melodies
+
         /// <summary>
         /// Melody whose played when <see cref="StartingMethod(string)"/> is called.
         /// </summary>
@@ -37,6 +39,8 @@ namespace HelpConsole
             // Sets default value with melody.
             _endMethodMelody = melody;
         }
+
+        #endregion Melodies
 
         /// <summary>
         /// Method starting with writing its name and beeping.
