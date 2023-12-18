@@ -5,7 +5,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <FileVersion>1.0.0</FileVersion>
     <AssemblyVersion>1.0.0</AssemblyVersion>
-    <Version>1.0.0-beta.4</Version>
+    <Version>1.0.0-rc</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -14,9 +14,12 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
-      v1.0.0-beta.4
-      * `SetConsoleTitleSeperator(string string)` method is added to set seperator between Console's title items.
-      * Fixed unintentional added " - " bug on title while not all parameters are used for `SetConsoleTitle()`
+      v1.0.0-rc
+      * `StartUp(string appName)` obsolote method is removed. Use `StartUp(ConsoleOption consoleOption)`.
+      * `FinishingUp()` obsolote method is removed. Use `FinishUp()` method.
+      * `ShowAvailableColors()` method is added.
+      * `SetScreenColors(ScreenColorOption screenColorOption)` is added.
+      * Renaming static variables to fix incorrect naming conventions.
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>

@@ -8,12 +8,12 @@ namespace HelpConsole
     public static partial class HelpConsole
     {
         // Console Option
-        internal static ConsoleOption _consoleOptions = new ConsoleOption();
+        internal static ConsoleOption s_consoleOptions = new ConsoleOption();
 
         /// <summary>
         /// Set and holds console options.
         /// </summary>
-        public static ConsoleOption ConsoleOptions { get => _consoleOptions; set => _consoleOptions = value; }
+        public static ConsoleOption ConsoleOptions { get => s_consoleOptions; set => s_consoleOptions = value; }
 
         /// <summary>
         /// Settings for console.
@@ -28,7 +28,7 @@ namespace HelpConsole
             /// <summary>
             /// Screen color option. It has foreground and background color individually.
             /// </summary>
-            public ScreenColorOption ScreenColorOption = _defaultScreenColorOption;
+            public ScreenColorOption ScreenColorOption = s_defaultScreenColorOption;
 
             /// <summary>
             /// Sets whether cursor is visible or not.
@@ -53,10 +53,10 @@ namespace HelpConsole
     public static partial class HelpConsole
     {
         // Start up beeping frequency and duration.
-        private static readonly Melody _startUpMelody = new Melody { Notes = new int[] { 850, 400, 0 } };
+        private static readonly Melody s_startUpMelody = new Melody { Notes = new int[] { 850, 400, 0 } };
 
         // Finish up beeping frequency and duration.
-        private static readonly Melody _finishUpMelody = new Melody { Notes = new int[] { 1250, 400, 0 } };
+        private static readonly Melody s_finishUpMelody = new Melody { Notes = new int[] { 1250, 400, 0 } };
 
         /// <summary>
         /// Starting up.
@@ -75,11 +75,8 @@ namespace HelpConsole
             // Set console title with default value.
             SetConsoleTitle(firstText: consoleOptions.AppName);
 
-            // Set console background color with default color value.
-            Console.BackgroundColor = consoleOptions.ScreenColorOption.BackgroundColor;
-
-            // Set console background color with default color value.
-            Console.ForegroundColor = consoleOptions.ScreenColorOption.ForegroundColor;
+            // Set console background and foreground colors with default value.
+            SetScreenColors(ScreenColorOptions);
 
             // Set cursor visible false on console.
             Console.CursorVisible = consoleOptions.CursorVisible;
@@ -88,7 +85,7 @@ namespace HelpConsole
             if (consoleOptions.WarningSound)
             {
                 // Beep sound.
-                Beep(_startUpMelody);
+                Beep(s_startUpMelody);
             }
         }
 
@@ -101,49 +98,25 @@ namespace HelpConsole
             // Setting console title.
             SetConsoleTitle("Done...");
 
-            // Giving a new line.
+            // Adding a new line.
             Console.WriteLine("");
 
             // Writing a end text.
             Console.WriteLine("Done...");
 
             // Beep sound.
-            if (_consoleOptions.WarningSound)
+            if (s_consoleOptions.WarningSound)
             {
                 // Beeping.
-                Beep(_finishUpMelody);
+                Beep(s_finishUpMelody);
             }
 
             // Checking if WaitOnEnd is true.
-            if (_consoleOptions.WaitOnEnd)
+            if (s_consoleOptions.WaitOnEnd)
             {
                 // Waiting for a key.
                 Console.ReadKey();
             }
-        }
-
-        /// <summary>
-        /// Starting up.
-        /// </summary>
-        /// <param name="appName">Application name</param>
-        [Obsolete("This method renamed as StartUp().")]
-        public static void StartUp(string appName)
-        {
-            // Temporary.
-            ConsoleOption consoleOption = new ConsoleOption { AppName = appName };
-
-            // Temporary.
-            StartUp(consoleOptions: consoleOption);
-        }
-
-        /// <summary>
-        /// Ending up.
-        /// </summary>
-        [Obsolete("This method renamed as FinishUp().")]
-        public static void FinishingUp()
-        {
-            // Temporary.
-            FinishUp();
         }
     }
 }
