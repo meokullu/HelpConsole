@@ -3,14 +3,14 @@
 namespace HelpConsole
 {
     public static partial class HelpConsole
-    {
+    {       
         // Screen Color Option.
-        internal static ScreenColorOption _defaultScreenColorOption = new ScreenColorOption(foregroundColor: ConsoleColor.Black, backgroundColor: ConsoleColor.White);
+        internal static ScreenColorOption s_defaultScreenColorOption = new ScreenColorOption(foregroundColor: ConsoleColor.Black, backgroundColor: ConsoleColor.White);
 
         /// <summary>
         /// Set and holds screen color options.
         /// </summary>
-        public static ScreenColorOption ScreenColorOptions { get => _defaultScreenColorOption; set => _defaultScreenColorOption = value; }
+        public static ScreenColorOption ScreenColorOptions { get => s_defaultScreenColorOption; set => s_defaultScreenColorOption = value; }
 
         /// <summary>
         /// Preset black for background, yellow for foreground.
@@ -59,6 +59,74 @@ namespace HelpConsole
 
                 // Foreground color.
                 BackgroundColor = backgroundColor;
+            }
+        }
+
+        /// <summary>
+        /// Sets console screen background and foreground colors. Foreground color specifies text color.
+        /// </summary>
+        /// <param name="screenColorOption">Pre-built or specified ScreenColorOption.</param>
+        public static void SetScreenColors(ScreenColorOption screenColorOption)
+        {
+            // Sets foreground color of console. Text color is foreground color.
+            Console.ForegroundColor = screenColorOption.ForegroundColor;
+
+            // Sets background color of console.
+            Console.BackgroundColor = screenColorOption.BackgroundColor;
+        }
+
+        /// <summary>
+        /// List available console color pairs provided by <see cref="System.ConsoleColor"/>.
+        /// </summary>
+        public static void ShowAvailableColors()
+        {
+            // Available console colors.
+            // Black
+            // DarkBlue
+            // DarkGreen
+            // DarkGreen
+            // DarkRed
+            // DarkMagenta
+            // DarkYellow
+            // Gray
+            // DarkGray
+            // Blue
+            // Green
+            // Cyan
+            // Red
+            // Magenta
+            // Yellow
+            // White
+
+            // Black background with all available foreground colors and light color background with black foreground provides better contrast.
+            // Dark color on background with its light version of foreground color provides less constrast but better privacy.
+            // Dark versions of light color on background provides smooth color pairs.
+
+            // Loop for background colors.
+            foreach (var backgroundColor in Enum.GetValues(typeof(ConsoleColor)))
+            {
+                // Loop for foreground color.
+                foreach (var foregroundColor in Enum.GetValues(typeof(ConsoleColor)))
+                {
+                    // Check if background and foreground colors are same. Since text color is equal to background color text will not be visible.
+                    if ((ConsoleColor)backgroundColor == (ConsoleColor)foregroundColor)
+                    {
+                        // Exiting the loop.
+                        continue;
+                    }
+
+                    // Created ScreenColorOption with color items on the loop.
+                    ScreenColorOption screenColorOption = new ScreenColorOption(foregroundColor: (ConsoleColor)foregroundColor, backgroundColor: (ConsoleColor)backgroundColor);
+
+                    // Calling SetScreenColors method.
+                    SetScreenColors(screenColorOption);
+
+                    // Writing current background and foreground colors to screen.
+                    Console.WriteLine($" BG: {Enum.GetName(typeof(ConsoleColor), foregroundColor)} FG: {Enum.GetName(typeof(ConsoleColor), backgroundColor)}");
+                }
+
+                // Adding a blank line to seperate background color options on listing.
+                Console.WriteLine("");
             }
         }
     }

@@ -13,7 +13,7 @@ namespace HelpConsole
         /// <summary>
         /// Melody whose played when <see cref="StartingMethod(string)"/> is called.
         /// </summary>
-        private static Melody _startMethodMelody = new Melody { Notes = new int[] { 725, 500, 0 } };
+        private static Melody s_startMethodMelody = new Melody { Notes = new int[] { 725, 500, 0 } };
 
         /// <summary>
         /// Sets melody that is played when <see cref="StartingMethod(string)"/> is called.
@@ -22,13 +22,13 @@ namespace HelpConsole
         public static void SetStartMethodMelody(Melody melody)
         {
             // Sets default value with melody.
-            _startMethodMelody = melody;
+            s_startMethodMelody = melody;
         }
 
         /// <summary>
         /// Melody whose played when <see cref="EndingMethod(string)"/> is called.
         /// </summary>
-        private static Melody _endMethodMelody = new Melody { Notes = new int[] { 525, 500, 0 } };
+        private static Melody s_endMethodMelody = new Melody { Notes = new int[] { 525, 500, 0 } };
 
         /// <summary>
         /// Sets melody that is played when <see cref="EndingMethod(string)"/> is called.
@@ -37,7 +37,7 @@ namespace HelpConsole
         public static void SetEndingMethodMelody(Melody melody)
         {
             // Sets default value with melody.
-            _endMethodMelody = melody;
+            s_endMethodMelody = melody;
         }
 
         #endregion Melodies
@@ -56,10 +56,10 @@ namespace HelpConsole
             Console.WriteLine($"{memberName} started...");
 
             // Checks if warning sound is active.
-            if (_consoleOptions.WarningSound)
+            if (s_consoleOptions.WarningSound)
             {
                 // Beep sounds
-                Beep(_startMethodMelody);
+                Beep(s_startMethodMelody);
             }
         }
 
@@ -77,10 +77,10 @@ namespace HelpConsole
             Console.WriteLine($"{memberName} ended...");
 
             // Checks if warning sound is active.
-            if (_consoleOptions.WarningSound)
+            if (s_consoleOptions.WarningSound)
             {
                 // Beep sounds.
-                Beep(_endMethodMelody);
+                Beep(s_endMethodMelody);
             }
         }
     }

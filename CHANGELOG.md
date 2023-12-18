@@ -1,5 +1,5 @@
 ## HelpConsole Changelog
-[![CalculateETA](https://img.shields.io/nuget/v/HelpConsole.svg)](https://www.nuget.org/packages/HelpConsole/)
+[![HelpConsole](https://img.shields.io/nuget/v/HelpConsole.svg)](https://www.nuget.org/packages/HelpConsole/)
 
 <!--
 ### [Unreleased]
@@ -10,6 +10,19 @@
 
 #### Removed
 -->
+
+### [1.0.0-rc]
+
+#### Added
+* `SetScreenColor(ScreenColorOption screenColorOption)` method is added. It sets console colors as method.
+* `ShowAvailableColors()` method is added. It list available color-pairs on screen.
+
+#### Changed
+* `StartUp(ConsoleOption consoleOption)` calls `SetScreenColor(ScreenColorOption screenColorOption)` instead of setting Console.BackgroundColor and Console.ForegroundColor individually.
+
+#### Removed
+* `StartUp(string appname)` deprecated method is removed. Use `StartUp(ConsoleOption consoleOption)`.
+* `FinishingUp()` deprecated method is removed. Use `FinishUp()`.
 
 ### [1.0.0-beta.4]
 
