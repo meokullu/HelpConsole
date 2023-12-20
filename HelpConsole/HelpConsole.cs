@@ -53,10 +53,10 @@ namespace HelpConsole
     public static partial class HelpConsole
     {
         // Start up beeping frequency and duration.
-        private static readonly Melody s_startUpMelody = new Melody { Notes = new int[] { 850, 400, 0 } };
+        private static readonly Melody s_startUpMelody = new Melody { Notes = new int[] { 440, 250, 25 , 660, 250, 25} };
 
         // Finish up beeping frequency and duration.
-        private static readonly Melody s_finishUpMelody = new Melody { Notes = new int[] { 1250, 400, 0 } };
+        private static readonly Melody s_finishUpMelody = new Melody { Notes = new int[] { 1250, 400, 25, 1000, 400, 25 } };
 
         /// <summary>
         /// Starting up.

@@ -5,7 +5,6 @@ HelpConsole is a project to offer useful methods which makes easier to use conso
 
 ![HelpConsole](https://repository-images.githubusercontent.com/686183747/05bcb609-213f-4743-986d-989622e87f8b)
 
-
 [Download on NuGet gallery](https://www.nuget.org/packages/HelpConsole/)
 
 ### Description

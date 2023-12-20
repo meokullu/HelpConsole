@@ -11,17 +11,17 @@ namespace HelpConsole
         /// <summary>
         /// Beep for warning.
         /// </summary>
-        public static Melody Warning = new Melody { Notes = new int[] { 250, 250, 0 } };
+        public static Melody Warning = new Melody { Notes = new int[] { 440, 250, 5, 440, 250, 50 } };
 
         /// <summary>
         /// Beep for welcome.
         /// </summary>
-        public static Melody Welcome = new Melody { Notes = new int[] { 2000, 400, 25, 1750, 400, 25, 1650, 400, 25 } };
+        public static Melody Welcome = new Melody { Notes = new int[] { 2000, 400, 25, 1750, 400, 25, 1500, 400, 25 } };
 
         /// <summary>
         /// Beep for success.
         /// </summary>
-        public static Melody Success = new Melody { Notes = new int[] { 750, 200, 100, 650, 250, 100, 850, 150, 65, 450, 450, 0 } };
+        public static Melody Success = new Melody { Notes = new int[] { 750, 200, 25, 650, 200, 25, 850, 200, 25, 450, 200, 25 } };
 
         /// <summary>
         /// Beep for beeping method. <see cref="SleepWithBeeping(int)"/>

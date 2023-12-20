@@ -11,6 +11,12 @@
 #### Removed
 -->
 
+### [1.0.0]
+Initial release.
+
+### Changed
+* `Welcome`, `Warning`, `Success`, melody in `StartUp()` and `FinishUp()` are replaced with new ones.
+
 ### [1.0.0-rc]
 
 #### Added
