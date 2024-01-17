@@ -11,10 +11,16 @@
 #### Removed
 -->
 
+### [1.1.0]
+
+#### Changed
+* `StartUp(ConsoleOption consoleOption)` method was using default `ScreenColorOption` instead of given value on `ConsoleOption`. This bug is fixed.
+* `StartingMethod()` and `EndingMethod()` had new line before writing either calling method name's starting or ending. This new line addings are removed on both methods.
+
 ### [1.0.0]
 Initial release.
 
-### Changed
+#### Changed
 * `Welcome`, `Warning`, `Success`, melody in `StartUp()` and `FinishUp()` are replaced with new ones.
 
 ### [1.0.0-rc]
