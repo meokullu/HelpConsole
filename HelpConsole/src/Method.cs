@@ -49,9 +49,6 @@ namespace HelpConsole
         //[SupportedOSPlatform("windows")]
         public static void StartingMethod([CallerMemberName] string memberName = "")
         {
-            // Skipping line.
-            Console.WriteLine("");
-
             // Writing the method's name.
             Console.WriteLine($"{memberName} started...");
 
@@ -70,9 +67,6 @@ namespace HelpConsole
         //[SupportedOSPlatform("windows")]
         public static void EndingMethod([CallerMemberName] string memberName = "")
         {
-            // Skipping line.
-            Console.WriteLine("");
-
             // Writing a method's name.
             Console.WriteLine($"{memberName} ended...");
 

@@ -76,7 +76,7 @@ namespace HelpConsole
             SetConsoleTitle(firstText: consoleOptions.AppName);
 
             // Set console background and foreground colors with default value.
-            SetScreenColors(ScreenColorOptions);
+            SetScreenColors(consoleOptions.ScreenColorOption);
 
             // Set cursor visible false on console.
             Console.CursorVisible = consoleOptions.CursorVisible;
