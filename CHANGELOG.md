@@ -11,6 +11,13 @@
 #### Removed
 -->
 
+### [1.1.1]
+
+#### Changed
+v1.1.1
+* Bux fixed while lsting color combinations names as background and foreground by `ShowAvailableColors()` under `ScreenColorOptions.cs`
+* Color issues are fixed while listing color combinations by `ShowAvailableColors()
+
 ### [1.1.0]
 
 #### Changed

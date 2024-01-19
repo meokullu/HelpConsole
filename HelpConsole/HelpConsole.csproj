@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0; net7.0; net461; netcoreapp3.1; netstandard2.0</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
-    <FileVersion>1.1.0</FileVersion>
-    <AssemblyVersion>1.1.0</AssemblyVersion>
-    <Version>1.1.0</Version>
+    <FileVersion>1.1.1</FileVersion>
+    <AssemblyVersion>1.1.1</AssemblyVersion>
+    <Version>1.1.1</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -14,9 +14,9 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
-      v1.1.0
-      * `StartUp(ConsoleOption consoleOption)` method was using default `ScreenColorOption` instead of given value on `ConsoleOption`. This bug is fixed.
-      * `StartingMethod()` and `EndingMethod()` had new line before writing either calling method name's starting or ending. This new line addings are removed on both methods.
+      v1.1.1
+      * Bux fixed while lsting color combinations names as background and foreground by `ShowAvailableColors()` under `ScreenColorOptions.cs`
+      * Color issues are fixed while listing color combinations by `ShowAvailableColors()`
 
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
