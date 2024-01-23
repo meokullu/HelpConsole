@@ -11,7 +11,55 @@
         /// <param name="item1">Dividend number.</param>
         /// <param name="item2">Dividor number.</param>
         /// <returns>String result.</returns>
+        public static string Percentage8F(ulong item1, ulong item2)
+        {
+            // Returning dividing with eight digit fractions.
+            return (item1 * 100 / (double)item2).ToString("0.00000000") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results with eight digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string Percentage8F(long item1, long item2)
+        {
+            // Returning dividing with eight digit fractions.
+            return (item1 * 100 / (double)item2).ToString("0.00000000") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results with eight digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string Percentage8F(uint item1, uint item2)
+        {
+            // Returning dividing with eight digit fractions.
+            return (item1 * 100 / (double)item2).ToString("0.00000000") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results with eight digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
         public static string Percentage8F(int item1, int item2)
+        {
+            // Returning dividing with eight digit fractions.
+            return (item1 * 100 / (double)item2).ToString("0.00000000") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results with eight digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string Percentage8F(float item1, float item2)
         {
             // Returning dividing with eight digit fractions.
             return (item1 * 100 / (double)item2).ToString("0.00000000") + "%";
@@ -66,63 +114,39 @@
         }
 
         /// <summary>
-        /// Divides first number to second. Shows results without digit fraction.
+        /// Divides first number to second. Shows results with two digit fraction.
         /// </summary>
         /// <param name="item1">Dividend number.</param>
         /// <param name="item2">Dividor number.</param>
         /// <returns>String result.</returns>
-        public static string PercentageNoFrac(int item1, int item2)
+        public static string Percentage2F(ulong item1, ulong item2)
         {
-            // Returning dividing with no fraction.
-            return (item1 * 100 / (double)item2).ToString("0") + "%";
+            // Returning dividing with eight digit fractions.
+            return (item1 * 100 / (double)item2).ToString("0.00") + "%";
         }
 
         /// <summary>
-        /// Divides first number to second. Shows results without digit fraction.
+        /// Divides first number to second. Shows results with two digit fraction.
         /// </summary>
         /// <param name="item1">Dividend number.</param>
         /// <param name="item2">Dividor number.</param>
         /// <returns>String result.</returns>
-        public static string PercentageNoFrac(double item1, double item2)
+        public static string Percentage2F(long item1, long item2)
         {
-            // Returning dividing with no fraction.
-            return (item1 * 100 / item2).ToString("0") + "%";
+            // Returning dividing with eight digit fractions.
+            return (item1 * 100 / (double)item2).ToString("0.00") + "%";
         }
 
         /// <summary>
-        /// Divides first number to second. Shows results without digit fraction.
+        /// Divides first number to second. Shows results with two digit fraction.
         /// </summary>
         /// <param name="item1">Dividend number.</param>
         /// <param name="item2">Dividor number.</param>
         /// <returns>String result.</returns>
-        public static string PercentageNoFrac(short item1, short item2)
+        public static string Percentage2F(uint item1, uint item2)
         {
-            // Returning dividing with no fraction.
-            return (item1 * 100 / (double)item2).ToString("0") + "%";
-        }
-
-        /// <summary>
-        /// Divides first number to second. Shows results without digit fraction.
-        /// </summary>
-        /// <param name="item1">Dividend number.</param>
-        /// <param name="item2">Dividor number.</param>
-        /// <returns>String result.</returns>
-        public static string PercentageNoFrac(byte item1, byte item2)
-        {
-            // Returning dividing with no fraction.
-            return (item1 * 100 / (double)item2).ToString("0") + "%";
-        }
-
-        /// <summary>
-        /// Divides first number to second. Shows results without digit fraction.
-        /// </summary>
-        /// <param name="item1">Dividend number.</param>
-        /// <param name="item2">Dividor number.</param>
-        /// <returns>String result.</returns>
-        public static string PercentageNoFrac(sbyte item1, byte item2)
-        {
-            // Returning dividing with no fraction.
-            return (item1 * 100 / (double)item2).ToString("0") + "%";
+            // Returning dividing with eight digit fractions.
+            return (item1 * 100 / (double)item2).ToString("0.00") + "%";
         }
 
         /// <summary>
@@ -144,6 +168,18 @@
         /// <param name="item2">Dividor number.</param>
         /// <returns>String result.</returns>
         public static string Percentage2F(double item1, double item2)
+        {
+            // Returning dividing with two digits fractions.
+            return (item1 * 100 / (double)item2).ToString("0.00") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results with two digits fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string Percentage2F(float item1, float item2)
         {
             // Returning dividing with two digits fractions.
             return (item1 * 100 / (double)item2).ToString("0.00") + "%";
@@ -183,6 +219,114 @@
         {
             // Returning dividing with two digits fractions.
             return (item1 * 100 / (double)item2).ToString("0.00") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results without digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string PercentageNoFrac(ulong item1, ulong item2)
+        {
+            // Returning dividing with no fraction.
+            return (item1 * 100 / (double)item2).ToString("0") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results without digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string PercentageNoFrac(long item1, long item2)
+        {
+            // Returning dividing with no fraction.
+            return (item1 * 100 / (double)item2).ToString("0") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results without digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string PercentageNoFrac(uint item1, uint item2)
+        {
+            // Returning dividing with no fraction.
+            return (item1 * 100 / (double)item2).ToString("0") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results without digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string PercentageNoFrac(int item1, int item2)
+        {
+            // Returning dividing with no fraction.
+            return (item1 * 100 / (double)item2).ToString("0") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results without digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string PercentageNoFrac(double item1, double item2)
+        {
+            // Returning dividing with no fraction.
+            return (item1 * 100 / item2).ToString("0") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results without digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string PercentageNoFrac(float item1, float item2)
+        {
+            // Returning dividing with no fraction.
+            return (item1 * 100 / (double)item2).ToString("0") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results without digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string PercentageNoFrac(short item1, short item2)
+        {
+            // Returning dividing with no fraction.
+            return (item1 * 100 / (double)item2).ToString("0") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results without digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string PercentageNoFrac(byte item1, byte item2)
+        {
+            // Returning dividing with no fraction.
+            return (item1 * 100 / (double)item2).ToString("0") + "%";
+        }
+
+        /// <summary>
+        /// Divides first number to second. Shows results without digit fraction.
+        /// </summary>
+        /// <param name="item1">Dividend number.</param>
+        /// <param name="item2">Dividor number.</param>
+        /// <returns>String result.</returns>
+        public static string PercentageNoFrac(sbyte item1, byte item2)
+        {
+            // Returning dividing with no fraction.
+            return (item1 * 100 / (double)item2).ToString("0") + "%";
         }
     }
 }

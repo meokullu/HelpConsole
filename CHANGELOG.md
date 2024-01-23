@@ -11,6 +11,11 @@
 #### Removed
 -->
 
+### [1.2.0]
+
+#### Added
+* `ulong`, `long`, `uint` and `float` data types are now supported individually by `Perentage8F()`, `Percentage2F()` and `PercentageNoFrac()` under `Math.cs`
+
 ### [1.1.0]
 
 #### Changed
