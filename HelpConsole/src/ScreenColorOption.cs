@@ -103,8 +103,8 @@ namespace HelpConsole
             // Dark versions of light color on background provides smooth color pairs.
 
             // Gets default color values of screen.
-            ConsoleColor defaultBackgroundConsoleColor = Console.BackgroundColor;
-            ConsoleColor defaultForegroundConsoleColor = Console.ForegroundColor;
+            ConsoleColor currentBackgroundConsoleColor = Console.BackgroundColor;
+            ConsoleColor currentForegroundConsoleColor = Console.ForegroundColor;
 
             // Loop for background colors.
             foreach (ConsoleColor backgroundColor in Enum.GetValues(typeof(ConsoleColor)))
@@ -128,7 +128,7 @@ namespace HelpConsole
                     // Writing current background and foreground colors to screen.
                     Console.Write($" BG: {Enum.GetName(typeof(ConsoleColor), backgroundColor)} FG: {Enum.GetName(typeof(ConsoleColor), foregroundColor)}");
 
-                    SetScreenColors(new ScreenColorOption(foregroundColor: defaultForegroundConsoleColor, backgroundColor: defaultBackgroundConsoleColor));
+                    SetScreenColors(new ScreenColorOption(foregroundColor: currentForegroundConsoleColor, backgroundColor: currentBackgroundConsoleColor));
 
                     // Adding a blank line to seperate background color options on listing.
                     Console.WriteLine("");

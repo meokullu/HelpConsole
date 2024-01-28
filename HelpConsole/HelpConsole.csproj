@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0; net7.0; net461; netcoreapp3.1; netstandard2.0</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
-    <FileVersion>1.1.1</FileVersion>
-    <AssemblyVersion>1.1.1</AssemblyVersion>
-    <Version>1.1.1</Version>
+    <FileVersion>1.2.0</FileVersion>
+    <AssemblyVersion>1.2.0</AssemblyVersion>
+    <Version>1.2.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -14,9 +14,11 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
-      v1.1.1
-      * Bux fixed while lsting color combinations names as background and foreground by `ShowAvailableColors()` under `ScreenColorOptions.cs`
-      * Color issues are fixed while listing color combinations by `ShowAvailableColors()`
+      v1.2.0
+      * Write&lt;T&gt;(T value, ConsoleColor color) method added.
+      * Write&lt;T&gt;(List&lt;T&gt;valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor) method added.
+      * WriteLine&lt;T&gt;(T value, ConsoleColor color) method added.
+      * WriteLine&lt;T&gt;(List&lt;T&gt; valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor) method added.
 
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
