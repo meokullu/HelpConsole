@@ -11,6 +11,14 @@
 #### Removed
 -->
 
+### [1.2.0]
+
+#### Added
+* `Write<T>(T value, ConsoleColor color)` method added.
+* `Write<T>(List<T> valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor)` method added.
+* `WriteLine<T>(T value, ConsoleColor color)` method added.
+* `WriteLine<T>(List<T> valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor)` method added.
+
 ### [1.1.1]
 
 #### Changed

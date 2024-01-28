@@ -27,6 +27,12 @@ SetConsoleTitle(string firstText = "", string secondText = "", string thirdText 
 ```
 ClearConsoleTitle()
 ```
+```
+Write<T>(T value, ConsoleColor color);
+```
+```
+Write<T>(List<T> valueList, T expectedValue, ConsoleColor valueCcolor, ConsoleColor expectedColor);
+```
 #### Sleeping & Beeping
 ```
 Beep(Melody melody)
