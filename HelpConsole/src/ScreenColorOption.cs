@@ -3,9 +3,9 @@
 namespace HelpConsole
 {
     public static partial class HelpConsole
-    {       
+    {
         // Screen Color Option.
-        internal static ScreenColorOption s_defaultScreenColorOption = new ScreenColorOption(foregroundColor: ConsoleColor.Black, backgroundColor: ConsoleColor.White);
+        internal static ScreenColorOption s_defaultScreenColorOption;
 
         /// <summary>
         /// Set and holds screen color options.
@@ -73,6 +73,12 @@ namespace HelpConsole
 
             // Sets background color of console.
             Console.BackgroundColor = screenColorOption.BackgroundColor;
+
+            // Sets values to use later.
+            ScreenColorOptions.ForegroundColor = screenColorOption.ForegroundColor;
+
+            // Sets values to use later.
+            ScreenColorOptions.BackgroundColor = screenColorOption.BackgroundColor;
         }
 
         /// <summary>
@@ -131,11 +137,11 @@ namespace HelpConsole
                     SetScreenColors(new ScreenColorOption(foregroundColor: currentForegroundConsoleColor, backgroundColor: currentBackgroundConsoleColor));
 
                     // Adding a blank line to seperate background color options on listing.
-                    Console.WriteLine("");
+                    WriteLine("");
                 }
 
                 // Adding a blank line to seperate background color options on listing.
-                Console.WriteLine("");
+                WriteLine("");
             }
         }
     }

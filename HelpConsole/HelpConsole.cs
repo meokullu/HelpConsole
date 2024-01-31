@@ -8,7 +8,7 @@ namespace HelpConsole
     public static partial class HelpConsole
     {
         // Console Option
-        internal static ConsoleOption s_consoleOptions = new ConsoleOption();
+        internal static ConsoleOption s_consoleOptions;
 
         /// <summary>
         /// Set and holds console options.
@@ -75,8 +75,14 @@ namespace HelpConsole
             // Set console title with default value.
             SetConsoleTitle(firstText: consoleOptions.AppName);
 
+            // Set given ScreenColorOptions to use it later.
+            ScreenColorOptions = new ScreenColorOption(foregroundColor: consoleOptions.ScreenColorOption.ForegroundColor, backgroundColor: consoleOptions.ScreenColorOption.BackgroundColor);
+
             // Set console background and foreground colors with default value.
             SetScreenColors(consoleOptions.ScreenColorOption);
+
+            // Set given ConsoleOptions to use it later.
+            ConsoleOptions = consoleOptions;
 
             // Set cursor visible false on console.
             Console.CursorVisible = consoleOptions.CursorVisible;
