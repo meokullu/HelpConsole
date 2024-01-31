@@ -11,6 +11,19 @@
 #### Removed
 -->
 
+### [1.3.0]
+#### Added
+* `StartingMethod(ConsoleColor consoleColor, [CallerName] string memberName = "")` method is added. Now `StartingMethod()` writes method's start with colorful text.
+* `EndingMethod(ConsoleColor consoleColor, [CallerName] string memberName = "")` method is added. Now `EndingMethod()` writes method's end with colorful text.
+* `Black`, `DarkBlue`,`DarkGreen`, `DarkDyan`, `DarkRed`, `DarkMagenta`, `DarkYellow`, `Gray`, `DarkGray`, `Blue`, `Green`, `Cyan`, `Red`, `Magenta`, `Yellow` and `White` are added as `ConsoleColor` to use them easily on `Write<T>()` and `WriteLine<T>()`.
+
+### Changed
+* `ScreenColorOptions` was not holding color-pair, now it is fixed.
+* When `SetScreenColor(ConsoleColor foregroundColor, ConsoleColor backgroundColor)` called, now it also sets `ScreenColorOptions` which holds preset values.
+* `ConsoleOptions` was not holding options, now it is fixed.
+* When `StartUp(ConsoleOption consoleOption)` called, now it also sets `ConsoleOptions` which holds preset option values.
+* When `StartUp(ConsoleOption consoleOption)` called, now it also sets `ScreenColorOption` which holds preset color-pair values with given `ScreenColorOption` on `consoleOptions`.
+
 ### [1.2.0]
 
 #### Added

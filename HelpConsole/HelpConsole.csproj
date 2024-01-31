@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0; net7.0; net461; netcoreapp3.1; netstandard2.0</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
-    <FileVersion>1.2.0</FileVersion>
-    <AssemblyVersion>1.2.0</AssemblyVersion>
-    <Version>1.2.0</Version>
+    <FileVersion>1.3.0</FileVersion>
+    <AssemblyVersion>1.3.0</AssemblyVersion>
+    <Version>1.3.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -14,11 +14,16 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
-      v1.2.0
-      * Write&lt;T&gt;(T value, ConsoleColor color) method added.
-      * Write&lt;T&gt;(List&lt;T&gt;valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor) method added.
-      * WriteLine&lt;T&gt;(T value, ConsoleColor color) method added.
-      * WriteLine&lt;T&gt;(List&lt;T&gt; valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor) method added.
+      v1.3.0
+      * `StartingMethod(ConsoleColor consoleColor, [CallerName] string memberName = "")` method is added. Now `StartingMethod()` writes method's start with colorful text.
+      * `EndingMethod(ConsoleColor consoleColor, [CallerName] string memberName = "")` method is added. Now `EndingMethod()` writes method's end with colorful text.
+      * `Black`, `DarkBlue`,`DarkGreen`, `DarkDyan`, `DarkRed`, `DarkMagenta`, `DarkYellow`, `Gray`, `DarkGray`, `Blue`, `Green`, `Cyan`, `Red`, `Magenta`, `Yellow` and `White` are added as `ConsoleColor` to use them easily on `Write&gt;T&gt;
+        ()` and `WriteLine&lt;T&gt;()`.
+      * `ScreenColorOptions` was not holding color-pair, now it is fixed.
+      * When `SetScreenColor(ConsoleColor foregroundColor, ConsoleColor backgroundColor)` called, now it also sets `ScreenColorOptions` which holds preset values.
+      * `ConsoleOptions` was not holding options, now it is fixed.
+      * When `StartUp(ConsoleOption consoleOption)` called, now it also sets `ConsoleOptions` which holds preset option values.
+      * When `StartUp(ConsoleOption consoleOption)` called, now it also sets `ScreenColorOption` which holds preset color-pair values with given `ScreenColorOption` on `consoleOptions`.
 
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>

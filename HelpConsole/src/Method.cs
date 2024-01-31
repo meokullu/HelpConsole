@@ -50,7 +50,25 @@ namespace HelpConsole
         public static void StartingMethod([CallerMemberName] string memberName = "")
         {
             // Writing the method's name.
-            Console.WriteLine($"{memberName} started...");
+            WriteLine($"{memberName} started...");
+
+            // Checks if warning sound is active.
+            if (s_consoleOptions.WarningSound)
+            {
+                // Beep sounds
+                Beep(s_startMethodMelody);
+            }
+        }
+
+        /// <summary>
+        /// Method ending with writing its name with given color and beeping.
+        /// </summary>
+        /// <param name="consoleColor">Color to write method name.</param>
+        /// <param name="memberName">Catches method's name.</param>
+        public static void StartingMethod(ConsoleColor consoleColor, [CallerMemberName] string memberName = "")
+        {
+            // Writing the method's name with given color.
+            WriteLine($"{memberName} started...", color: consoleColor);
 
             // Checks if warning sound is active.
             if (s_consoleOptions.WarningSound)
@@ -68,7 +86,25 @@ namespace HelpConsole
         public static void EndingMethod([CallerMemberName] string memberName = "")
         {
             // Writing a method's name.
-            Console.WriteLine($"{memberName} ended...");
+            WriteLine($"{memberName} ended...");
+
+            // Checks if warning sound is active.
+            if (s_consoleOptions.WarningSound)
+            {
+                // Beep sounds.
+                Beep(s_endMethodMelody);
+            }
+        }
+
+        /// <summary>
+        /// Method ending with writing its name with given color and beeping.
+        /// </summary>
+        /// <param name="consoleColor">Color to write method name.</param>
+        /// <param name="memberName">Catches method's name.</param>
+        public static void EndingMethod(ConsoleColor consoleColor, [CallerMemberName] string memberName = "")
+        {
+            // Writing a method's name.
+            WriteLine($"{memberName} ended...", color: consoleColor);
 
             // Checks if warning sound is active.
             if (s_consoleOptions.WarningSound)
