@@ -15,6 +15,7 @@
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
       v1.4.0
+      New featuress added. `Melody` can be provided to write value, indicate differences, and starting and ending method.
       
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
