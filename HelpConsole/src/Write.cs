@@ -372,7 +372,22 @@ namespace HelpConsole
         }
 
         /// <summary>
-        /// Writes value into screen via <see cref="Console.Write(object)"/> with specified exoectedColor when value is expectedValue, otherwise writes with valueColor.
+        /// Writes value into screen via <see cref="Console.Write(object)"/> with specified <see cref="Melody"/>.
+        /// </summary>
+        /// <typeparam name="T">Generic type of data.</typeparam>
+        /// <param name="value">Value to write.</param>
+        /// <param name="melody">A melody whose to be played.</param>
+        public static void Write<T>(T value, Melody melody)
+        {
+            // Calling Console.Write(object value).
+            Write(value: value);
+
+            // Beep sounds.
+            Beep(melody: melody);
+        }
+
+        /// <summary>
+        /// Writes value into screen via <see cref="Write{T}(T, ConsoleColor)"/> with specified exoectedColor when value is expectedValue, otherwise writes with valueColor.
         /// </summary>
         /// <typeparam name="T">Generic type of data.</typeparam>
         /// <param name="valueList">Value array.</param>
@@ -381,31 +396,52 @@ namespace HelpConsole
         /// <param name="expectedColor">Text color for elements of array when it is expected value.</param>
         public static void Write<T>(List<T> valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor)
         {
-            // Temporary data for previous color settings.
-            ConsoleColor consoleBGColor = Console.BackgroundColor;
-            ConsoleColor consoleFGColor = Console.ForegroundColor;
-
             // Iteration for all elements of the array.
             for (int i = 0; i < valueList.Count; i++)
             {
                 // Comparasion expectedValue on current iteration of array.
                 if (valueList[i].Equals(expectedValue) == false)
                 {
-                    // Set screen color to specified color. foregroundColor is color for text color when values are same on the list.
-                    SetScreenColors(new ScreenColorOption(foregroundColor: valueColor, backgroundColor: consoleBGColor));
+                    // Calling Write(T value, ConsoleColor color).
+                    Write(value: valueList[i], color: valueColor);
                 }
                 else
                 {
-                    // Set screen color to specified color. foregroundColor is color for text color when values are expected value on the list.
-                    SetScreenColors(new ScreenColorOption(foregroundColor: expectedColor, backgroundColor: consoleBGColor));
+                    // Calling Write(T value, ConsoleColor color).
+                    Write(value: valueList[i], color: expectedColor);
                 }
-
-                // Calling Console.Write(object value).
-                Write(value: valueList[i]);
             }
+        }
 
-            // Set screen colors back to previous setting.
-            SetScreenColors(new ScreenColorOption(foregroundColor: consoleFGColor, backgroundColor: consoleBGColor));
+        /// <summary>
+        /// Writes value into screen via <see cref="Console.Write(object)"/> with specified text color as ConsoleColor and beeping specified melody.
+        /// </summary>
+        /// <typeparam name="T">Generic type of data.</typeparam>
+        /// <param name="valueList">Value array.</param>
+        /// <param name="expectedValue">Value to specify text color.</param>
+        /// <param name="melody">A melody whose to be played.</param>
+        /// <param name="valueColor">Text color for elements of array when it is not expected value.</param>
+        /// <param name="expectedColor">Text color for elements of array when it is expected value.</param>
+        public static void Write<T>(List<T> valueList, T expectedValue, Melody melody, ConsoleColor valueColor, ConsoleColor expectedColor)
+        {
+            // Iteration for all elements of the array.
+            for (int i = 0; i < valueList.Count; i++)
+            {
+                // Comparasion expectedValue on current iteration of array.
+                if (valueList[i].Equals(expectedValue) == false)
+                {
+                    // Calling Write(T value, ConsoleColor color).
+                    Write<T>(value: valueList[i], color: valueColor);
+                }
+                else
+                {
+                    // Calling Write(T value, ConsoleColor color).
+                    Write<T>(value: valueList[i], color: expectedColor);
+
+                    // Beep sounds. 
+                    Beep(melody: melody);
+                }
+            }
         }
 
         /// <summary>
@@ -431,6 +467,21 @@ namespace HelpConsole
         }
 
         /// <summary>
+        /// Writes value into screen via <see cref="Console.Write(object)"/> with specified <see cref="Melody"/>.
+        /// </summary>
+        /// <typeparam name="T">Generic type of data.</typeparam>
+        /// <param name="value">Value to write.</param>
+        /// <param name="melody">A melody whose to be played.</param>
+        public static void WriteLine<T>(T value, Melody melody)
+        {
+            // Calling Console.Write(object value).
+            WriteLine(value: value);
+
+            //Beep sounds.
+            Beep(melody: melody);
+        }
+
+        /// <summary>
         ///  Writes value into screen via <see cref="Console.WriteLine(object)"/> with specified exoectedColor when value is expectedValue, otherwise writes with valueColor.
         /// </summary>
         /// <typeparam name="T">Generic type of data.</typeparam>
@@ -440,9 +491,6 @@ namespace HelpConsole
         /// <param name="expectedColor">Text color for elements of array when it is expected value.</param>
         public static void WriteLine<T>(List<T> valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor)
         {
-            // Temporary data for previous color settings.
-            ConsoleColor consoleBGColor = Console.BackgroundColor;
-            ConsoleColor consoleFGColor = Console.ForegroundColor;
 
             // Iteration for all elements of the array.
             for (int i = 0; i < valueList.Count; i++)
@@ -450,21 +498,47 @@ namespace HelpConsole
                 // Comparasion expectedValue on current iteration of array.
                 if (valueList[i].Equals(expectedValue) == false)
                 {
-                    // Set screen color to specified color. foregroundColor is color for text color when values are same on the list.
-                    SetScreenColors(new ScreenColorOption(foregroundColor: valueColor, backgroundColor: consoleBGColor));
+                    // Calling Console.WriteLine(object value)
+                    WriteLine(value: valueList[i], color: valueColor);
+                   
                 }
                 else
                 {
-                    // Set screen color to specified color. foregroundColor is color for text color when values are expected value on the list.
-                    SetScreenColors(new ScreenColorOption(foregroundColor: expectedColor, backgroundColor: consoleBGColor));
+                    // Calling Console.WriteLine(object value)
+                    WriteLine(value: valueList[i], color: expectedColor);                   
                 }
-
-                // Calling Console.WriteLine(object value)
-                WriteLine(value: valueList[i]);
             }
+        }
 
-            // Set screen colors back to previous setting.
-            SetScreenColors(new ScreenColorOption(foregroundColor: consoleFGColor, backgroundColor: consoleBGColor));
+        /// <summary>
+        /// Writes value into screen via <see cref="Console.WriteLine(object)"/> with specified text color as ConsoleColor and beeping specified melody.
+        /// </summary>
+        /// <typeparam name="T">Generic type of data.</typeparam>
+        /// <param name="valueList">Value array.</param>
+        /// <param name="expectedValue">Value to specify text color.</param>
+        /// <param name="melody">A melody whose to be played.</param>
+        /// <param name="valueColor">Text color for elements of array when it is not expected value.</param>
+        /// <param name="expectedColor">Text color for elements of array when it is expected value.</param>
+        public static void WriteLine<T>(List<T> valueList, T expectedValue, Melody melody, ConsoleColor valueColor, ConsoleColor expectedColor)
+        {
+            // Iteration for all elements of the array.
+            for (int i = 0; i < valueList.Count; i++)
+            {
+                // Comparasion expectedValue on current iteration of array.
+                if (valueList[i].Equals(expectedValue) == false)
+                {
+                    // Calling Console.WriteLine(object value)
+                    WriteLine(valueList[i], color: valueColor);
+                }
+                else
+                {
+                    // Calling Console.WriteLine(object value)
+                    WriteLine(valueList[i], color: expectedColor);
+
+                    // Beep sonuds.
+                    Beep(melody: melody);
+                }
+            }
         }
     }
 }

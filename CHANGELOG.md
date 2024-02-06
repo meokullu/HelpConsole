@@ -11,13 +11,25 @@
 #### Removed
 -->
 
+### [1.4.0]
+
+#### Added
+* `StartingMethod(Melody melody, [CallerMemberName] string memberName = "")`
+* `StartingMethod(ConsoleColor color, Melody melody, [CallerMemberName] string memberName = "")`
+* `EndingMethod(Melody melody, [CallerMemberName] string memberName = "")`
+* `EndingMethod(ConsoleColor color, Melody melody, [CallerMemberName] string memberName = "")`
+* `Write<T>(T value, Melody melody)`
+* `Write<T>(List<T> valueList, T expectedValue, Melody melody, ConsoleColor valueColor, ConsoleColor expecetedColor)`
+* `WriteLine<T>(T value, Melody melody)`
+* `WriteLine<T>(List<T> valueList, T expectedValue, Melody melody, ConsoleColor valueColor, ConsoleColor expectedColor)`
+
 ### [1.3.0]
 #### Added
 * `StartingMethod(ConsoleColor consoleColor, [CallerName] string memberName = "")` method is added. Now `StartingMethod()` writes method's start with colorful text.
 * `EndingMethod(ConsoleColor consoleColor, [CallerName] string memberName = "")` method is added. Now `EndingMethod()` writes method's end with colorful text.
 * `Black`, `DarkBlue`,`DarkGreen`, `DarkDyan`, `DarkRed`, `DarkMagenta`, `DarkYellow`, `Gray`, `DarkGray`, `Blue`, `Green`, `Cyan`, `Red`, `Magenta`, `Yellow` and `White` are added as `ConsoleColor` to use them easily on `Write<T>()` and `WriteLine<T>()`.
 
-### Changed
+#### Changed
 * `ScreenColorOptions` was not holding color-pair, now it is fixed.
 * When `SetScreenColor(ConsoleColor foregroundColor, ConsoleColor backgroundColor)` called, now it also sets `ScreenColorOptions` which holds preset values.
 * `ConsoleOptions` was not holding options, now it is fixed.

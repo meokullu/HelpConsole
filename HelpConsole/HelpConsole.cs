@@ -105,10 +105,10 @@ namespace HelpConsole
             SetConsoleTitle("Done...");
 
             // Adding a new line.
-            Console.WriteLine("");
+            WriteLine("");
 
             // Writing a end text.
-            Console.WriteLine("Done...");
+            WriteLine("Done...");
 
             // Beep sound.
             if (s_consoleOptions.WarningSound)

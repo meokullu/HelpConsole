@@ -79,6 +79,43 @@ namespace HelpConsole
         }
 
         /// <summary>
+        /// Method starting with writing its name with beeping given melody.
+        /// </summary>
+        /// <param name="melody">A melody whose to be played.</param>
+        /// <param name="memberName">Catches method's name.</param>
+        public static void StartingMethod(Melody melody, [CallerMemberName] string memberName = "")
+        {
+            // Writing the method's name with given color.
+            WriteLine($"{memberName} started...");
+
+            // Checks if warning sound is active.
+            if (s_consoleOptions.WarningSound)
+            {
+                // Beep sounds
+                Beep(melody: melody);
+            }
+        }
+
+        /// <summary>
+        /// Method ending with writing its name with given color and beeping given melody.
+        /// </summary>
+        /// <param name="consoleColor">Color to write method name.</param>
+        /// <param name="melody">A melody whose to be played.</param>
+        /// <param name="memberName">Catches method's name.</param>
+        public static void StartingMethod(ConsoleColor consoleColor, Melody melody, [CallerMemberName] string memberName = "")
+        {
+            // Writing the method's name with given color.
+            WriteLine($"{memberName} started...", color: consoleColor);
+
+            // Checks if warning sound is active.
+            if (s_consoleOptions.WarningSound)
+            {
+                // Beep sounds
+                Beep(melody: melody);
+            }
+        }
+
+        /// <summary>
         /// Method ending with writing its name and beeping.
         /// </summary>
         /// <param name="memberName">Catches method's name.</param>
@@ -111,6 +148,43 @@ namespace HelpConsole
             {
                 // Beep sounds.
                 Beep(s_endMethodMelody);
+            }
+        }
+
+        /// <summary>
+        /// Method ending with writing its name with beeping given melody.
+        /// </summary>
+        /// <param name="melody">A melody whose to be played.</param>
+        /// <param name="memberName">Catches method's name.</param>
+        public static void EndingMethod(Melody melody, [CallerMemberName] string memberName = "")
+        {
+            // Writing a method's name.
+            WriteLine($"{memberName} ended...");
+
+            // Checks if warning sound is active.
+            if (s_consoleOptions.WarningSound)
+            {
+                // Beep sounds
+                Beep(melody: melody);
+            }
+        }
+
+        /// <summary>
+        /// Method ending with writing its name with beeping given melody.
+        /// </summary>
+        /// <param name="consoleColor"></param>
+        /// <param name="melody">A melody whose to be played.</param>
+        /// <param name="memberName">Catches method's name.</param>
+        public static void EndingMethod(ConsoleColor consoleColor, Melody melody, [CallerMemberName] string memberName = "")
+        {
+            // Writing a method's name.
+            WriteLine($"{memberName} ended...", color: consoleColor);
+
+            // Checks if warning sound is active.
+            if (s_consoleOptions.WarningSound)
+            {
+                // Beep sounds.
+                Beep(melody: melody);
             }
         }
     }
