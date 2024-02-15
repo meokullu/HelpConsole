@@ -6,7 +6,7 @@ namespace HelpConsole
     /// <summary>
     /// Methods helpers.
     /// </summary>
-    public static partial class HelpConsole
+    public partial class HelpConsole
     {
         #region Melodies
 

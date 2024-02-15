@@ -5,7 +5,7 @@ namespace HelpConsole
     /// <summary>
     /// 
     /// </summary>
-    public static partial class HelpConsole
+    public partial class HelpConsole
     {
         // Console Option
         internal static ConsoleOption s_consoleOptions;
@@ -50,10 +50,10 @@ namespace HelpConsole
     /// <summary>
     /// 
     /// </summary>
-    public static partial class HelpConsole
+    public partial class HelpConsole
     {
         // Start up beeping frequency and duration.
-        private static readonly Melody s_startUpMelody = new Melody { Notes = new int[] { 440, 250, 25 , 660, 250, 25} };
+        private static readonly Melody s_startUpMelody = new Melody { Notes = new int[] { 440, 250, 25, 660, 250, 25 } };
 
         // Finish up beeping frequency and duration.
         private static readonly Melody s_finishUpMelody = new Melody { Notes = new int[] { 1250, 400, 25, 1000, 400, 25 } };
@@ -69,7 +69,7 @@ namespace HelpConsole
             if (consoleOptions == null)
             {
                 // Sets parameter variable with default constructor.
-                consoleOptions = new ConsoleOption();
+                consoleOptions = new ConsoleOption { AppName = "HelpConsole", ScreenColorOption = new ScreenColorOption(foregroundColor: White, backgroundColor: Black), CursorVisible = false, WarningSound = false, WaitOnEnd = true};
             }
 
             // Set console title with default value.

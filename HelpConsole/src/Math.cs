@@ -3,7 +3,7 @@
     /// <summary>
     /// Percentage helpers.
     /// </summary>
-    public static partial class HelpConsole
+    public partial class HelpConsole
     {
         /// <summary>
         /// Divides first number to second. Shows results with eight digit fraction.

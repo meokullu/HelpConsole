@@ -349,6 +349,8 @@ namespace HelpConsole
 
         #endregion WriteLine
 
+        #region Write<T>
+
         /// <summary>
         /// Writes value into screen via <see cref="Console.Write(object)"/> with specified text color as ConsoleColor.
         /// </summary>
@@ -384,6 +386,22 @@ namespace HelpConsole
 
             // Beep sounds.
             Beep(melody: melody);
+        }
+
+        /// <summary>
+        /// Writes value into screen via <see cref="Console.Write(object)"/> with specified text color as ConsoleColor and beep specified <see cref="Melody"/>.
+        /// </summary>
+        /// <typeparam name="T">Generic type of data.</typeparam>
+        /// <param name="value">Value to write.</param>
+        /// <param name="color">Text color.</param>
+        /// <param name="melody">A melody whose to be played.</param>
+        public static void Write<T>(T value, ConsoleColor color, Melody melody)
+        {
+            // Calls Writte(T value, ConsoleColor color)
+            Write(value: value, color: color);
+
+            // Beep sounds.
+            Beep(melody);
         }
 
         /// <summary>
@@ -444,6 +462,10 @@ namespace HelpConsole
             }
         }
 
+        #endregion Write<T>
+
+        #region WriteLine<T>
+
         /// <summary>
         /// Writes value into screen via <see cref="Console.WriteLine(object)"/> with specified text color as ConsoleColor.
         /// </summary>
@@ -479,6 +501,22 @@ namespace HelpConsole
 
             //Beep sounds.
             Beep(melody: melody);
+        }
+
+        /// <summary>
+        /// Writes value into screen via <see cref="Console.WriteLine(object)"/> with specified text color as ConsoleColor and beep specified <see cref="Melody"/>.
+        /// </summary>
+        /// <typeparam name="T">Generic type of data.</typeparam>
+        /// <param name="value">Value to write.</param>
+        /// <param name="color">Text color.</param>
+        /// <param name="melody">A melody whose to be played.</param>
+        public static void WriteLine<T>(T value, ConsoleColor color, Melody melody)
+        {
+            // Calls Writte(T value, ConsoleColor color)
+            WriteLine(value: value, color: color);
+
+            // Beep sounds.
+            Beep(melody);
         }
 
         /// <summary>
@@ -540,5 +578,7 @@ namespace HelpConsole
                 }
             }
         }
+
+        #endregion WriteLine<T>
     }
 }

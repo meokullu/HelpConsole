@@ -2,7 +2,7 @@
 
 namespace HelpConsole
 {
-    public static partial class HelpConsole
+    public partial class HelpConsole
     {
         // Screen Color Option.
         internal static ScreenColorOption s_defaultScreenColorOption;
