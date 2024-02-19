@@ -21,7 +21,7 @@
 * `StartUp()` was throwing an error when consoleOption is not provided as value. When value is not provided, it creates ConsoleOption but `ScreenColorOption` was not set any value. Now it has its default value when value is not provided into `StartUp()`
 #### Changed
 
-* * `Beep(Melody melody)` was writing simple "error on notes" when frequency-beeping duration-waiting duration pair has argument range error. Now it checks frequency's range (32-32767) and beeping/duration positivity individually. It writes specified index/indexes on screen.
+* `Beep(Melody melody)` was writing simple "error on notes" when frequency-beeping duration-waiting duration pair has argument range error. Now it checks frequency's range (32-32767) and beeping/duration positivity individually. It writes specified index/indexes on screen.
 * Variable naming is fixed under `Title.cs`
 * `Beep.cs`, `Math.cs`, `Method.cs`, `ScreenColorOption.cs` and `Title.cs` are not longer static classes.
 * Naming error are fixed on private static variables on `Title.cs`
