@@ -18,14 +18,14 @@ HelpConsole has methods to increase liability of output, state and methods.
 StartUp(ConsoleOption consoleOption = null);
 ```
 ```
-FinishUp()
+FinishUp();
 ```
-#### Text
+#### Title & Writing
 ```
-SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "")
+SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "");
 ```
 ```
-ClearConsoleTitle()
+ClearConsoleTitle();
 ```
 ```
 Write<T>(T value, ConsoleColor color);
@@ -35,30 +35,30 @@ Write<T>(List<T> valueList, T expectedValue, ConsoleColor valueCcolor, ConsoleCo
 ```
 #### Sleeping & Beeping
 ```
-Beep(Melody melody)
+Beep(Melody melody);
 ```
 ```
-Sleep(int duration)
+Sleep(int duration);
 ```
 ```
-SleepWithBeeping(int duration)
+SleepWithBeeping(int duration);
 ```
-#### Methods
+#### Method
 ```
-StartingMethod([CallerMemberName] string memberName = "")
-```
-```
-EndingMethod([CallerMemberName] string memberName = "")
-```
-#### Fractions
-```
-PercentageNoFrac(int item1, int item2)
+StartingMethod([CallerMemberName] string memberName = "");
 ```
 ```
-Percentage2F(int item1, int item2)
+EndingMethod([CallerMemberName] string memberName = "");
+```
+#### Math
+```
+PercentageNoFrac(int item1, int item2);
 ```
 ```
-Percentage8F(int item1, int item2)
+Percentage2F(int item1, int item2);
+```
+```
+Percentage8F(int item1, int item2);
 ```
 
 To check listed methods, example of output visit wiki page. [HelpConsole Wiki](https://github.com/meokullu/HelpConsole/wiki)
