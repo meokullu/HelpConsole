@@ -15,7 +15,7 @@
 #### Added
 * `Write<T>(T value, ConsoleColor color, Melody melody)` method is added. You can call it to write colorful text with beeping.
 * `WriteLine<T>(T value, ConsoleColor color, Melody melody)` method is added. You can call it to write colorful text with beeping into new line.
-* * Added `Notes` null check under `Melody` when `Beep(Melody melody)` is called.
+* Added `Notes` null check under `Melody` when `Beep(Melody melody)` is called.
 
 #### Fixed
 * `StartUp()` was throwing an error when consoleOption is not provided as value. When value is not provided, it creates ConsoleOption but `ScreenColorOption` was not set any value. Now it has its default value when value is not provided into `StartUp()`
