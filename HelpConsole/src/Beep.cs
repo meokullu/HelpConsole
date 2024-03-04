@@ -28,7 +28,10 @@ namespace HelpConsole
         /// </summary>
         /// <param name="duration"></param>
         /// <returns></returns>
-        public static Melody Beeping(int duration) => new Melody { Notes = new int[] { 725, duration, duration } };
+        public static Melody Beeping(int duration)
+        {
+            return new Melody { Notes = new int[] { 725, duration, duration } };
+        }
 
         /// <summary>
         /// Melody holds integer array with an order of sound frequency, duuration of sound and waiting.
@@ -82,10 +85,10 @@ namespace HelpConsole
                 }
 
                 // Checking if the beeping duration or waitin duration are positive values.
-                if (melody.Notes[i + 1] < 0 || melody.Notes[i + 2] < 0)
+                if (melody.Notes[i + 1] <= 0 || melody.Notes[i + 2] <= 0)
                 {
                     //
-                    WriteLine($"Error on notes. Notes at index: {i+1}/{i+2} {(melody.Notes[i + 1] < 0 ? "beeping duration should be greater than 0" : "")} {(melody.Notes[i + 2] < 0 ? "waiting duration should be greater than 0" : "")}");
+                    WriteLine($"Error on notes. Notes at index: {i + 1}/{i + 2} {(melody.Notes[i + 1] < 0 ? "beeping duration should be greater than 0" : "")} {(melody.Notes[i + 2] < 0 ? "waiting duration should be greater than 0" : "")}");
 
                     //
                     continue;

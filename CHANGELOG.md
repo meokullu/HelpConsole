@@ -11,6 +11,11 @@
 #### Removed
 -->
 
+### [1.6.0]
+
+#### Changed
+* `Beep(Melody melody)` was checking `Melody` elements with checking duration of beeping and duration of waiting as not being lower than zero. Now it is checking with equal or lower than zero as it should be.
+
 ### [1.5.0]
 #### Added
 * `Write<T>(T value, ConsoleColor color, Melody melody)` method is added. You can call it to write colorful text with beeping.

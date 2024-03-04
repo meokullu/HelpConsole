@@ -69,7 +69,7 @@ namespace HelpConsole
             if (consoleOptions == null)
             {
                 // Sets parameter variable with default constructor.
-                consoleOptions = new ConsoleOption { AppName = "HelpConsole", ScreenColorOption = new ScreenColorOption(foregroundColor: White, backgroundColor: Black), CursorVisible = false, WarningSound = false, WaitOnEnd = true};
+                consoleOptions = new ConsoleOption { AppName = "HelpConsole", ScreenColorOption = new ScreenColorOption(foregroundColor: White, backgroundColor: Black), CursorVisible = false, WarningSound = false, WaitOnEnd = true };
             }
 
             // Set console title with default value.
@@ -121,7 +121,7 @@ namespace HelpConsole
             if (s_consoleOptions.WaitOnEnd)
             {
                 // Waiting for a key.
-                Console.ReadKey();
+                _ = Console.ReadKey();
             }
         }
     }

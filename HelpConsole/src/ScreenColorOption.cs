@@ -15,22 +15,22 @@ namespace HelpConsole
         /// <summary>
         /// Preset black for background, yellow for foreground.
         /// </summary>
-        public readonly static ScreenColorOption ScreenColorOptionYellow = new ScreenColorOption(foregroundColor: ConsoleColor.Yellow, backgroundColor: ConsoleColor.Black);
+        public static readonly ScreenColorOption ScreenColorOptionYellow = new ScreenColorOption(foregroundColor: ConsoleColor.Yellow, backgroundColor: ConsoleColor.Black);
 
         /// <summary>
         /// Preset black for background, green for foreground color.
         /// </summary>
-        public readonly static ScreenColorOption ScreenColorOptionGreen = new ScreenColorOption(foregroundColor: ConsoleColor.Green, backgroundColor: ConsoleColor.Black);
+        public static readonly ScreenColorOption ScreenColorOptionGreen = new ScreenColorOption(foregroundColor: ConsoleColor.Green, backgroundColor: ConsoleColor.Black);
 
         /// <summary>
         /// Preset black for background, green for foreground color.
         /// </summary>
-        public readonly static ScreenColorOption ScreenColorOptionCyan = new ScreenColorOption(foregroundColor: ConsoleColor.Cyan, backgroundColor: ConsoleColor.Black);
+        public static readonly ScreenColorOption ScreenColorOptionCyan = new ScreenColorOption(foregroundColor: ConsoleColor.Cyan, backgroundColor: ConsoleColor.Black);
 
         /// <summary>
         /// Preset black for background, dark yellow for foreground color.
         /// </summary>
-        public readonly static ScreenColorOption ScreenColorOptionDarkYellow = new ScreenColorOption(foregroundColor: ConsoleColor.DarkYellow, backgroundColor: ConsoleColor.Black);
+        public static readonly ScreenColorOption ScreenColorOptionDarkYellow = new ScreenColorOption(foregroundColor: ConsoleColor.DarkYellow, backgroundColor: ConsoleColor.Black);
 
         /// <summary>
         /// Settings for console colors.

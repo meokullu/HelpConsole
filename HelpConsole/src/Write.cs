@@ -12,7 +12,7 @@ namespace HelpConsole
         /// ConsoleColor Black.
         /// </summary>
         public static readonly ConsoleColor Black = ConsoleColor.Black;
-        
+
         /// <summary>
         /// ConsoleColor DarkBlue.
         /// </summary>
@@ -22,67 +22,67 @@ namespace HelpConsole
         /// ConsoleColor DarkGreen.
         /// </summary>
         public static readonly ConsoleColor DarkGreen = ConsoleColor.DarkGreen;
-        
+
         /// <summary>
         /// ConsoleColor DarkCyan.
         /// </summary>
         public static readonly ConsoleColor DarkCyan = ConsoleColor.DarkCyan;
-        
+
         /// <summary>
         /// ConsoleColor DarkRed.
         /// </summary>
         public static readonly ConsoleColor DarkRed = ConsoleColor.DarkRed;
-        
+
         /// <summary>
         /// ConsoleColor DarkMagenta.
         /// </summary>
         public static readonly ConsoleColor DarkMagenta = ConsoleColor.DarkMagenta;
-        
+
         /// <summary>
         /// ConsoleColor DarkYellow.
         /// </summary>
         public static readonly ConsoleColor DarkYellow = ConsoleColor.DarkYellow;
-        
+
         /// <summary>
         /// ConsoleColor Gray.
         /// </summary>
         public static readonly ConsoleColor Gray = ConsoleColor.Gray;
-        
+
         /// <summary>
         /// ConsoleColor DarkGray.
         /// </summary>
         public static readonly ConsoleColor DarkGray = ConsoleColor.DarkGray;
-        
+
         /// <summary>
         /// ConsoleColor Blue.
         /// </summary>
         public static readonly ConsoleColor Blue = ConsoleColor.Blue;
-        
+
         /// <summary>
         /// ConsoleColor Green.
         /// </summary>
         public static readonly ConsoleColor Green = ConsoleColor.Green;
-        
+
         /// <summary>
         /// ConsoleColor Cyan.
         /// </summary>
         public static readonly ConsoleColor Cyan = ConsoleColor.Cyan;
-        
+
         /// <summary>
         /// ConsoleColor Red.
         /// </summary>
         public static readonly ConsoleColor Red = ConsoleColor.Red;
-        
+
         /// <summary>
         /// ConsoleColor Magenta.
         /// </summary>
         public static readonly ConsoleColor Magenta = ConsoleColor.Magenta;
-        
+
         /// <summary>
         /// ConsoleColor Yellow.
         /// </summary>
         public static readonly ConsoleColor Yellow = ConsoleColor.Yellow;
-        
+
         /// <summary>
         /// ConsoleColor White.
         /// </summary>
@@ -529,7 +529,6 @@ namespace HelpConsole
         /// <param name="expectedColor">Text color for elements of array when it is expected value.</param>
         public static void WriteLine<T>(List<T> valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor)
         {
-
             // Iteration for all elements of the array.
             for (int i = 0; i < valueList.Count; i++)
             {
@@ -538,12 +537,12 @@ namespace HelpConsole
                 {
                     // Calling Console.WriteLine(object value)
                     WriteLine(value: valueList[i], color: valueColor);
-                   
+
                 }
                 else
                 {
                     // Calling Console.WriteLine(object value)
-                    WriteLine(value: valueList[i], color: expectedColor);                   
+                    WriteLine(value: valueList[i], color: expectedColor);
                 }
             }
         }
