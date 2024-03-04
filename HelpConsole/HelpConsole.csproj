@@ -16,6 +16,8 @@
     <PackageReleaseNotes>
       v1.6.0
       * Beep(Melody melody) was checking Melody elements with checking duration of beeping and duration of waiting as not being lower than zero. Now it is checking with equal or lower than zero as it should be.
+      * SleepWithTitle(int duration) method added instead of Sleep(int duration). It writes sleeping duration into Console's title.
+      * Sleep(int duration) now only waits instead of writing sleeping duration into screen.
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>

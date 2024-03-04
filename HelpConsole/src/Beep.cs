@@ -107,20 +107,31 @@ namespace HelpConsole
         }
 
         /// <summary>
-        /// Sleep uses <see cref="Thread.Sleep(int)"/>, writes Sleeping {duration} ms to console's title via <see cref="SetConsoleTitle(string)"/>.
+        /// Sleep uses <see cref="Thread.Sleep(int)"/>.
         /// </summary>
         /// <param name="duration">Time in milliseconds.</param>
         //[SupportedOSPlatform("windows")]
         public static void Sleep(int duration)
         {
+            // Sleeping.
+            Thread.Sleep(duration);
+        }
+
+        /// <summary>
+        /// Sleep uses <see cref="Thread.Sleep(int)"/>, writes Sleeping {duration} s/ms to console's title via <see cref="SetConsoleTitle(string)"/>.
+        /// </summary>
+        /// <param name="duration">Time in milliseconds.</param>
+        //[SupportedOSPlatform("windows")]
+        public static void SleepWithTitle(int duration)
+        {
             // Save console title into temporary variable.
             string tempTitle = Console.Title;
 
             // Set console title specified with duration to indicate sleeping.
-            SetConsoleTitle($"Sleeping {duration} ms");
+            SetConsoleTitle($"Sleeping {(duration >= 1000 ? duration / 1000 : duration)} {(duration >= 1000 ? "s" : "ms")}");
 
             // Sleeping.
-            Thread.Sleep(duration);
+            Sleep(duration);
 
             // Set console title's back.
             SetConsoleTitle(tempTitle);
