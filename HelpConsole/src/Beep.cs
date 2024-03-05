@@ -28,7 +28,10 @@ namespace HelpConsole
         /// </summary>
         /// <param name="duration"></param>
         /// <returns></returns>
-        public static Melody Beeping(int duration) => new Melody { Notes = new int[] { 725, duration, duration } };
+        public static Melody Beeping(int duration)
+        {
+            return new Melody { Notes = new int[] { 725, duration, duration } };
+        }
 
         /// <summary>
         /// Melody holds integer array with an order of sound frequency, duuration of sound and waiting.
@@ -82,10 +85,10 @@ namespace HelpConsole
                 }
 
                 // Checking if the beeping duration or waitin duration are positive values.
-                if (melody.Notes[i + 1] < 0 || melody.Notes[i + 2] < 0)
+                if (melody.Notes[i + 1] <= 0 || melody.Notes[i + 2] <= 0)
                 {
                     //
-                    WriteLine($"Error on notes. Notes at index: {i+1}/{i+2} {(melody.Notes[i + 1] < 0 ? "beeping duration should be greater than 0" : "")} {(melody.Notes[i + 2] < 0 ? "waiting duration should be greater than 0" : "")}");
+                    WriteLine($"Error on notes. Notes at index: {i + 1}/{i + 2} {(melody.Notes[i + 1] < 0 ? "beeping duration should be greater than 0" : "")} {(melody.Notes[i + 2] < 0 ? "waiting duration should be greater than 0" : "")}");
 
                     //
                     continue;
@@ -104,20 +107,31 @@ namespace HelpConsole
         }
 
         /// <summary>
-        /// Sleep uses <see cref="Thread.Sleep(int)"/>, writes Sleeping {duration} ms to console's title via <see cref="SetConsoleTitle(string)"/>.
+        /// Sleep uses <see cref="Thread.Sleep(int)"/>.
         /// </summary>
         /// <param name="duration">Time in milliseconds.</param>
         //[SupportedOSPlatform("windows")]
         public static void Sleep(int duration)
         {
+            // Sleeping.
+            Thread.Sleep(duration);
+        }
+
+        /// <summary>
+        /// Sleep uses <see cref="Thread.Sleep(int)"/>, writes Sleeping {duration} s/ms to console's title via <see cref="SetConsoleTitle(string)"/>.
+        /// </summary>
+        /// <param name="duration">Time in milliseconds.</param>
+        //[SupportedOSPlatform("windows")]
+        public static void SleepWithTitle(int duration)
+        {
             // Save console title into temporary variable.
             string tempTitle = Console.Title;
 
             // Set console title specified with duration to indicate sleeping.
-            SetConsoleTitle($"Sleeping {duration} ms");
+            SetConsoleTitle($"Sleeping {(duration >= 1000 ? duration / 1000 : duration)} {(duration >= 1000 ? "s" : "ms")}");
 
             // Sleeping.
-            Thread.Sleep(duration);
+            Sleep(duration);
 
             // Set console title's back.
             SetConsoleTitle(tempTitle);

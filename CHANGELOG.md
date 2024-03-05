@@ -11,6 +11,18 @@
 #### Removed
 -->
 
+### [1.6.0]
+
+#### Added
+* `SleepWithTitle(int duration)` method added instead of `Sleep(int duration)`. It writes sleeping duration into Console's title.
+
+#### Changed
+* `Beep(Melody melody)` was checking `Melody` elements with checking duration of beeping and duration of waiting as not being lower than zero. Now it is checking with equal or lower than zero as it should be.
+* `Sleep(int duration)` now only waits instead of writing sleeping duration into screen.
+
+#### Fixed
+* Several features were not working due to default values of `ConsoleOptions` and `ScreenColorOptions`. Features like `WriteLine()` or `StartingMethod()` now can be used without calling `StartUp()`.
+
 ### [1.5.0]
 #### Added
 * `Write<T>(T value, ConsoleColor color, Melody melody)` method is added. You can call it to write colorful text with beeping.

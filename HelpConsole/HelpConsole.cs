@@ -2,18 +2,36 @@
 
 namespace HelpConsole
 {
+    public partial class HelpConsole
+    {
+        private readonly static string s_defaultAppName = "HelpConsole";
+        private readonly static bool s_defaultCursorVisible = false;
+        private readonly static ScreenColorOption s_defaultScreenColorOption = new ScreenColorOption(foregroundColor: Green, backgroundColor: Black);
+        private readonly static bool s_defaultWaitOnEnd = true;
+        private readonly static bool s_defaultWarningSound = false;
+
+        private readonly static ConsoleOption s_defaultConsoleOption = new ConsoleOption
+        {
+            AppName = s_defaultAppName,
+            CursorVisible = s_defaultCursorVisible,
+            ScreenColorOption = s_defaultScreenColorOption,
+            WaitOnEnd = s_defaultWaitOnEnd,
+            WarningSound = s_defaultWarningSound
+        };
+    }
+
     /// <summary>
     /// 
     /// </summary>
     public partial class HelpConsole
     {
         // Console Option
-        internal static ConsoleOption s_consoleOptions;
+        internal static ConsoleOption s_currentConsoleOptions;
 
         /// <summary>
         /// Set and holds console options.
         /// </summary>
-        public static ConsoleOption ConsoleOptions { get => s_consoleOptions; set => s_consoleOptions = value; }
+        public static ConsoleOption ConsoleOptions { get => s_currentConsoleOptions ?? s_defaultConsoleOption; set => s_currentConsoleOptions = value; }
 
         /// <summary>
         /// Settings for console.
@@ -23,27 +41,27 @@ namespace HelpConsole
             /// <summary>
             /// Application name
             /// </summary>
-            public string AppName = "HelpConsole";
-
-            /// <summary>
-            /// Screen color option. It has foreground and background color individually.
-            /// </summary>
-            public ScreenColorOption ScreenColorOption = s_defaultScreenColorOption;
+            public string AppName = s_defaultAppName;
 
             /// <summary>
             /// Sets whether cursor is visible or not.
             /// </summary>
-            public bool CursorVisible = false;
+            public bool CursorVisible = s_defaultCursorVisible;
 
             /// <summary>
-            /// Sets warning beep.
+            /// Screen color option. It has foreground and background color individually.
             /// </summary>
-            public bool WarningSound = false;
+            public ScreenColorOption ScreenColorOption = s_currentScreenColorOption ?? s_defaultScreenColorOption;
 
             /// <summary>
             /// Sets whether application should wait end or not.
             /// </summary>
-            public bool WaitOnEnd = true;
+            public bool WaitOnEnd = s_defaultWaitOnEnd;
+
+            /// <summary>
+            /// Sets warning beep.
+            /// </summary>
+            public bool WarningSound = s_defaultWarningSound;
         }
     }
 
@@ -69,7 +87,7 @@ namespace HelpConsole
             if (consoleOptions == null)
             {
                 // Sets parameter variable with default constructor.
-                consoleOptions = new ConsoleOption { AppName = "HelpConsole", ScreenColorOption = new ScreenColorOption(foregroundColor: White, backgroundColor: Black), CursorVisible = false, WarningSound = false, WaitOnEnd = true};
+                consoleOptions = s_defaultConsoleOption;
             }
 
             // Set console title with default value.
@@ -111,17 +129,17 @@ namespace HelpConsole
             WriteLine("Done...");
 
             // Beep sound.
-            if (s_consoleOptions.WarningSound)
+            if (ConsoleOptions.WarningSound)
             {
                 // Beeping.
                 Beep(s_finishUpMelody);
             }
 
             // Checking if WaitOnEnd is true.
-            if (s_consoleOptions.WaitOnEnd)
+            if (ConsoleOptions.WaitOnEnd)
             {
                 // Waiting for a key.
-                Console.ReadKey();
+                _ = Console.ReadKey();
             }
         }
     }
