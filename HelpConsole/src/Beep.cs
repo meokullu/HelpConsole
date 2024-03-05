@@ -88,7 +88,7 @@ namespace HelpConsole
                 if (melody.Notes[i + 1] <= 0 || melody.Notes[i + 2] <= 0)
                 {
                     //
-                    WriteLine($"Error on notes. Notes at index: {i + 1}/{i + 2} {(melody.Notes[i + 1] < 0 ? "beeping duration should be greater than 0" : "")} {(melody.Notes[i + 2] < 0 ? "waiting duration should be greater than 0" : "")}");
+                    WriteLine($"Error on notes. Notes at index: {i + 1}/{i + 2} {(melody.Notes[i + 1] <= 0 ? "beeping duration should be greater than 0" : "")} {(melody.Notes[i + 2] <= 0 ? "waiting duration should be greater than 0" : "")}");
 
                     //
                     continue;
