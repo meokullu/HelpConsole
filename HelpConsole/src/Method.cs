@@ -53,7 +53,7 @@ namespace HelpConsole
             WriteLine($"{memberName} started...");
 
             // Checks if warning sound is active.
-            if (s_consoleOptions.WarningSound)
+            if (ConsoleOptions.WarningSound)
             {
                 // Beep sounds
                 Beep(s_startMethodMelody);
@@ -71,7 +71,7 @@ namespace HelpConsole
             WriteLine($"{memberName} started...", color: consoleColor);
 
             // Checks if warning sound is active.
-            if (s_consoleOptions.WarningSound)
+            if (ConsoleOptions.WarningSound)
             {
                 // Beep sounds
                 Beep(s_startMethodMelody);
@@ -89,7 +89,7 @@ namespace HelpConsole
             WriteLine($"{memberName} started...");
 
             // Checks if warning sound is active.
-            if (s_consoleOptions.WarningSound)
+            if (ConsoleOptions.WarningSound)
             {
                 // Beep sounds
                 Beep(melody: melody);
@@ -108,7 +108,7 @@ namespace HelpConsole
             WriteLine($"{memberName} started...", color: consoleColor);
 
             // Checks if warning sound is active.
-            if (s_consoleOptions.WarningSound)
+            if (ConsoleOptions.WarningSound)
             {
                 // Beep sounds
                 Beep(melody: melody);
@@ -126,7 +126,7 @@ namespace HelpConsole
             WriteLine($"{memberName} ended...");
 
             // Checks if warning sound is active.
-            if (s_consoleOptions.WarningSound)
+            if (ConsoleOptions.WarningSound)
             {
                 // Beep sounds.
                 Beep(s_endMethodMelody);
@@ -144,7 +144,7 @@ namespace HelpConsole
             WriteLine($"{memberName} ended...", color: consoleColor);
 
             // Checks if warning sound is active.
-            if (s_consoleOptions.WarningSound)
+            if (ConsoleOptions.WarningSound)
             {
                 // Beep sounds.
                 Beep(s_endMethodMelody);
@@ -162,7 +162,7 @@ namespace HelpConsole
             WriteLine($"{memberName} ended...");
 
             // Checks if warning sound is active.
-            if (s_consoleOptions.WarningSound)
+            if (ConsoleOptions.WarningSound)
             {
                 // Beep sounds
                 Beep(melody: melody);
@@ -181,7 +181,7 @@ namespace HelpConsole
             WriteLine($"{memberName} ended...", color: consoleColor);
 
             // Checks if warning sound is active.
-            if (s_consoleOptions.WarningSound)
+            if (ConsoleOptions.WarningSound)
             {
                 // Beep sounds.
                 Beep(melody: melody);

@@ -5,12 +5,12 @@ namespace HelpConsole
     public partial class HelpConsole
     {
         // Screen Color Option.
-        internal static ScreenColorOption s_defaultScreenColorOption;
+        internal static ScreenColorOption s_currentScreenColorOption;
 
         /// <summary>
         /// Set and holds screen color options.
         /// </summary>
-        public static ScreenColorOption ScreenColorOptions { get => s_defaultScreenColorOption; set => s_defaultScreenColorOption = value; }
+        public static ScreenColorOption ScreenColorOptions { get => s_currentScreenColorOption ?? s_defaultScreenColorOption; set => s_currentScreenColorOption = value; }
 
         /// <summary>
         /// Preset black for background, yellow for foreground.
@@ -40,12 +40,12 @@ namespace HelpConsole
             /// <summary>
             /// Sets foreground color for text.
             /// </summary>
-            public ConsoleColor ForegroundColor = ConsoleColor.Black;
+            public ConsoleColor ForegroundColor = Green;
 
             /// <summary>
             /// Sets background color for background.
             /// </summary>
-            public ConsoleColor BackgroundColor = ConsoleColor.White;
+            public ConsoleColor BackgroundColor = Black;
 
             /// <summary>
             /// Sets ScreenColorOption.
