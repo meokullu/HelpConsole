@@ -11,6 +11,10 @@
 #### Removed
 -->
 
+### [1.6.2]
+#### Changed
+* Files splitting.
+
 ### [1.6.1]
 #### Fixed
 * [Hotfix]: Beep(Melody melody) was writing error on notes when duration of waiting as third element is zero.

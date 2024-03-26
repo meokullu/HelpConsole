@@ -397,7 +397,7 @@ namespace HelpConsole
         /// <param name="melody">A melody whose to be played.</param>
         public static void Write<T>(T value, ConsoleColor color, Melody melody)
         {
-            // Calls Writte(T value, ConsoleColor color)
+            // Calls Write(T value, ConsoleColor color)
             Write(value: value, color: color);
 
             // Beep sounds.

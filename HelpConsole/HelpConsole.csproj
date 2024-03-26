@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0; net7.0; net461; netcoreapp3.1; netstandard2.0</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
-    <FileVersion>1.6.1</FileVersion>
-    <AssemblyVersion>1.6.1</AssemblyVersion>
-    <Version>1.6.1</Version>
+    <FileVersion>1.6.2</FileVersion>
+    <AssemblyVersion>1.6.2</AssemblyVersion>
+    <Version>1.6.2</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -14,12 +14,8 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
-      v1.6.1
-      * Beep(Melody melody) was checking Melody elements with checking duration of beeping and duration of waiting as not being lower than zero. Now it is checking with equal or lower than zero as it should be.
-      * SleepWithTitle(int duration) method added instead of Sleep(int duration). It writes sleeping duration into Console's title.
-      * Sleep(int duration) now only waits instead of writing sleeping duration into screen.
-      * Several features were not working due to default values of ConsoleOptions and ScreenColorOptions. Features like WriteLine() or StartingMethod() now can be used without calling `StartUp()`.
-      * [Hotfix]: Beep(Melody melody) was writing error on notes when duration of waiting as third element is zero.
+      v1.6.2
+      * Files splitting.
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>
