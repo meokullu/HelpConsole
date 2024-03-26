@@ -4,13 +4,13 @@ namespace HelpConsole
 {
     public partial class HelpConsole
     {
-        private readonly static string s_defaultAppName = "HelpConsole";
-        private readonly static bool s_defaultCursorVisible = false;
-        private readonly static ScreenColorOption s_defaultScreenColorOption = new ScreenColorOption(foregroundColor: Green, backgroundColor: Black);
-        private readonly static bool s_defaultWaitOnEnd = true;
-        private readonly static bool s_defaultWarningSound = false;
+        private static readonly string s_defaultAppName = "HelpConsole";
+        private static readonly bool s_defaultCursorVisible = false;
+        private static readonly ScreenColorOption s_defaultScreenColorOption = new(foregroundColor: Green, backgroundColor: Black);
+        private static readonly bool s_defaultWaitOnEnd = true;
+        private static readonly bool s_defaultWarningSound = false;
 
-        private readonly static ConsoleOption s_defaultConsoleOption = new ConsoleOption
+        private static readonly ConsoleOption s_defaultConsoleOption = new()
         {
             AppName = s_defaultAppName,
             CursorVisible = s_defaultCursorVisible,
@@ -18,13 +18,7 @@ namespace HelpConsole
             WaitOnEnd = s_defaultWaitOnEnd,
             WarningSound = s_defaultWarningSound
         };
-    }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    public partial class HelpConsole
-    {
         // Console Option
         internal static ConsoleOption s_currentConsoleOptions;
 
@@ -70,11 +64,15 @@ namespace HelpConsole
     /// </summary>
     public partial class HelpConsole
     {
+        #region Melodies
+
         // Start up beeping frequency and duration.
         private static readonly Melody s_startUpMelody = new Melody { Notes = new int[] { 440, 250, 25, 660, 250, 25 } };
 
         // Finish up beeping frequency and duration.
         private static readonly Melody s_finishUpMelody = new Melody { Notes = new int[] { 1250, 400, 25, 1000, 400, 25 } };
+
+        #endregion Melodies
 
         /// <summary>
         /// Starting up.

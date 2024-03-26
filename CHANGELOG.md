@@ -11,13 +11,15 @@
 #### Removed
 -->
 
-### [1.6.1]
+### [1.6.2]
+#### Changed
+* Files splitting.
 
+### [1.6.1]
 #### Fixed
 * [Hotfix]: Beep(Melody melody) was writing error on notes when duration of waiting as third element is zero.
 
 ### [1.6.0]
-
 #### Added
 * `SleepWithTitle(int duration)` method added instead of `Sleep(int duration)`. It writes sleeping duration into Console's title.
 
@@ -44,7 +46,6 @@
 * Naming error are fixed on private static variables on `Title.cs`
 
 ### [1.4.0]
-
 #### Added
 * `StartingMethod(Melody melody, [CallerMemberName] string memberName = "")`
 * `StartingMethod(ConsoleColor color, Melody melody, [CallerMemberName] string memberName = "")`
@@ -69,7 +70,6 @@
 * When `StartUp(ConsoleOption consoleOption)` called, now it also sets `ScreenColorOption` which holds preset color-pair values with given `ScreenColorOption` on `consoleOptions`.
 
 ### [1.2.0]
-
 #### Added
 * `Write<T>(T value, ConsoleColor color)` method added.
 * `Write<T>(List<T> valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor)` method added.
@@ -77,14 +77,12 @@
 * `WriteLine<T>(List<T> valueList, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor)` method added.
 
 ### [1.1.1]
-
 #### Changed
 v1.1.1
 * Bux fixed while lsting color combinations names as background and foreground by `ShowAvailableColors()` under `ScreenColorOptions.cs`
 * Color issues are fixed while listing color combinations by `ShowAvailableColors()
 
 ### [1.1.0]
-
 #### Changed
 * `StartUp(ConsoleOption consoleOption)` method was using default `ScreenColorOption` instead of given value on `ConsoleOption`. This bug is fixed.
 * `StartingMethod()` and `EndingMethod()` had new line before writing either calling method name's starting or ending. This new line addings are removed on both methods.
@@ -96,7 +94,6 @@ Initial release.
 * `Welcome`, `Warning`, `Success`, melody in `StartUp()` and `FinishUp()` are replaced with new ones.
 
 ### [1.0.0-rc]
-
 #### Added
 * `SetScreenColor(ScreenColorOption screenColorOption)` method is added. It sets console colors as method.
 * `ShowAvailableColors()` method is added. It list available color-pairs on screen.
@@ -109,7 +106,6 @@ Initial release.
 * `FinishingUp()` deprecated method is removed. Use `FinishUp()`.
 
 ### [1.0.0-beta.4]
-
 #### Added
 * `SetConsoleTitleSeperator(string separator)` is added. Console title's item could be seperated with provided value.
 
@@ -117,7 +113,6 @@ Initial release.
 * `SetConsoleTitleSeperator(string firstText, string secondText, string thirdText)` is now checking if parameter is provided and if so adds string seperator value.
 
 ### [1.0.0-beta.3]
-
 #### Added
 * `SetStartMethodMelody(Melody melody)` and `SetEndingMethodMelody(Melody melody)` are added for `Method.cs`. These methods can be used to set default melody that will be played when `StartMethod()` and `EndingMethod()` are called respectively.
 * `Beeping(duration)` method is added.
@@ -129,7 +124,6 @@ Initial release.
 * Added cref method references into method summaries.
 
 ### [1.0.0-beta.2]
-
 #### Added
 * `SetConsoleTitle(string firstText)` and `SetConsoleTitle(string firstText, string secondText)` new methods are added. These methods calls `SetConsoleTitle(strinf firstText, string secondText, string thirdText)`. 
 
@@ -138,13 +132,11 @@ Initial release.
 * New design CHANGELOG.
 
 ### [1.0.0-beta.1]
-
 ### Changed
 * Changing missing static declaration into `Beep`, `Math`, `ScreenColorOption`.
 * Changing wrong namespace on `Method`, `ScreenColorOption` and `Title`.
 
 ### [1.0.0-beta]
-
 ### Added
 * New pre-defined `ScreenColorOption`. `ScrenColorOptionCyan` and `ScreenColorOptionDarkYellow` are added.
 * `Beep(Melody)` is added.
@@ -158,7 +150,6 @@ Initial release.
 * `ScreenColorOption.cs` is created.
 
 ### [1.0.0-alpha.5]
-
 ### Added
 * `ConsoleOption` is available now. It has `AppName`, `ScreenColorOption`, `CursorAvailable`, `WarningSound` and `WaitOnEnd` properties.
 * `ScreenColorOption` has `BackgroundColor` and `ForegroundColor` and its constructor.
@@ -172,7 +163,6 @@ Initial release.
 * `StartUp(string appName)` method is depreciated. Use `StartUp()`
 
 ### [1.0.0-alpha.4]
-
 #### Added
 * Tag added to PackageTags.
 * CHANGELOG link added under Version History on README.
@@ -181,18 +171,15 @@ Initial release.
 * README has cleaner view.
 
 ### [1.0.0-alpha.3]
-
 #### Added
 * Added icons.
 
 ### [1.0.0-alpha.2]
-
 #### Added
 * Added summaries into methods.
 * Added comments.
 
 ### [1.0.0-alpha.1]
-
 #### Added
 * Added `ClearConsoleTitle()`.
 * Added `Percentage8F()` for `double`, `short`, `byte`, `sbyte`.
