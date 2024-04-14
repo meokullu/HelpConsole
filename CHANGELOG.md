@@ -11,6 +11,10 @@
 #### Removed
 -->
 
+### [1.6.3]
+#### Changed
+* Removed unused usings.
+
 ### [1.6.2]
 #### Changed
 * Files splitting.
