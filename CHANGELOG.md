@@ -14,6 +14,7 @@
 ### [1.6.3]
 #### Changed
 * Removed unused usings.
+* Slightly change on built-in melodies.
 
 ### [1.6.2]
 #### Changed

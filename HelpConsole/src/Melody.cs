@@ -14,18 +14,18 @@
         }
 
         /// <summary>
-        /// Beep for warning.
+        /// Beep for warning. Total duration: 500 ms.
         /// </summary>
-        public static Melody Warning = new Melody { Notes = new int[] { 440, 250, 5, 440, 250, 50 } };
+        public static Melody Warning = new Melody { Notes = new int[] { 440, 190, 60, 440, 190, 60 } };
 
         /// <summary>
-        /// Beep for welcome.
+        /// Beep for welcome. Total duration: 1.500 ms.
         /// </summary>
-        public static Melody Welcome = new Melody { Notes = new int[] { 2000, 400, 25, 1750, 400, 25, 1500, 400, 25 } };
+        public static Melody Welcome = new Melody { Notes = new int[] { 2000, 400, 100, 1750, 400, 100, 1500, 400, 100 } };
 
         /// <summary>
-        /// Beep for success.
+        /// Beep for success. 
         /// </summary>
-        public static Melody Success = new Melody { Notes = new int[] { 750, 200, 25, 650, 200, 25, 850, 200, 25, 450, 200, 25 } };
+        public static Melody Success = new Melody { Notes = new int[] { 750, 225, 75, 650, 225, 75, 850, 225, 275, 450, 225, 75 } };
     }
 }

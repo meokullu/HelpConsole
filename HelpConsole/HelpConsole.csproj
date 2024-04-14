@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0; net7.0; net461; netcoreapp3.1; netstandard2.0</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
-    <FileVersion>1.6.2</FileVersion>
-    <AssemblyVersion>1.6.2</AssemblyVersion>
-    <Version>1.6.2</Version>
+    <FileVersion>1.6.3</FileVersion>
+    <AssemblyVersion>1.6.3</AssemblyVersion>
+    <Version>1.6.3</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -14,8 +14,8 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
-      v1.6.2
-      * Files splitting.
+      v1.6.3
+      * Slightly changes on built-in melodies.
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>
