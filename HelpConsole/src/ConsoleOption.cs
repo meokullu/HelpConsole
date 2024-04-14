@@ -66,11 +66,11 @@ namespace HelpConsole
     {
         #region Melodies
 
-        // Start up beeping frequency and duration.
-        private static readonly Melody s_startUpMelody = new Melody { Notes = new int[] { 440, 250, 25, 660, 250, 25 } };
+        // Start up beeping frequency and duration. Total duration 500 ms.
+        private static readonly Melody s_startUpMelody = new Melody { Notes = new int[] { 440, 190, 60, 660, 190, 60 } };
 
-        // Finish up beeping frequency and duration.
-        private static readonly Melody s_finishUpMelody = new Melody { Notes = new int[] { 1250, 400, 25, 1000, 400, 25 } };
+        // Finish up beeping frequency and duration. Total duration 1.000 ms.
+        private static readonly Melody s_finishUpMelody = new Melody { Notes = new int[] { 1250, 400, 100, 1000, 400, 100 } };
 
         #endregion Melodies
 

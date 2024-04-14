@@ -13,7 +13,7 @@ namespace HelpConsole
         /// <summary>
         /// Melody whose played when <see cref="StartingMethod(string)"/> is called.
         /// </summary>
-        private static Melody s_startMethodMelody = new Melody { Notes = new int[] { 725, 300, 20 } };
+        private static Melody s_startMethodMelody = new Melody { Notes = new int[] { 725, 225, 75 } };
 
         /// <summary>
         /// Sets melody that is played when <see cref="StartingMethod(string)"/> is called.
@@ -28,7 +28,7 @@ namespace HelpConsole
         /// <summary>
         /// Melody whose played when <see cref="EndingMethod(string)"/> is called.
         /// </summary>
-        private static Melody s_endMethodMelody = new Melody { Notes = new int[] { 525, 300, 20 } };
+        private static Melody s_endMethodMelody = new Melody { Notes = new int[] { 525, 225, 75 } };
 
         /// <summary>
         /// Sets melody that is played when <see cref="EndingMethod(string)"/> is called.
