@@ -15,7 +15,7 @@
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
       v1.7.0
-      * 
+      * Methods for writing with given background color are added. Methods for array of generic data are added.
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>
