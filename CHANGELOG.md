@@ -11,6 +11,14 @@
 #### Removed
 -->
 
+### [1.7.0]
+#### Added
+* `Write<T>(T value, ConsoleColor bgColor, ConsoleColor fgColor)`, `WriteLine<T>(T value, ConsoleColor bgColor, ConsoleColor fgColor)` method added for write text with given foreground and background color.
+* `Write<T>(T[] valueArray, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor)`, `WriteLine<T>(T[] valueArray, T expectedValue, ConsoleColor valueColor, ConsoleColor expectedColor)` method added to print array of generic data with colorizing expecting ones.
+* `Write<T>(T[] valueArray, T expectedValue, Melody melody, ConsoleColor valueColor, ConsoleColor expectedColor)`, `WriteLine<T>(T[] valueArray, T expectedValue, Melody melody, ConsoleColor valueColor, ConsoleColor expectedColor)` method added to print array of generic data with colorizing  and beeping for expecting ones.
+* `Write<T>(T[] valueArray, ConsoleColor[] colorList)`, `WriteLine<T>(T[] valueArray, ConsoleColor[] colorList)` method added to print array of generic data with each of given color array.
+* `WriteLine<T>(T value, ConsoleColor bgColor, ConsoleColor fgColor)`, `WriteLine<T>(T value, ConsoleColor bgColor, ConsoleColor fgColor)` method added for write text with given foreground and background color.
+
 ### [1.6.3]
 #### Changed
 * Removed unused usings.

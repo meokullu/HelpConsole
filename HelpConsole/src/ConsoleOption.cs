@@ -6,11 +6,11 @@ namespace HelpConsole
     {
         private static readonly string s_defaultAppName = "HelpConsole";
         private static readonly bool s_defaultCursorVisible = false;
-        private static readonly ScreenColorOption s_defaultScreenColorOption = new(foregroundColor: Green, backgroundColor: Black);
+        private static readonly ScreenColorOption s_defaultScreenColorOption = new ScreenColorOption(foregroundColor: Green, backgroundColor: Black);
         private static readonly bool s_defaultWaitOnEnd = true;
         private static readonly bool s_defaultWarningSound = false;
 
-        private static readonly ConsoleOption s_defaultConsoleOption = new()
+        private static readonly ConsoleOption s_defaultConsoleOption = new ConsoleOption()
         {
             AppName = s_defaultAppName,
             CursorVisible = s_defaultCursorVisible,
