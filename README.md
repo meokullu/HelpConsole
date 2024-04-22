@@ -3,7 +3,7 @@
 
 HelpConsole is a project to offer useful methods which makes easier to use console applications.
 
-![HelpConsole](https://github.com/meokullu/HelpConsole/assets/4971757/b90993c5-ffa8-4f59-9255-127f4871794a)
+![HelpConsole](https://github.com/meokullu/HelpConsole/assets/4971757/d75601ba-8a9d-4871-8dab-a34bf98f2c64)
 
 [Download on NuGet gallery](https://www.nuget.org/packages/HelpConsole/)
 
