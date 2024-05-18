@@ -14,18 +14,43 @@
         }
 
         /// <summary>
-        /// Beep for warning. Total duration: 500 ms.
+        /// Beep for welcome.
         /// </summary>
-        public static Melody Warning = new Melody { Notes = new int[] { 440, 190, 60, 440, 190, 60 } };
+        public static Melody Welcome = new Melody { Notes = new int[] { 640, 200, 100, 530, 200, 100, 520, 200, 100 } };
 
         /// <summary>
-        /// Beep for welcome. Total duration: 1.500 ms.
+        /// Beep for warning.
         /// </summary>
-        public static Melody Welcome = new Melody { Notes = new int[] { 2000, 400, 100, 1750, 400, 100, 1500, 400, 100 } };
+        public static Melody Warning = new Melody { Notes = new int[] { 660, 250, 90, 660, 250, 90, 660, 250, 60} };
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Melody Error = new Melody { Notes = new int[] { 554, 750, 250, 554, 750, 250, 554, 250, 558} };
 
         /// <summary>
         /// Beep for success. 
         /// </summary>
-        public static Melody Success = new Melody { Notes = new int[] { 750, 225, 75, 650, 225, 75, 850, 225, 275, 450, 225, 75 } };
+        public static Melody Success = new Melody { Notes = new int[] { 800, 200, 100, 800, 250, 150, 800, 250, 200} };
+
+        /// <summary>
+        /// Beep for fail.
+        /// </summary>
+        public static Melody Fail = new Melody { Notes = new int[] { 340, 750, 500, 340, 750, 500} };
+
+
+        #region Melodies
+
+        /// <summary>
+        /// Start up beeping frequency and duration.
+        /// </summary>
+        public static Melody StartingUp = new Melody { Notes = new int[] { 440, 190, 60, 660, 190, 60 } };
+
+        /// <summary>
+        /// Finish up beeping frequency and duration.
+        /// </summary>
+        public static Melody FinishingUp = new Melody { Notes = new int[] { 720, 400, 100, 720, 400, 100 } };
+
+        #endregion Melodies
     }
 }

@@ -3,10 +3,12 @@
 namespace HelpConsole
 {
     /// <summary>
-    /// Console methods
+    /// Methods to set console title.
     /// </summary>
     public partial class HelpConsole
     {
+        #region Private variables
+
         // Title's first part text.
         private static string s_titleFirstText = "";
 
@@ -16,8 +18,27 @@ namespace HelpConsole
         // Title's third part text.
         private static string s_titleThirdText = "";
 
+        // Title's fourth part text.
+        private static string s_titleFourthText = "";
+
+        // Title's fifth part text.
+        private static string s_titleFifthText = "";
+
+        // Title's sixth part text.
+        private static string s_titleSixthText = "";
+
+        // Title's seventh part text.
+        private static string s_titleSeventhText = "";
+
+        // Title's eighth part text.
+        private static string s_titleEighthText = "";
+
         // Title's seperator between first, second and third text.
         private static string s_titleSeperator = " - ";
+
+        #endregion Private variables
+
+        #region Text seperator
 
         /// <summary>
         /// Sets console's title seperator for better liability between parameters.
@@ -29,35 +50,11 @@ namespace HelpConsole
             s_titleSeperator = seperator;
         }
 
-        /// <summary>
-        /// Sets console's title with one text. {f} Calls <see cref="SetConsoleTitle(string, string, string)"/>
-        /// </summary>
-        /// <param name="firstText">First text</param>
-        public static void SetConsoleTitle(string firstText)
-        {
-            //
-            SetConsoleTitle(firstText: firstText, secondText: "", thirdText: "");
-        }
+        #endregion Text seperator
 
-        /// <summary>
-        ///  Sets console's title with two text. {f} - {s} Calls <see cref="SetConsoleTitle(string, string, string)"/>
-        /// </summary>
-        /// <param name="firstText">First text</param>
-        /// <param name="secondText">Second text</param>
-        public static void SetConsoleTitle(string firstText, string secondText)
-        {
-            //
-            SetConsoleTitle(firstText: firstText, secondText: secondText, thirdText: "");
-        }
+        #region Set text
 
-        /// <summary>
-        /// Sets console's title with three text. {f} - {s} - {t}
-        /// </summary>
-        /// <param name="firstText">First text</param>
-        /// <param name="secondText">Second text</param>
-        /// <param name="thirdText">Third text</param>        
-        //[SupportedOSPlatform("windows")]
-        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "")
+        private static void SetFirstText(string firstText)
         {
             // Checking if firstText is null.
             if (firstText == null)
@@ -70,7 +67,10 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleFirstText = firstText;
             }
+        }
 
+        private static void SetSecondText(string secondText)
+        {
             // Checking if secondText is null.
             if (secondText == null)
             {
@@ -82,7 +82,10 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleSecondText = secondText;
             }
+        }
 
+        private static void SetThirdText(string thirdText)
+        {
             // Checking if thirdText is null.
             if (thirdText == null)
             {
@@ -94,15 +97,271 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleThirdText = thirdText;
             }
+        }
+
+        private static void SetFourthText(string fourthText)
+        {
+            // Checking if fourthText is null.
+            if (fourthText == null)
+            {
+                // Set fourth text with default value.
+                fourthText = s_titleFourthText;
+            }
+            else
+            {
+                // Set default value with given parameter.
+                s_titleFourthText = fourthText;
+            }
+        }
+
+        private static void SetFifthText(string fifthText)
+        {
+            // Checking if fifthText is null.
+            if (fifthText == null)
+            {
+                // Set fifth text with default value.
+                fifthText = s_titleFifthText;
+            }
+            else
+            {
+                // Set default value with given parameter.
+                s_titleFifthText = fifthText;
+            }
+        }
+
+        private static void SetSixthText(string sixthText)
+        {
+            // Checking if sixthText is null.
+            if (sixthText == null)
+            {
+                // Set sixth text with default value.
+                sixthText = s_titleSixthText;
+            }
+            else
+            {
+                // Set default value with given parameter.
+                s_titleSixthText = sixthText;
+            }
+        }
+
+        private static void SetSeventhText(string seventhText)
+        {
+            // Checking if seventhText is null.
+            if (seventhText == null)
+            {
+                // Set seventh text with default value.
+                seventhText = s_titleSeventhText;
+            }
+            else
+            {
+                // Set default value with given parameter.
+                s_titleSeventhText = seventhText;
+            }
+        }
+
+        private static void SetEigthText(string eigthText)
+        {
+            // Checking if eighth is null.
+            if (eigthText == null)
+            {
+                // Set eighth text with default value.
+                eigthText = s_titleEighthText;
+            }
+            else
+            {
+                // Set default value with given parameter.
+                s_titleEighthText = eigthText;
+            }
+        }
+
+        #endregion Set text
+
+        #region Set Console Title
+
+        /// <summary>
+        /// Sets console's title with one text. {f} Calls <see cref="SetConsoleTitle(string, string, string)"/>.
+        /// </summary>
+        /// <param name="firstText">First text.</param>
+        public static void SetConsoleTitle(string firstText)
+        {
+            //
+            SetConsoleTitle(firstText: firstText, secondText: "", thirdText: "");
+        }
+
+        /// <summary>
+        ///  Sets console's title with two text. {f} - {s} Calls <see cref="SetConsoleTitle(string, string, string)"/>.
+        /// </summary>
+        /// <param name="firstText">First text.</param>
+        /// <param name="secondText">Second text.</param>
+        public static void SetConsoleTitle(string firstText, string secondText)
+        {
+            //
+            SetConsoleTitle(firstText: firstText, secondText: secondText, thirdText: "");
+        }
+
+        /// <summary>
+        /// Sets console's title with three text. {f} - {s} - {t}
+        /// </summary>
+        /// <param name="firstText">First text.</param>
+        /// <param name="secondText">Second text.</param>
+        /// <param name="thirdText">Third text.</param>        
+        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "")
+        {
+            SetFirstText(firstText);
+            SetSecondText(secondText);
+            SetThirdText(thirdText);
 
             // Setting console's title with first, second and third text. Adds provided title seperator if parameter parameter is provided.
             Console.Title = $"{firstText}{(string.IsNullOrEmpty(secondText) ? "" : s_titleSeperator)}{secondText}{(string.IsNullOrEmpty(thirdText) ? "" : s_titleSeperator)}{thirdText}";
         }
 
         /// <summary>
+        /// Sets console's title with four text. {first text}{seperator}...{last text}
+        /// </summary>
+        /// <param name="firstText">First text.</param>
+        /// <param name="secondText">Second text.</param>
+        /// <param name="thirdText">Third text.</param>
+        /// <param name="fourthText">Fourth text.</param>
+        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "", string fourthText = "")
+        {
+            SetFirstText(firstText);
+            SetSecondText(secondText);
+            SetThirdText(thirdText);
+            SetFourthText(fourthText);
+
+            // Setting console's title with first, second, third and fourth text. Adds provided title seperator if parameter parameter is provided.
+            Console.Title = $"" +
+                $"{firstText}" +
+                $"{(string.IsNullOrEmpty(secondText) ? "" : s_titleSeperator)}{secondText}" +
+                $"{(string.IsNullOrEmpty(thirdText) ? "" : s_titleSeperator)}{thirdText}" +
+                $"{(string.IsNullOrEmpty(fourthText) ? "" : s_titleSeperator)}{fourthText}";
+        }
+
+        /// <summary>
+        /// Sets console's title with five text. {first text}{seperator}...{last text}
+        /// </summary>
+        /// <param name="firstText">First text.</param>
+        /// <param name="secondText">Second text.</param>
+        /// <param name="thirdText">Third text.</param>
+        /// <param name="fourthText">Fourth text.</param>
+        /// <param name="fifthText">Fifth text.</param>
+        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "", string fourthText = "", string fifthText = "")
+        {
+            SetFirstText(firstText);
+            SetSecondText(secondText);
+            SetThirdText(thirdText);
+            SetFourthText(fourthText);
+            SetFifthText(fifthText);
+
+            // Setting console's title with first, second, third, fourth and fifth text. Adds provided title seperator if parameter parameter is provided.
+            Console.Title = $"" +
+                $"{firstText}" +
+                $"{(string.IsNullOrEmpty(secondText) ? "" : s_titleSeperator)}{secondText}" +
+                $"{(string.IsNullOrEmpty(thirdText) ? "" : s_titleSeperator)}{thirdText}" +
+                $"{(string.IsNullOrEmpty(fourthText) ? "" : s_titleSeperator)}{fourthText}" +
+                $"{(string.IsNullOrEmpty(fifthText) ? "" : s_titleSeperator)}{fifthText}";
+        }
+
+        /// <summary>
+        /// Sets console's title with six text. {first text}{seperator}...{last text}
+        /// </summary>
+        /// <param name="firstText">First text.</param>
+        /// <param name="secondText">Second text.</param>
+        /// <param name="thirdText">Third text.</param>
+        /// <param name="fourthText">Fourth text.</param>
+        /// <param name="fifthText">Fifth text.</param>
+        /// <param name="sixthText">Sixth text.</param>
+        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "", string fourthText = "", string fifthText = "", string sixthText = "")
+        {
+            SetFirstText(firstText);
+            SetSecondText(secondText);
+            SetThirdText(thirdText);
+            SetFourthText(fourthText);
+            SetFifthText(fifthText);
+            SetSixthText(sixthText);
+
+            // Setting console's title with first, second, third, fourth, fifth and sixth text. Adds provided title seperator if parameter parameter is provided.
+            Console.Title = $"" +
+                $"{firstText}" +
+                $"{(string.IsNullOrEmpty(secondText) ? "" : s_titleSeperator)}{secondText}" +
+                $"{(string.IsNullOrEmpty(thirdText) ? "" : s_titleSeperator)}{thirdText}" +
+                $"{(string.IsNullOrEmpty(fourthText) ? "" : s_titleSeperator)}{fourthText}" +
+                $"{(string.IsNullOrEmpty(fifthText) ? "" : s_titleSeperator)}{fifthText}" +
+                $"{(string.IsNullOrEmpty(sixthText) ? "" : s_titleSeperator)}{sixthText}";
+        }
+
+        /// <summary>
+        /// Sets console's title with seven text. {first text}{seperator}...{last text}
+        /// </summary>
+        /// <param name="firstText">First text.</param>
+        /// <param name="secondText">Second text.</param>
+        /// <param name="thirdText">Third text.</param>
+        /// <param name="fourthText">Fourth text.</param>
+        /// <param name="fifthText">Fifth text.</param>
+        /// <param name="sixthText">Sixth text.</param>
+        /// <param name="seventhText">Seventh text.</param>
+        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "", string fourthText = "", string fifthText = "", string sixthText = "", string seventhText = "")
+        {
+            SetFirstText(firstText);
+            SetSecondText(secondText);
+            SetThirdText(thirdText);
+            SetFourthText(fourthText);
+            SetFifthText(fifthText);
+            SetSixthText(sixthText);
+            SetSeventhText(seventhText);
+
+            // Setting console's title with first, second, third, fourth, fifth, sixth and seventh text. Adds provided title seperator if parameter parameter is provided.
+            Console.Title = $"" +
+                $"{firstText}" +
+                $"{(string.IsNullOrEmpty(secondText) ? "" : s_titleSeperator)}{secondText}" +
+                $"{(string.IsNullOrEmpty(thirdText) ? "" : s_titleSeperator)}{thirdText}" +
+                $"{(string.IsNullOrEmpty(fourthText) ? "" : s_titleSeperator)}{fourthText}" +
+                $"{(string.IsNullOrEmpty(fifthText) ? "" : s_titleSeperator)}{fifthText}" +
+                $"{(string.IsNullOrEmpty(sixthText) ? "" : s_titleSeperator)}{sixthText}" +
+                $"{(string.IsNullOrEmpty(seventhText) ? "" : s_titleSeperator)}{seventhText}";
+        }
+
+        /// <summary>
+        /// Sets console's title with eigth text. {first text}{seperator}...{last text}
+        /// </summary>
+        /// <param name="firstText">First text.</param>
+        /// <param name="secondText">Second text.</param>
+        /// <param name="thirdText">Third text.</param>
+        /// <param name="fourthText">Four text.</param>
+        /// <param name="fifthText">Fifth text.</param>
+        /// <param name="sixthText">Sixth text.</param>
+        /// <param name="seventhText">Seven text.</param>
+        /// <param name="eigthText">Eight text.</param>
+        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "", string fourthText = "", string fifthText = "", string sixthText = "", string seventhText = "", string eigthText = "")
+        {
+            SetFirstText(firstText);
+            SetSecondText(secondText);
+            SetThirdText(thirdText);
+            SetFourthText(fourthText);
+            SetFifthText(fifthText);
+            SetSixthText(sixthText);
+            SetSeventhText(seventhText);
+            SetEigthText(eigthText);
+
+            // Setting console's title with first, second, third, fourth, fifth, sixth, seventh and eighth text. Adds provided title seperator if parameter parameter is provided.
+            Console.Title = $"" +
+                $"{firstText}" +
+                $"{(string.IsNullOrEmpty(secondText) ? "" : s_titleSeperator)}{secondText}" +
+                $"{(string.IsNullOrEmpty(thirdText) ? "" : s_titleSeperator)}{thirdText}" +
+                $"{(string.IsNullOrEmpty(fourthText) ? "" : s_titleSeperator)}{fourthText}" +
+                $"{(string.IsNullOrEmpty(fifthText) ? "" : s_titleSeperator)}{fifthText}" +
+                $"{(string.IsNullOrEmpty(sixthText) ? "" : s_titleSeperator)}{sixthText}" +
+                $"{(string.IsNullOrEmpty(seventhText) ? "" : s_titleSeperator)}{seventhText}" +
+                $"{(string.IsNullOrEmpty(eigthText) ? "" : s_titleSeperator)}{eigthText}";
+        }
+
+        #endregion Set Console Title
+
+        #region Clear text
+
+        /// <summary>
         /// Clears console title.
         /// </summary>
-        //[SupportedOSPlatform("windows")]
         public static void ClearConsoleTitle()
         {
             // Set default value null.
@@ -114,8 +373,25 @@ namespace HelpConsole
             // Set default value null.
             s_titleThirdText = null;
 
+            // Set default value null.
+            s_titleFourthText = null;
+
+            // Set default value null.
+            s_titleFifthText = null;
+
+            // Set default value null.
+            s_titleSixthText = null;
+
+            // Set default value null.
+            s_titleSeventhText = null;
+
+            // Set default value null.
+            s_titleEighthText = null;
+
             // Set console's title empty.
             Console.Title = "";
         }
+
+        #endregion Clear text
     }
 }
