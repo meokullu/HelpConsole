@@ -64,16 +64,6 @@ namespace HelpConsole
     /// </summary>
     public partial class HelpConsole
     {
-        #region Melodies
-
-        // Start up beeping frequency and duration. Total duration 500 ms.
-        private static readonly Melody s_startUpMelody = new Melody { Notes = new int[] { 440, 190, 60, 660, 190, 60 } };
-
-        // Finish up beeping frequency and duration. Total duration 1.000 ms.
-        private static readonly Melody s_finishUpMelody = new Melody { Notes = new int[] { 1250, 400, 100, 1000, 400, 100 } };
-
-        #endregion Melodies
-
         /// <summary>
         /// Starting up.
         /// </summary>
@@ -107,7 +97,7 @@ namespace HelpConsole
             if (consoleOptions.WarningSound)
             {
                 // Beep sound.
-                Beep(s_startUpMelody);
+                Beep(StartingUp);
             }
         }
 
@@ -130,7 +120,7 @@ namespace HelpConsole
             if (ConsoleOptions.WarningSound)
             {
                 // Beeping.
-                Beep(s_finishUpMelody);
+                Beep(FinishingUp);
             }
 
             // Checking if WaitOnEnd is true.

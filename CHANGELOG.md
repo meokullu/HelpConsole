@@ -11,6 +11,18 @@
 #### Removed
 -->
 
+### [1.8.0]
+#### Added
+* `SetConsoleTitle(..., string fourthText)`, `SetConsoleTitle(..., string fifthText)`, `SetConsoleTitle(..., string sixthText)`, `SetConsoleTitle(..., string seventhText)`, `SetConsoleTitle(..., string eighthText)` methods are added.
+* `Error` and `Fail` melodies are added.
+
+#### Changed
+* SetConsoleTitle method series are expanded from three to eigth componenents.
+* `ClearConsoleTitle()` now clears all eigth values.
+* Fixing punctations on method summaries on Title.cs.
+* `StartingUp` and `EndingUp` melodies are now public variables.
+* All melodies are simplified.
+
 ### [1.7.0]
 #### Added
 * `Write<T>(T value, ConsoleColor bgColor, ConsoleColor fgColor)`, `WriteLine<T>(T value, ConsoleColor bgColor, ConsoleColor fgColor)` method added for write text with given foreground and background color.
