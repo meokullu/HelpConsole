@@ -11,6 +11,16 @@
 #### Removed
 -->
 
+### [1.9.0]
+#### Added
+* `AllLightColors`, `AllDarkColors`, `GrayToneColors`, `BlueToneColors`, `GreenToneColors`, `BlueToneColors`, `GreenToneColors`, `CyanToneColors`, `RedToneColors`, `MagentaToneColors`, `YellowToneColors`, `BlackWhiteColors` predefined `ConsoleColor[]` are added to use for `WriteLine<T>(T[] valueArray, ConsoleColor[] colorList)` and `Write<T>(T[] valueArray, ConsoleColor[] colorList)`.
+
+#### Changed
+* `SetConsoleTitle()` method series now uses `null` value as ignoring.
+
+#### Fixed
+* `SetConsoleTitle()` series were not keeping previous value when method with different parameters were using.
+
 ### [1.8.0]
 #### Added
 * `SetConsoleTitle(..., string fourthText)`, `SetConsoleTitle(..., string fifthText)`, `SetConsoleTitle(..., string sixthText)`, `SetConsoleTitle(..., string seventhText)`, `SetConsoleTitle(..., string eighthText)` methods are added.

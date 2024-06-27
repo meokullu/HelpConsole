@@ -54,7 +54,7 @@ namespace HelpConsole
 
         #region Set text
 
-        private static void SetFirstText(string firstText)
+        private static string SetFirstText(string firstText)
         {
             // Checking if firstText is null.
             if (firstText == null)
@@ -67,9 +67,12 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleFirstText = firstText;
             }
+
+            //
+            return firstText;
         }
 
-        private static void SetSecondText(string secondText)
+        private static string SetSecondText(string secondText)
         {
             // Checking if secondText is null.
             if (secondText == null)
@@ -82,9 +85,12 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleSecondText = secondText;
             }
+
+            //
+            return secondText;
         }
 
-        private static void SetThirdText(string thirdText)
+        private static string SetThirdText(string thirdText)
         {
             // Checking if thirdText is null.
             if (thirdText == null)
@@ -97,9 +103,12 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleThirdText = thirdText;
             }
+
+            //
+            return thirdText;
         }
 
-        private static void SetFourthText(string fourthText)
+        private static string SetFourthText(string fourthText)
         {
             // Checking if fourthText is null.
             if (fourthText == null)
@@ -112,9 +121,12 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleFourthText = fourthText;
             }
+
+            //
+            return fourthText;
         }
 
-        private static void SetFifthText(string fifthText)
+        private static string SetFifthText(string fifthText)
         {
             // Checking if fifthText is null.
             if (fifthText == null)
@@ -127,9 +139,12 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleFifthText = fifthText;
             }
+
+            //
+            return fifthText;
         }
 
-        private static void SetSixthText(string sixthText)
+        private static string SetSixthText(string sixthText)
         {
             // Checking if sixthText is null.
             if (sixthText == null)
@@ -142,9 +157,12 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleSixthText = sixthText;
             }
+
+            //
+            return sixthText;
         }
 
-        private static void SetSeventhText(string seventhText)
+        private static string SetSeventhText(string seventhText)
         {
             // Checking if seventhText is null.
             if (seventhText == null)
@@ -157,9 +175,12 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleSeventhText = seventhText;
             }
+
+            //
+            return seventhText;
         }
 
-        private static void SetEigthText(string eigthText)
+        private static string SetEigthText(string eigthText)
         {
             // Checking if eighth is null.
             if (eigthText == null)
@@ -172,6 +193,9 @@ namespace HelpConsole
                 // Set default value with given parameter.
                 s_titleEighthText = eigthText;
             }
+
+            //
+            return eigthText;
         }
 
         #endregion Set text
@@ -185,7 +209,7 @@ namespace HelpConsole
         public static void SetConsoleTitle(string firstText)
         {
             //
-            SetConsoleTitle(firstText: firstText, secondText: "", thirdText: "");
+            SetConsoleTitle(firstText: firstText, secondText: null, thirdText: null);
         }
 
         /// <summary>
@@ -196,7 +220,7 @@ namespace HelpConsole
         public static void SetConsoleTitle(string firstText, string secondText)
         {
             //
-            SetConsoleTitle(firstText: firstText, secondText: secondText, thirdText: "");
+            SetConsoleTitle(firstText: firstText, secondText: secondText, thirdText: null);
         }
 
         /// <summary>
@@ -205,11 +229,11 @@ namespace HelpConsole
         /// <param name="firstText">First text.</param>
         /// <param name="secondText">Second text.</param>
         /// <param name="thirdText">Third text.</param>        
-        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "")
+        public static void SetConsoleTitle(string firstText = null, string secondText = null, string thirdText = null)
         {
-            SetFirstText(firstText);
-            SetSecondText(secondText);
-            SetThirdText(thirdText);
+            firstText = SetFirstText(firstText);
+            secondText = SetSecondText(secondText);
+            thirdText = SetThirdText(thirdText);
 
             // Setting console's title with first, second and third text. Adds provided title seperator if parameter parameter is provided.
             Console.Title = $"{firstText}{(string.IsNullOrEmpty(secondText) ? "" : s_titleSeperator)}{secondText}{(string.IsNullOrEmpty(thirdText) ? "" : s_titleSeperator)}{thirdText}";
@@ -222,12 +246,12 @@ namespace HelpConsole
         /// <param name="secondText">Second text.</param>
         /// <param name="thirdText">Third text.</param>
         /// <param name="fourthText">Fourth text.</param>
-        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "", string fourthText = "")
+        public static void SetConsoleTitle(string firstText = null, string secondText = null, string thirdText = null, string fourthText = null)
         {
-            SetFirstText(firstText);
-            SetSecondText(secondText);
-            SetThirdText(thirdText);
-            SetFourthText(fourthText);
+            firstText = SetFirstText(firstText);
+            secondText = SetSecondText(secondText);
+            thirdText = SetThirdText(thirdText);
+            fourthText = SetFourthText(fourthText);
 
             // Setting console's title with first, second, third and fourth text. Adds provided title seperator if parameter parameter is provided.
             Console.Title = $"" +
@@ -245,13 +269,13 @@ namespace HelpConsole
         /// <param name="thirdText">Third text.</param>
         /// <param name="fourthText">Fourth text.</param>
         /// <param name="fifthText">Fifth text.</param>
-        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "", string fourthText = "", string fifthText = "")
+        public static void SetConsoleTitle(string firstText = null, string secondText = null, string thirdText = null, string fourthText = null, string fifthText = null)
         {
-            SetFirstText(firstText);
-            SetSecondText(secondText);
-            SetThirdText(thirdText);
-            SetFourthText(fourthText);
-            SetFifthText(fifthText);
+            firstText = SetFirstText(firstText);
+            secondText = SetSecondText(secondText);
+            thirdText = SetThirdText(thirdText);
+            fourthText = SetFourthText(fourthText);
+            fifthText = SetFifthText(fifthText);
 
             // Setting console's title with first, second, third, fourth and fifth text. Adds provided title seperator if parameter parameter is provided.
             Console.Title = $"" +
@@ -271,14 +295,14 @@ namespace HelpConsole
         /// <param name="fourthText">Fourth text.</param>
         /// <param name="fifthText">Fifth text.</param>
         /// <param name="sixthText">Sixth text.</param>
-        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "", string fourthText = "", string fifthText = "", string sixthText = "")
+        public static void SetConsoleTitle(string firstText = null, string secondText = null, string thirdText = null, string fourthText = null, string fifthText = null, string sixthText = null)
         {
-            SetFirstText(firstText);
-            SetSecondText(secondText);
-            SetThirdText(thirdText);
-            SetFourthText(fourthText);
-            SetFifthText(fifthText);
-            SetSixthText(sixthText);
+            firstText = SetFirstText(firstText);
+            secondText = SetSecondText(secondText);
+            thirdText = SetThirdText(thirdText);
+            fourthText = SetFourthText(fourthText);
+            fifthText = SetFifthText(fifthText);
+            sixthText = SetSixthText(sixthText);
 
             // Setting console's title with first, second, third, fourth, fifth and sixth text. Adds provided title seperator if parameter parameter is provided.
             Console.Title = $"" +
@@ -300,15 +324,15 @@ namespace HelpConsole
         /// <param name="fifthText">Fifth text.</param>
         /// <param name="sixthText">Sixth text.</param>
         /// <param name="seventhText">Seventh text.</param>
-        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "", string fourthText = "", string fifthText = "", string sixthText = "", string seventhText = "")
+        public static void SetConsoleTitle(string firstText = null, string secondText = null, string thirdText = null, string fourthText = null, string fifthText = null, string sixthText = null, string seventhText = null)
         {
-            SetFirstText(firstText);
-            SetSecondText(secondText);
-            SetThirdText(thirdText);
-            SetFourthText(fourthText);
-            SetFifthText(fifthText);
-            SetSixthText(sixthText);
-            SetSeventhText(seventhText);
+            firstText = SetFirstText(firstText);
+            secondText = SetSecondText(secondText);
+            thirdText = SetThirdText(thirdText);
+            fourthText = SetFourthText(fourthText);
+            fifthText = SetFifthText(fifthText);
+            sixthText = SetSixthText(sixthText);
+            seventhText = SetSeventhText(seventhText);
 
             // Setting console's title with first, second, third, fourth, fifth, sixth and seventh text. Adds provided title seperator if parameter parameter is provided.
             Console.Title = $"" +
@@ -332,16 +356,16 @@ namespace HelpConsole
         /// <param name="sixthText">Sixth text.</param>
         /// <param name="seventhText">Seven text.</param>
         /// <param name="eigthText">Eight text.</param>
-        public static void SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "", string fourthText = "", string fifthText = "", string sixthText = "", string seventhText = "", string eigthText = "")
+        public static void SetConsoleTitle(string firstText = null, string secondText = null, string thirdText = null, string fourthText = null, string fifthText = null, string sixthText = null, string seventhText = null, string eigthText = null)
         {
-            SetFirstText(firstText);
-            SetSecondText(secondText);
-            SetThirdText(thirdText);
-            SetFourthText(fourthText);
-            SetFifthText(fifthText);
-            SetSixthText(sixthText);
-            SetSeventhText(seventhText);
-            SetEigthText(eigthText);
+            firstText = SetFirstText(firstText);
+            secondText = SetSecondText(secondText);
+            thirdText = SetThirdText(thirdText);
+            fourthText = SetFourthText(fourthText);
+            fifthText = SetFifthText(fifthText);
+            sixthText = SetSixthText(sixthText);
+            seventhText = SetSeventhText(seventhText);
+            eigthText = SetEigthText(eigthText);
 
             // Setting console's title with first, second, third, fourth, fifth, sixth, seventh and eighth text. Adds provided title seperator if parameter parameter is provided.
             Console.Title = $"" +
