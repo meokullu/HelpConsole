@@ -22,7 +22,7 @@ FinishUp();
 ```
 #### Title & Writing
 ```
-SetConsoleTitle(string firstText = "", string secondText = "", string thirdText = "");
+SetConsoleTitle(string firstText = null, string secondText = null, string thirdText = null);
 ```
 ```
 ClearConsoleTitle();
