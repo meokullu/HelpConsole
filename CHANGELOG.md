@@ -11,6 +11,15 @@
 #### Removed
 -->
 
+### [1.10.0]
+
+#### Added
+* `Write(string format, object arg0)`, `Write(string format, object arg0, object arg1)`, `Write(string format, object arg0, object arg2)`, `Write(string format, object arg0, object arg1, object arg2, object arg3)` and `Write(string format, param object[] arg)` are added into WriteCore.cs.
+* `WriteLine(string format, object arg0)`, `WriteLine(string format, object arg0, object arg1)`, `Write(string format, object arg0, object arg2)`, `WriteLine(string format, object arg0, object arg1, object arg2, object arg3)` and `WriteLine(string format, param object[] arg)` are added into WriteCore.cs.
+
+#### Changed
+* Summary improvements on WriteCore.cs and WriteLineCore.cs
+
 ### [1.9.0]
 #### Added
 * `AllLightColors`, `AllDarkColors`, `GrayToneColors`, `BlueToneColors`, `GreenToneColors`, `BlueToneColors`, `GreenToneColors`, `CyanToneColors`, `RedToneColors`, `MagentaToneColors`, `YellowToneColors`, `BlackWhiteColors` predefined `ConsoleColor[]` are added to use for `WriteLine<T>(T[] valueArray, ConsoleColor[] colorList)` and `Write<T>(T[] valueArray, ConsoleColor[] colorList)`.

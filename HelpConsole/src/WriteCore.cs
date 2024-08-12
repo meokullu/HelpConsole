@@ -48,15 +48,6 @@ namespace HelpConsole
         }
 
         /// <summary>
-        /// Calls <see cref="Console.Write(double)"/>.
-        /// </summary>
-        /// <param name="value">Value to write.</param>
-        public static void Write(double value)
-        {
-            Console.Write(value: value);
-        }
-
-        /// <summary>
         /// Calls <see cref="Console.Write(decimal)"/>.
         /// </summary>
         /// <param name="value">Value to write.</param>
@@ -65,6 +56,15 @@ namespace HelpConsole
             Console.Write(value: value);
         }
 
+        /// <summary>
+        /// Calls <see cref="Console.Write(double)"/>.
+        /// </summary>
+        /// <param name="value">Value to write.</param>
+        public static void Write(double value)
+        {
+            Console.Write(value: value);
+        }
+         
         /// <summary>
         /// Calls <see cref="Console.Write(float)"/>.
         /// </summary>
@@ -111,7 +111,7 @@ namespace HelpConsole
         }
 
         /// <summary>
-        /// Calls <see cref="Console.Write(object)"/>.
+        /// Calls <see cref="Console.Write(object)"/>. Parameter is not nullable.
         /// </summary>
         /// <param name="value">Value to write.</param>
         public static void Write(object value)
@@ -120,12 +120,55 @@ namespace HelpConsole
         }
 
         /// <summary>
-        /// Calls <see cref="Console.Write(string)"/>.
+        /// Calls <see cref="Console.Write(string)"/>. Parameter is not nullable.
         /// </summary>
         /// <param name="value">Value to write.</param>
         public static void Write(string value)
         {
             Console.Write(value: value);
+        }
+
+        /// <summary>
+        /// Calls <see cref="Console.Write(string, object)"/>. Parameter is not nullable.
+        /// </summary>
+        /// <param name="format">String format.</param>
+        /// <param name="arg0">Object to write on format.</param>
+        public static void Write(string format, object arg0)
+        {
+            Console.Write(format: format, arg0: arg0);
+        }
+
+        /// <summary>
+        /// Calls <see cref="Console.Write(string, object, object)"/>. Parameter is not nullable.
+        /// </summary>
+        /// <param name="format">String format.</param>
+        /// <param name="arg0">Object to write on format.</param>
+        /// <param name="arg1">Object to write on format.</param>
+        public static void Write(string format, object arg0, object arg1)
+        {
+            Console.Write(format: format, arg0: arg0, arg1: arg1);
+        }
+
+        /// <summary>
+        /// Calls <see cref="Console.Write(string, object, object)"/>. Parameter is not nullable.
+        /// </summary>
+        /// <param name="format">String format.</param>
+        /// <param name="arg0">Object to write on format.</param>
+        /// <param name="arg1">Object to write on format.</param>
+        /// <param name="arg2">Object to write on format.</param>
+        public static void Write(string format, object arg0, object arg1, object arg2)
+        {
+            Console.Write(format: format, arg0: arg0, arg1: arg1, arg2: arg2);
+        }
+
+        /// <summary>
+        /// Calls <see cref="Console.Write(string, object[])"/>. Parameter is not nullable.
+        /// </summary>
+        /// <param name="format">String format.</param>
+        /// <param name="arg">Object list to write on format.</param>
+        public static void Write(string format, params object[] arg)
+        {
+            Console.Write(format: format, arg: arg);
         }
 
         #endregion Write

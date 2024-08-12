@@ -52,20 +52,20 @@ namespace HelpConsole
         }
 
         /// <summary>
-        /// Calls <see cref="Console.WriteLine(double)"/>.
+        /// Calls <see cref="Console.WriteLine(decimal)"/>.
         /// </summary>
         /// <param name="value">Value to write.</param>
-        public static void WriteLine(double value)
+        public static void WriteLine(decimal value)
         {
             //
             Console.WriteLine(value: value);
         }
 
         /// <summary>
-        /// Calls <see cref="Console.WriteLine(decimal)"/>.
+        /// Calls <see cref="Console.WriteLine(double)"/>.
         /// </summary>
         /// <param name="value">Value to write.</param>
-        public static void WriteLine(decimal value)
+        public static void WriteLine(double value)
         {
             //
             Console.WriteLine(value: value);
@@ -122,7 +122,7 @@ namespace HelpConsole
         }
 
         /// <summary>
-        /// Calls <see cref="Console.WriteLine(object)"/>.
+        /// Calls <see cref="Console.WriteLine(object)"/>. Parameter is not nullable.
         /// </summary>
         /// <param name="value">Value to write.</param>
         public static void WriteLine(object value)
@@ -132,13 +132,56 @@ namespace HelpConsole
         }
 
         /// <summary>
-        /// Calls <see cref="Console.WriteLine(string)"/>.
+        /// Calls <see cref="Console.WriteLine(string)"/>. Parameter is not nullable.
         /// </summary>
         /// <param name="value">Value to write.</param>
         public static void WriteLine(string value)
         {
             //
             Console.WriteLine(value: value);
+        }
+
+        /// <summary>
+        /// Calls <see cref="Console.WriteLine(string, object)"/>. Parameter is not nullable.
+        /// </summary>
+        /// <param name="format">String format.</param>
+        /// <param name="arg0">Object to write on format.</param>
+        public static void WriteLine(string format, object arg0)
+        {
+            Console.WriteLine(format: format, arg0: arg0);
+        }
+
+        /// <summary>
+        /// Calls <see cref="Console.WriteLine(string, object, object)"/>. Parameter is not nullable.
+        /// </summary>
+        /// <param name="format">String format.</param>
+        /// <param name="arg0">Object to write on format.</param>
+        /// <param name="arg1">Object to write on format.</param>
+        public static void WriteLine(string format, object arg0, object arg1)
+        {
+            Console.WriteLine(format: format, arg0: arg0, arg1: arg1);
+        }
+
+        /// <summary>
+        /// Calls <see cref="Console.WriteLine(string, object, object)"/>. Parameter is not nullable.
+        /// </summary>
+        /// <param name="format">String format.</param>
+        /// <param name="arg0">Object to write on format.</param>
+        /// <param name="arg1">Object to write on format.</param>
+        /// <param name="arg2">Object to write on format.</param>
+        public static void WriteLine(string format, object arg0, object arg1, object arg2)
+        {
+            Console.WriteLine(format: format, arg0: arg0, arg1: arg1, arg2: arg2);
+        }
+
+        /// <summary>
+        /// Calls <see cref="Console.WriteLine(string, object[])"/>. Parameter is not nullable.
+        /// </summary>
+        /// <param name="format">String format.</param>
+        /// <param name="arg">Object list to write on format.</param>
+        public static void WriteLine(string format, params object[] arg)
+        {
+            Console.WriteLine(format: format, arg: arg);
         }
 
         #endregion WriteLine
