@@ -8,7 +8,6 @@ HelpConsole is a project to offer useful methods which makes easier to use conso
 [Download on NuGet gallery](https://www.nuget.org/packages/HelpConsole/)
 
 ### Description
-
 HelpConsole has methods to increase liability of output, state and methods.
 
 ### Example Usage
@@ -59,6 +58,16 @@ Percentage2F(int item1, int item2);
 ```
 ```
 Percentage8F(int item1, int item2);
+```
+#### Key-Action
+```
+AddKeyActionPair(new Tuple<ConsoleKeyInfo, Action>(cki: cki, action: action))`;
+```
+```
+WaitKeyAction();
+```
+```
+KeyAction(ConsoleKeyInfo cki);
 ```
 
 To check listed methods, example of output visit wiki page. [HelpConsole Wiki](https://github.com/meokullu/HelpConsole/wiki)

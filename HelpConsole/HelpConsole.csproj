@@ -16,6 +16,7 @@
     <PackageReleaseNotes>
       v1.10.0
       * Missing Write() and WriteLine() methods are added into WriteCore.cs and WriteLineCore respectively.
+	  * Key-Action pair structure is added. `WaitKeyAction()` and `KeyAction(ConsoleKeyInfo cki)` methods call predefined action on predefined `KeyPairActionList`.
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>
