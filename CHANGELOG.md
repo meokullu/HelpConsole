@@ -16,6 +16,12 @@
 #### Added
 * `Write(string format, object arg0)`, `Write(string format, object arg0, object arg1)`, `Write(string format, object arg0, object arg2)`, `Write(string format, object arg0, object arg1, object arg2, object arg3)` and `Write(string format, param object[] arg)` are added into WriteCore.cs.
 * `WriteLine(string format, object arg0)`, `WriteLine(string format, object arg0, object arg1)`, `Write(string format, object arg0, object arg2)`, `WriteLine(string format, object arg0, object arg1, object arg2, object arg3)` and `WriteLine(string format, param object[] arg)` are added into WriteCore.cs.
+* Key-Action pair structure is added.
+* Simplified construstor of `ConsoleKeyInfo` is added. `ConsoleKeyInfo(char keychar, ConsoleKey key)` calls `ConsoleKeyInfo(char keyChar, ConsoleKey key, bool shift, bool alt, bool ctrl)` with false value modifiers.
+* `List<Tuple<ConsoleKeyInfo, Action>>` KeyActionPairList is added. It is `public`.
+* `AddKeyActionPair(ConsoleKeyInfo cki, Action action)`, `ListKeyActionPairList()` and `ClearKeyActionPairList()` methods added to work with `KeyActionParList`.
+* `WaitKeyAction()` is added which calls `KeyAction(ConsoleKeyInfo cki)` after asking user to type a key.
+* `KeyAction(ConsoleKeyInfo cki)` is added which calls predefined `Action` by match of `cki` on the list.
 
 #### Changed
 * Summary improvements on WriteCore.cs and WriteLineCore.cs
