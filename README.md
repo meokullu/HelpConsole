@@ -74,10 +74,10 @@ KeyAction(ConsoleKeyInfo cki);
 AddKeyFuncPair(new Tuple<ConsoleKeyInfo, Func<object>>(cki: cki, func: func));
 ```
 ```
-WaitKeyFunc();
+object returnData = WaitKeyFunc();
 ```
 ```
-KeyFunc(ConsoleKeyInfo cki);
+object returnData = KeyFunc(ConsoleKeyInfo cki);
 ```
 
 To check listed methods, example of output visit wiki page. [HelpConsole Wiki](https://github.com/meokullu/HelpConsole/wiki)
