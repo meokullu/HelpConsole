@@ -69,6 +69,16 @@ WaitKeyAction();
 ```
 KeyAction(ConsoleKeyInfo cki);
 ```
+### Key-Func
+```
+AddKeyFuncPair(new Tuple<ConsoleKeyInfo, Func<object>>(cki: cki, func: func));
+```
+```
+WaitKeyFunc();
+```
+```
+KeyFunc(ConsoleKeyInfo cki);
+```
 
 To check listed methods, example of output visit wiki page. [HelpConsole Wiki](https://github.com/meokullu/HelpConsole/wiki)
 
