@@ -11,15 +11,29 @@
 #### Removed
 -->
 
-### [1.10.0]
+### [1.11.0]
+#### Added
+* Key-Func pair structure is added.
+* `AddKeyFuncPair(ConsoleKeyInfo cki, Func func)`
+* `List<Tuple<ConsoleKeyInfo, Func<object>>>` KeyFuncPairList is added. It is `public`.
+* `AddKeyFuncPair(ConsoleKeyInfo cki, Func<object> func)`, `ListKeyFuncPairList()` and `ClearKeyFuncPairList()` methods added to work with `KeyFuncPairList`.
+* `WaitFuncAction()` is added which calls `KeyFunc(ConsoleKeyInfo cki)` after asking user to type a key.
+* `KeyFunc(ConsoleKeyInfo cki)` is added which calls predefined `Func` by match of `cki` on the list.
+* `WaitKeyAction(string message)` is added. It basically writes given message via `Write(string text)` then calls `WaitKeyAction()`. When message is given as "press any key: ", it asks callers to press any key with a message written on screen.
 
+#### Changed
+* Removed unnecessary usings.
+* Improvements on method summaries.
+* Added missing method summaries.
+
+### [1.10.0]
 #### Added
 * `Write(string format, object arg0)`, `Write(string format, object arg0, object arg1)`, `Write(string format, object arg0, object arg2)`, `Write(string format, object arg0, object arg1, object arg2, object arg3)` and `Write(string format, param object[] arg)` are added into WriteCore.cs.
 * `WriteLine(string format, object arg0)`, `WriteLine(string format, object arg0, object arg1)`, `Write(string format, object arg0, object arg2)`, `WriteLine(string format, object arg0, object arg1, object arg2, object arg3)` and `WriteLine(string format, param object[] arg)` are added into WriteCore.cs.
 * Key-Action pair structure is added.
 * Simplified construstor of `ConsoleKeyInfo` is added. `ConsoleKeyInfo(char keychar, ConsoleKey key)` calls `ConsoleKeyInfo(char keyChar, ConsoleKey key, bool shift, bool alt, bool ctrl)` with false value modifiers.
 * `List<Tuple<ConsoleKeyInfo, Action>>` KeyActionPairList is added. It is `public`.
-* `AddKeyActionPair(ConsoleKeyInfo cki, Action action)`, `ListKeyActionPairList()` and `ClearKeyActionPairList()` methods added to work with `KeyActionParList`.
+* `AddKeyActionPair(ConsoleKeyInfo cki, Action action)`, `ListKeyActionPairList()` and `ClearKeyActionPairList()` methods added to work with `KeyActionPairList`.
 * `WaitKeyAction()` is added which calls `KeyAction(ConsoleKeyInfo cki)` after asking user to type a key.
 * `KeyAction(ConsoleKeyInfo cki)` is added which calls predefined `Action` by match of `cki` on the list.
 

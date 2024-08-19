@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0; net7.0; net461; netcoreapp3.1; netstandard2.0</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
-    <FileVersion>1.10.0</FileVersion>
-    <AssemblyVersion>1.10.0</AssemblyVersion>
-    <Version>1.10.0</Version>
+    <FileVersion>1.11.0</FileVersion>
+    <AssemblyVersion>1.11.0</AssemblyVersion>
+    <Version>1.11.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Help Console</Title>
@@ -14,9 +14,8 @@
     <Copyright>Enes Okullu</Copyright>
     <PackageTags>console; console-application; console-app; helper</PackageTags>
     <PackageReleaseNotes>
-      v1.10.0
-      * Missing Write() and WriteLine() methods are added into WriteCore.cs and WriteLineCore respectively.
-	  * Key-Action pair structure is added. `WaitKeyAction()` and `KeyAction(ConsoleKeyInfo cki)` methods call predefined action on predefined `KeyPairActionList`.
+      v1.11.0
+      
       See changelog (https://github.com/meokullu/HelpConsole/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <RepositoryUrl>https://github.com/meokullu/HelpConsole</RepositoryUrl>

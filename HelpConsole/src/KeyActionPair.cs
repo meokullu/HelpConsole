@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HelpConsole
 {
@@ -34,14 +30,14 @@ namespace HelpConsole
 
         #endregion Additional constructors
 
-        #region List of Key-Action pair.
+        #region List of Key-Action pair
 
         /// <summary>
-        /// Key-Action pair list that holds values which will be used by KeyAction(ConsoleKeyInfo cki). Readonly?
+        /// Key-Action pair list that holds values which will be used by KeyAction(ConsoleKeyInfo cki).
         /// </summary>
         public static List<Tuple<ConsoleKeyInfo, Action>> KeyActionPairList = new List<Tuple<ConsoleKeyInfo, Action>>();
 
-        #endregion List of Key-Action pair.
+        #endregion List of Key-Action pair
 
         #region Add, List and Clear of Key-Action pair list.
 
@@ -95,10 +91,8 @@ namespace HelpConsole
 
         #region Wait
 
-        // Show any message or list options could be optional parameter.
-
         /// <summary>
-        /// 
+        /// Waits for callers input then calls KeyAction(ConsoleKeyInfo cki) with input. <seealso cref="KeyAction(System.ConsoleKeyInfo)"/>
         /// </summary>
         public static void WaitKeyAction()
         {
@@ -118,8 +112,18 @@ namespace HelpConsole
             }
             else
             {
-                Debug.WriteLine("HelpConsole:Key is not defined on Key-Action pair list. Use AddKeyActionPair() or ListActionPairList()");
+                Debug.WriteLine("HelpConsole:Key is not defined on Key-Action pair list. Use AddKeyActionPair() or ListKeyActionPairList()");
             }
+        }
+
+        /// <summary>
+        /// Writes given message and calls WaitKeyAction().
+        /// </summary>
+        /// <param name="message">A message to write for asking caller to press a key.</param>
+        public static void WaitKeyAction(string message)
+        {
+            Write(message);
+            WaitKeyAction();
         }
 
         #endregion Wait
