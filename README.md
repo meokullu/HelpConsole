@@ -10,6 +10,16 @@ HelpConsole is a project to offer useful methods which makes easier to use conso
 ### Description
 HelpConsole has methods to increase liability of output, state and methods.
 
+### How to download
+Release: [Latest release](https://github.com/meokullu/HelpConsole/releases/latest)
+
+[Download on NuGet gallery](https://www.nuget.org/packages/HelpConsole/)
+
+.NET CLI:
+```
+dotnet add package HelpConsole
+```
+
 ### Example Usage
 
 #### Start & Finish
