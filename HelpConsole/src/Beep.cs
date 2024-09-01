@@ -17,7 +17,7 @@ namespace HelpConsole
         {
             return new Melody { Notes = new int[] { 725, duration, duration } };
         }
-        
+
         /// <summary>
         /// Plays provided melody.
         /// </summary>
@@ -78,6 +78,6 @@ namespace HelpConsole
                     Thread.Sleep(melody.Notes[i + 2]);
                 }
             }
-        }        
+        }
     }
 }

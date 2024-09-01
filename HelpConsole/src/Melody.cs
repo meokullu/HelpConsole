@@ -21,22 +21,22 @@
         /// <summary>
         /// Beep for warning.
         /// </summary>
-        public static Melody Warning = new Melody { Notes = new int[] { 660, 250, 90, 660, 250, 90, 660, 250, 60} };
+        public static Melody Warning = new Melody { Notes = new int[] { 660, 250, 90, 660, 250, 90, 660, 250, 60 } };
 
         /// <summary>
         /// 
         /// </summary>
-        public static Melody Error = new Melody { Notes = new int[] { 554, 750, 250, 554, 750, 250, 554, 250, 558} };
+        public static Melody Error = new Melody { Notes = new int[] { 554, 750, 250, 554, 750, 250, 554, 250, 558 } };
 
         /// <summary>
         /// Beep for success. 
         /// </summary>
-        public static Melody Success = new Melody { Notes = new int[] { 800, 200, 100, 800, 250, 150, 800, 250, 200} };
+        public static Melody Success = new Melody { Notes = new int[] { 800, 200, 100, 800, 250, 150, 800, 250, 200 } };
 
         /// <summary>
         /// Beep for fail.
         /// </summary>
-        public static Melody Fail = new Melody { Notes = new int[] { 340, 750, 500, 340, 750, 500} };
+        public static Melody Fail = new Melody { Notes = new int[] { 340, 750, 500, 340, 750, 500 } };
 
 
         #region Melodies

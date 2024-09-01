@@ -64,7 +64,7 @@ namespace HelpConsole
         {
             Console.Write(value: value);
         }
-         
+
         /// <summary>
         /// Calls <see cref="Console.Write(float)"/>.
         /// </summary>

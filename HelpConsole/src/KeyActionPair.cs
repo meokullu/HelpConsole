@@ -149,7 +149,7 @@ namespace HelpConsole
             {
                 // calling action.
                 action();
-            }           
+            }
         }
 
         #endregion Do
