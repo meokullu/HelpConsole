@@ -16,6 +16,8 @@
 * When `ListKeyActionPairList()` is called `Modifiers` is checked and its data is printed only when it has a `ConsoleModifiers` value. [#65](https://github.com/meokullu/HelpConsole/issues/65)
 * When `ListKeyFuncPairList()` is called, when `cki.KeyChar` was not empty char, it was adding unintended new line. It is changed with expected behaviour now. [#65](https://github.com/meokullu/HelpConsole/issues/65)
 * When `ListKeyFuncPairList()` is called `Modifiers` is checked and its data is printed only when it has a `ConsoleModifiers` value. [#65](https://github.com/meokullu/HelpConsole/issues/65)
+* `WaitKeyAction()` and `WaitKeyAction(string message)` now returns `ConsoleKeyInfo` as a return value. [#61](https://github.com/meokullu/HelpConsole/issues/61)
+* `WaitKeyFunc()` and `WaitKeyFunc(string message)` now returns `ConsoleKeyInfo` as a return value. [#61](https://github.com/meokullu/HelpConsole/issues/61)
 
 ### [1.11.0]
 #### Added
