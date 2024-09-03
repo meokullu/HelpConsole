@@ -74,7 +74,14 @@ namespace HelpConsole
                 }
 
                 // Writing rest of the values of ConsoleKeyInfo.
-                WriteLine($"Key: {cki.Key} Mods: {Enum.GetName(typeof(ConsoleModifiers), cki.Modifiers)} Action: {KeyActionPairList[i].Item2.Method.Name}");
+                Write($"Key: {cki.Key} ");
+
+                if (cki.Modifiers != 0)
+                {
+                    Write($"Mods: {Enum.GetName(typeof(ConsoleModifiers), cki.Modifiers)} ");
+                }
+
+                WriteLine($"Action: {KeyActionPairList[i].Item2.Method.Name}");
             }
         }
 

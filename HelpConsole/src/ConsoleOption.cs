@@ -104,7 +104,6 @@ namespace HelpConsole
         /// <summary>
         /// Ending up.
         /// </summary>
-        //[SupportedOSPlatform("windows")]
         public static void FinishUp()
         {
             // Setting console title.
@@ -113,7 +112,7 @@ namespace HelpConsole
             // Adding a new line.
             WriteLine("");
 
-            // Writing a end text.
+            // Writing an end text.
             WriteLine("Done...");
 
             // Beep sound.
