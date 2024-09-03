@@ -79,7 +79,7 @@ WaitKeyAction();
 ```
 KeyAction(ConsoleKeyInfo cki);
 ```
-### Key-Func
+#### Key-Func
 ```
 AddKeyFuncPair(new Tuple<ConsoleKeyInfo, Func<object>>(cki: cki, func: func));
 ```
