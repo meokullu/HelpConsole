@@ -46,11 +46,20 @@ namespace HelpConsole
                 if (cki.KeyChar != ' ')
                 {
                     // Writing KeyChar value.
-                    WriteLine($"KeyChar: {cki.KeyChar} ");
+                    Write($"KeyChar: {cki.KeyChar} ");
                 }
 
                 // Writing rest of the values of ConsoleKeyInfo.
-                WriteLine($"Key: {cki.Key} Mods: {Enum.GetName(typeof(ConsoleModifiers), cki.Modifiers)} Func: {KeyFuncPairList[i].Item2.Method.Name}");
+                Write($"Key: {cki.Key} ");
+
+                WriteLine(cki.Modifiers);
+
+                if (cki.Modifiers != 0)
+                {
+                    Write($"Mods: {Enum.GetName(typeof(ConsoleModifiers), cki.Modifiers)} ");
+                }
+
+                WriteLine($"Func: {KeyFuncPairList[i].Item2.Method.Name}");                
             }
         }
 
