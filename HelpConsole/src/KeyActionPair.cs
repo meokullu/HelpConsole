@@ -101,7 +101,7 @@ namespace HelpConsole
         /// <summary>
         /// Waits for callers input then calls KeyAction(ConsoleKeyInfo cki) with input. <seealso cref="KeyAction(System.ConsoleKeyInfo)"/>
         /// </summary>
-        public static void WaitKeyAction()
+        public static ConsoleKeyInfo WaitKeyAction()
         {
             ConsoleKeyInfo? cki = null;
 
@@ -116,10 +116,16 @@ namespace HelpConsole
             {
                 // cki is not null now.
                 KeyAction(cki.Value);
+
+                // Returning pressed key.
+                return cki.Value;
             }
             else
             {
                 Debug.WriteLine("HelpConsole:Key is not defined on Key-Action pair list. Use AddKeyActionPair() or ListKeyActionPairList()");
+
+                // Returning pressed key.
+                return cki.Value;
             }
         }
 
@@ -127,10 +133,10 @@ namespace HelpConsole
         /// Writes given message and calls WaitKeyAction().
         /// </summary>
         /// <param name="message">A message to write for asking caller to press a key.</param>
-        public static void WaitKeyAction(string message)
+        public static ConsoleKeyInfo WaitKeyAction(string message)
         {
             Write(message);
-            WaitKeyAction();
+            return WaitKeyAction();
         }
 
         #endregion Wait

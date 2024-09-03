@@ -78,7 +78,7 @@ namespace HelpConsole
         /// <summary>
         /// Waits for callers input then calls KeyFunc(ConsoleKeyInfo cki) with input. <seealso cref="KeyFunc(System.ConsoleKeyInfo)"/>
         /// </summary>
-        public static object WaitKeyFunc()
+        public static ConsoleKeyInfo WaitKeyFunc()
         {
             ConsoleKeyInfo? cki = null;
 
@@ -92,13 +92,17 @@ namespace HelpConsole
             if (KeyFuncPairList.Select(p => p.Item1).Any(q => q == cki))
             {
                 // cki is not null now.
-                return KeyFunc(cki.Value);
+                KeyFunc(cki.Value);
+
+                // Returning pressed key.
+                return cki.Value;
             }
             else
             {
                 Debug.WriteLine("HelpConsole:Key is not defined on Key-Func pair list. Use AddKeyFuncPair() or ListKeyFuncPairList()");
 
-                return null;
+                // Returning pressed key.
+                return cki.Value;
             }
         }
 
@@ -106,7 +110,7 @@ namespace HelpConsole
         /// Writes given message and calls WaitKeyFunc().
         /// </summary>
         /// <param name="message">A message to write for asking caller to press a key.</param>
-        public static object WaitKeyFunc(string message)
+        public static ConsoleKeyInfo WaitKeyFunc(string message)
         {
             Write(message);
             return WaitKeyFunc();
