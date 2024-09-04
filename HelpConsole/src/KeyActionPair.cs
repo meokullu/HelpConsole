@@ -48,6 +48,14 @@ namespace HelpConsole
         /// <param name="action">An action to be called with match of cki.</param>
         public static void AddKeyActionPair(ConsoleKeyInfo cki, Action action)
         {
+            // Check pair is already added into the list.
+            if (KeyActionPairList.Any(p=> p == new Tuple<ConsoleKeyInfo, Action>(cki, action)))
+            {
+                Debug.WriteLine("HelpConsole:Key is defined already on Key-Action pair list. Use ListKeyActionPairList()");
+
+                return;
+            }
+
             // Adding given value into the list.
             KeyActionPairList.Add(new Tuple<ConsoleKeyInfo, Action>(cki, action));
         }

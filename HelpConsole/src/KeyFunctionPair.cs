@@ -25,6 +25,14 @@ namespace HelpConsole
         /// <param name="func">An func to be called with match of cki. Object is a result type.</param>
         public static void AddKeyFuncPair(ConsoleKeyInfo cki, Func<object> func)
         {
+            // Check pair is already added into the list.
+            if (KeyFuncPairList.Any(p => p == new Tuple<ConsoleKeyInfo, Func<object>>(cki, func)))
+            {
+                Debug.WriteLine("HelpConsole:Key is defined already on Key-Func pair list. Use ListKeyFuncPairList()");
+
+                return;
+            }
+
             KeyFuncPairList.Add(new Tuple<ConsoleKeyInfo, Func<object>>(cki, func));
         }
 
