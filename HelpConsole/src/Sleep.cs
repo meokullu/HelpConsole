@@ -27,7 +27,7 @@ namespace HelpConsole
             string tempTitle = Console.Title;
 
             // Set console title specified with duration to indicate sleeping.
-            SetConsoleTitle($"Sleeping {(duration >= 1000 ? duration / 1000 : duration)} {(duration >= 1000 ? "s" : "ms")}");
+            SetConsoleTitle($"Sleeping {NameDuration(duration)}");
 
             // Sleeping.
             Sleep(duration);
@@ -47,13 +47,33 @@ namespace HelpConsole
             string tempTitle = Console.Title;
 
             // Set console title specified with duration to indicate sleeping.
-            SetConsoleTitle($"Sleeping {duration} ms");
+            SetConsoleTitle($"Sleeping {NameDuration(duration)}");
 
             // Beeping.  
             Beep(Beeping(duration));
 
             // Set console title's back.
             SetConsoleTitle(firstText: tempTitle);
+        }
+
+        private static string NameDuration(int duration)
+        {
+            if (duration < 1000)
+            {
+                return $"{duration} ms";
+            }
+            else if (duration < 60000)
+            {
+                return $"{duration / 1000} s";
+            }
+            else if (duration < 360000)
+            {
+                return $"{duration / 60000} m";
+            }
+            else
+            {
+                return $"{duration / (1000 * 60 * 60)} h";
+            }
         }
     }
 }

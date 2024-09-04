@@ -18,7 +18,8 @@
 * When `ListKeyFuncPairList()` is called `Modifiers` is checked and its data is printed only when it has a `ConsoleModifiers` value. [#65](https://github.com/meokullu/HelpConsole/issues/65)
 * `WaitKeyAction()` and `WaitKeyAction(string message)` now returns `ConsoleKeyInfo` as a return value. [#61](https://github.com/meokullu/HelpConsole/issues/61)
 * `WaitKeyFunc()` and `WaitKeyFunc(string message)` now returns `ConsoleKeyInfo` as a return value. [#61](https://github.com/meokullu/HelpConsole/issues/61)
-* `AddKeyActionPair(ControlKeyInfo cki, Action action)` and `AddKeyFuncPair(ConsoleKeyInfo cki, Func<object> func)` now checks if item is already in the list.
+* `AddKeyActionPair(ControlKeyInfo cki, Action action)` and `AddKeyFuncPair(ConsoleKeyInfo cki, Func<object> func)` now checks if item is already in the list. [#66](https://github.com/meokullu/HelpConsole/issues/66)
+* `SleepWithTitle(int duration)` and `SleepWithBeeping(int duration)` now uses internal method to set console title better for remaining duration to sleep. [#64](https://github.com/meokullu/HelpConsole/issues/64)
 
 ### [1.11.0]
 #### Added
