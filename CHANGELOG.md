@@ -11,6 +11,12 @@
 #### Removed
 -->
 
+### [2.0.0]
+#### Changed
+* `WaitKeyAction()` and `WaitKeyFunc()` now executed action/func on new line.
+
+
+
 ### [1.12.0]
 #### Changed
 * When `ListKeyActionPairList()` is called `Modifiers` is checked and its data is printed only when it has a `ConsoleModifiers` value. [#65](https://github.com/meokullu/HelpConsole/issues/65)

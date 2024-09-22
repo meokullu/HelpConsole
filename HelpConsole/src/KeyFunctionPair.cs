@@ -99,6 +99,8 @@ namespace HelpConsole
             // Checking if cki is in Key-Action pair list.
             if (KeyFuncPairList.Select(p => p.Item1).Any(q => q == cki))
             {
+                WriteLine("");
+
                 // cki is not null now.
                 KeyFunc(cki.Value);
 
