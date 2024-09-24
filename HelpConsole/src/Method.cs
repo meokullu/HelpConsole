@@ -49,6 +49,12 @@ namespace HelpConsole
         //[SupportedOSPlatform("windows")]
         public static void StartingMethod([CallerMemberName] string memberName = "")
         {
+            // Checking if LogTiming is on and adding method into list.
+            if (ConsoleOptions.LogTiming)
+            {
+                AddLogTiming(new LogTiming(memberName, s_stopwatch.Elapsed, null));
+            }
+
             // Writing the method's name.
             WriteLine($"{memberName} started...");
 
@@ -67,6 +73,12 @@ namespace HelpConsole
         /// <param name="memberName">Catches method's name.</param>
         public static void StartingMethod(ConsoleColor consoleColor, [CallerMemberName] string memberName = "")
         {
+            // Checking if LogTiming is on and adding method into list.
+            if (ConsoleOptions.LogTiming)
+            {
+                AddLogTiming(new LogTiming(memberName, s_stopwatch.Elapsed, null));
+            }
+
             // Writing the method's name with given color.
             WriteLine($"{memberName} started...", color: consoleColor);
 
@@ -85,6 +97,12 @@ namespace HelpConsole
         /// <param name="memberName">Catches method's name.</param>
         public static void StartingMethod(Melody melody, [CallerMemberName] string memberName = "")
         {
+            // Checking if LogTiming is on and adding method into list.
+            if (ConsoleOptions.LogTiming)
+            {
+                AddLogTiming(new LogTiming(memberName, s_stopwatch.Elapsed, null));
+            }
+
             // Writing the method's name with given color.
             WriteLine($"{memberName} started...");
 
@@ -104,6 +122,12 @@ namespace HelpConsole
         /// <param name="memberName">Catches method's name.</param>
         public static void StartingMethod(ConsoleColor consoleColor, Melody melody, [CallerMemberName] string memberName = "")
         {
+            // Checking if LogTiming is on and adding method into list.
+            if (ConsoleOptions.LogTiming)
+            {
+                AddLogTiming(new LogTiming(memberName, s_stopwatch.Elapsed, null));
+            }
+
             // Writing the method's name with given color.
             WriteLine($"{memberName} started...", color: consoleColor);
 
@@ -122,6 +146,12 @@ namespace HelpConsole
         //[SupportedOSPlatform("windows")]
         public static void EndingMethod([CallerMemberName] string memberName = "")
         {
+            // Checking if LogTiming is on and adding method into list.
+            if (ConsoleOptions.LogTiming)
+            {
+                AddLogTiming(new LogTiming(memberName, null, s_stopwatch.Elapsed));
+            }
+
             // Writing a method's name.
             WriteLine($"{memberName} ended...");
 
@@ -140,6 +170,12 @@ namespace HelpConsole
         /// <param name="memberName">Catches method's name.</param>
         public static void EndingMethod(ConsoleColor consoleColor, [CallerMemberName] string memberName = "")
         {
+            // Checking if LogTiming is on and adding method into list.
+            if (ConsoleOptions.LogTiming)
+            {
+                AddLogTiming(new LogTiming(memberName, null, s_stopwatch.Elapsed));
+            }
+
             // Writing a method's name.
             WriteLine($"{memberName} ended...", color: consoleColor);
 
@@ -158,6 +194,12 @@ namespace HelpConsole
         /// <param name="memberName">Catches method's name.</param>
         public static void EndingMethod(Melody melody, [CallerMemberName] string memberName = "")
         {
+            // Checking if LogTiming is on and adding method into list.
+            if (ConsoleOptions.LogTiming)
+            {
+                AddLogTiming(new LogTiming(memberName, null, s_stopwatch.Elapsed));
+            }
+
             // Writing a method's name.
             WriteLine($"{memberName} ended...");
 
@@ -177,6 +219,12 @@ namespace HelpConsole
         /// <param name="memberName">Catches method's name.</param>
         public static void EndingMethod(ConsoleColor consoleColor, Melody melody, [CallerMemberName] string memberName = "")
         {
+            // Checking if LogTiming is on and adding method into list.
+            if (ConsoleOptions.LogTiming)
+            {
+                AddLogTiming(new LogTiming(memberName, null, s_stopwatch.Elapsed));
+            }
+
             // Writing a method's name.
             WriteLine($"{memberName} ended...", color: consoleColor);
 

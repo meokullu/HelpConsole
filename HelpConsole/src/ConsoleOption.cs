@@ -9,6 +9,7 @@ namespace HelpConsole
         private static readonly ScreenColorOption s_defaultScreenColorOption = new ScreenColorOption(foregroundColor: Green, backgroundColor: Black);
         private static readonly bool s_defaultWaitOnEnd = true;
         private static readonly bool s_defaultWarningSound = false;
+        private static readonly bool s_logTiming = true;
 
         private static readonly ConsoleOption s_defaultConsoleOption = new ConsoleOption()
         {
@@ -16,7 +17,8 @@ namespace HelpConsole
             CursorVisible = s_defaultCursorVisible,
             ScreenColorOption = s_defaultScreenColorOption,
             WaitOnEnd = s_defaultWaitOnEnd,
-            WarningSound = s_defaultWarningSound
+            WarningSound = s_defaultWarningSound,
+            LogTiming = s_logTiming
         };
 
         // Console Option
@@ -56,6 +58,11 @@ namespace HelpConsole
             /// Sets warning beep.
             /// </summary>
             public bool WarningSound = s_defaultWarningSound;
+
+            /// <summary>
+            /// Sets timing.
+            /// </summary>
+            public bool LogTiming = s_logTiming;
         }
     }
 
@@ -99,6 +106,11 @@ namespace HelpConsole
                 // Beep sound.
                 Beep(StartingUp);
             }
+
+            if (consoleOptions.LogTiming)
+            {
+                s_stopwatch.Start();
+            }
         }
 
         /// <summary>
@@ -120,6 +132,11 @@ namespace HelpConsole
             {
                 // Beeping.
                 Beep(FinishingUp);
+            }
+
+            if (ConsoleOptions.LogTiming)
+            {
+                s_stopwatch.Stop();
             }
 
             // Checking if WaitOnEnd is true.

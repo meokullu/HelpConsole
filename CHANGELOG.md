@@ -11,11 +11,17 @@
 #### Removed
 -->
 
-### [2.0.0]
+### [2.0.0-beta]
+#### Added
+* `LogTimingList` is added.
+* `LogTiming` class is added.
+* `AddLogTiming(LogTiming logTiming)` method is added.
+* `ListLogTiming()` method is added.
+
 #### Changed
 * `WaitKeyAction()` and `WaitKeyFunc()` now executed action/func on new line.
-
-
+* `ConsoleOption` is now parameter for `LogTiming`. Default value is true.
+* `StartingMethod(...)` and `EndingMethod(...)` now check if `ConsoleOption.LogTiming` and calls `AddLogTiming(LogTiming logTiming)`. `LogTiming`'s `StartedAt` is provided by `StartingMethod(...)` while `FinishedAt` is provided by `EndingMethod(...)`.
 
 ### [1.12.0]
 #### Changed
