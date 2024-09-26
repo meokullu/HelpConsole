@@ -11,6 +11,10 @@
 #### Removed
 -->
 
+### [2.0.0-beta.1]
+#### Added
+* `ConsoleKeyInfo` `Key[A-Z]` are added.
+
 ### [2.0.0-beta]
 #### Added
 * `LogTimingList` is added.
