@@ -14,6 +14,9 @@
 ### [2.0.0-beta.1]
 #### Added
 * `ConsoleKeyInfo` `Key[A-Z]` are added.
+* `Node` class is added under new `DisplayList` class.
+* `ListValues(List<node> list)` method added under `DisplayList`. It prints list values in an order with specified indention and characters.
+* `DisplayList()`, `DisplayList(ConsoleColor parentColor, ConsoleColr childColor)` and `DisplayList(string parentIndent, string childIndent, ConsoleColor oarentColor, ConsoleColor childColor)` constructors are added under new `DisplayList` class.
 
 ### [2.0.0-beta]
 #### Added
