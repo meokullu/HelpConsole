@@ -46,7 +46,6 @@ namespace HelpConsole
         /// Method starting with writing its name and beeping.
         /// </summary>
         /// <param name="memberName">Catches method's name.</param>
-        //[SupportedOSPlatform("windows")]
         public static void StartingMethod([CallerMemberName] string memberName = "")
         {
             // Checking if LogTiming is on and adding method into list.
@@ -143,7 +142,6 @@ namespace HelpConsole
         /// Method ending with writing its name and beeping.
         /// </summary>
         /// <param name="memberName">Catches method's name.</param>
-        //[SupportedOSPlatform("windows")]
         public static void EndingMethod([CallerMemberName] string memberName = "")
         {
             // Checking if LogTiming is on and adding method into list.
